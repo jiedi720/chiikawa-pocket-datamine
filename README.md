@@ -53,7 +53,7 @@ if ConstantDamage > 0:    flat override (never crits)
 
 ## 数据
 
-- **[analysis/masterdata/](analysis/masterdata/)** — **236 张主数据表全部解码为 JSON**（逐字节精确）：8,648 个关卡、25,008 条敌方状态、146 套服装、168 个技能／186 个效果、2,823 个持有效果、2,084 个商店商品，以及扭蛋结构、料理、特训、除草、联赛……
+- **[analysis/masterdata/](analysis/masterdata/)** — **236 张主数据表全部解码为 JSON**（逐字节精确）；服装表已补充简体中文名称，网页计算器优先显示中文服装名：8,648 个关卡、25,008 条敌方状态、146 套服装、168 个技能／186 个效果、2,823 个持有效果、2,084 个商店商品，以及扭蛋结构、料理、特训、除草、联赛……
 - **[dumps/MasterData/](dumps/MasterData/)** — 从设备拉取的原始 `.bytes` 主数据文件
 - **[analysis/schema.json](analysis/schema.json)** — 提取出的 message／enum 结构（568 个类、1,331 个枚举）+ [proto_descriptors.json](analysis/proto_descriptors.json)（部分 `.proto` 恢复）
 - **[analysis/skills_resolved.json](analysis/skills_resolved.json)** — 每个技能效果均已解析出按等级缩放后的数值
@@ -79,7 +79,7 @@ if ConstantDamage > 0:    flat override (never crits)
 
 - **APK 与 Unity 资源包**（受版权保护的游戏文件；且超过 800 MB，超出 GitHub 限制）。
 - **`libil2cpp.so`、`il2cpp.h`、`script.json`**（二进制／体积过大；`dump.cs` + DummyDll 已包含同样信息）。
-- **扭蛋概率、主数据文本、挂机奖励最终数值** — 由**服务器端**（GS2）计算，客户端里没有，因此无法离线拆包。你在别处看到的任何「概率」都来自服务器，而不是 APK。
+- **扭蛋概率、挂机奖励最终数值** — 由**服务器端**（GS2）计算，客户端里没有，因此无法离线拆包。服装名称及部分界面文本已在 `analysis/masterdata/Costume.json`、`analysis/masterdata/LocalizationText.json` 中补充简体中文字段；中文字段可能包含本地 AI 辅助整理或翻译内容，不应一概视为客户端原始官方简中资源。
 - 工具链（Ghidra／jadx／Il2CppDumper）— 需要下载什么见 `scripts/`。
 
 ## 免责声明

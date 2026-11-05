@@ -48,7 +48,7 @@ def skill_json(s):
 
 def costume_json(c):
     return {
-        'id': c['id'], 'char': c['characterId'], 'rarity': c['costumeRarityId'],
+        'id': c['id'], 'char': c['characterId'], 'rarity': c['costumeRarityId'], 'chinese': c.get('chinese', ''),
         'skill': c['uniqueHuntSkillId'], 'skillCoef': c['skillCoefficient'],
         'arGroup': c['attackRateLevelRagneGroupId'], 'asGroup': c['attackSpeedLevelRagneGroupId'],
         'asType': c['attackSpeedType'], 'tags': c['tagIds'], 'sort': c['sortOrder'],
