@@ -5,7 +5,8 @@
   "viewConditionId": 0,
   "assetId": 1,
   "index": 1,
-  "nameTextKey": -1399327955
+  "nameTextKey": -1399327955,
+  "chinese": "吉伊卡哇"
  },
  {
   "version": "250330.1.0",
@@ -13,7 +14,8 @@
   "viewConditionId": 0,
   "assetId": 2,
   "index": 3,
-  "nameTextKey": 899588759
+  "nameTextKey": 899588759,
+  "chinese": "乌萨奇"
  },
  {
   "version": "250330.1.0",
@@ -21,7 +23,8 @@
   "viewConditionId": 0,
   "assetId": 3,
   "index": 2,
-  "nameTextKey": 1117360641
+  "nameTextKey": 1117360641,
+  "chinese": "哈奇喵"
  },
  {
   "version": "250330.1.0",
@@ -29,7 +32,8 @@
   "viewConditionId": 0,
   "assetId": 4,
   "index": 5,
-  "nameTextKey": -587397214
+  "nameTextKey": -587397214,
+  "chinese": "栗子馒头"
  },
  {
   "version": "250330.1.0",
@@ -37,7 +41,8 @@
   "viewConditionId": 0,
   "assetId": 5,
   "index": 4,
-  "nameTextKey": -1409665228
+  "nameTextKey": -1409665228,
+  "chinese": "飞鼠"
  },
  {
   "version": "250330.1.0",
@@ -45,7 +50,8 @@
   "viewConditionId": 0,
   "assetId": 6,
   "index": 6,
-  "nameTextKey": 854812302
+  "nameTextKey": 854812302,
+  "chinese": "獭师"
  },
  {
   "version": "250330.1.0",
@@ -53,7 +59,8 @@
   "viewConditionId": 0,
   "assetId": 7,
   "index": 7,
-  "nameTextKey": 1173640728
+  "nameTextKey": 1173640728,
+  "chinese": "狮萨"
  },
  {
   "version": "250330.1.0",
@@ -61,7 +68,8 @@
   "viewConditionId": 0,
   "assetId": 10,
   "index": 10,
-  "nameTextKey": -1031015686
+  "nameTextKey": -1031015686,
+  "chinese": "收藏：普通"
  },
  {
   "version": "250330.1.0",
@@ -69,7 +77,8 @@
   "viewConditionId": 0,
   "assetId": 11,
   "index": 11,
-  "nameTextKey": -1249066388
+  "nameTextKey": -1249066388,
+  "chinese": "[普通]吉伊卡哇"
  },
  {
   "version": "250330.1.0",
@@ -77,7 +86,8 @@
   "viewConditionId": 0,
   "assetId": 12,
   "index": 13,
-  "nameTextKey": 1535288128
+  "nameTextKey": 1535288128,
+  "chinese": "[普通]哈奇喵"
  },
  {
   "version": "250330.1.0",
@@ -85,7 +95,8 @@
   "viewConditionId": 0,
   "assetId": 13,
   "index": 12,
-  "nameTextKey": 746951638
+  "nameTextKey": 746951638,
+  "chinese": "[普通]乌萨奇"
  },
  {
   "version": "250330.1.0",
@@ -93,7 +104,8 @@
   "viewConditionId": 0,
   "assetId": 14,
   "index": 15,
-  "nameTextKey": -974768413
+  "nameTextKey": -974768413,
+  "chinese": "[普通]栗子馒头"
  },
  {
   "version": "250330.1.0",
@@ -101,7 +113,8 @@
   "viewConditionId": 0,
   "assetId": 15,
   "index": 14,
-  "nameTextKey": -1293875595
+  "nameTextKey": -1293875595,
+  "chinese": "[普通]飞鼠"
  },
  {
   "version": "250330.1.0",
@@ -109,7 +122,8 @@
   "viewConditionId": 0,
   "assetId": 16,
   "index": 16,
-  "nameTextKey": 736647119
+  "nameTextKey": 736647119,
+  "chinese": "[普通]獭师"
  },
  {
   "version": "250330.1.0",
@@ -117,7 +131,8 @@
   "viewConditionId": 0,
   "assetId": 17,
   "index": 17,
-  "nameTextKey": 1559193433
+  "nameTextKey": 1559193433,
+  "chinese": "[普通]狮萨"
  },
  {
   "version": "250330.1.0",
@@ -125,7 +140,8 @@
   "viewConditionId": 2504104,
   "assetId": 20,
   "index": 20,
-  "nameTextKey": -374955719
+  "nameTextKey": -374955719,
+  "chinese": "收藏：野餐"
  },
  {
   "version": "250330.1.0",
@@ -133,7 +149,8 @@
   "viewConditionId": 0,
   "assetId": 21,
   "index": 21,
-  "nameTextKey": -1633578577
+  "nameTextKey": -1633578577,
+  "chinese": "[野餐]吉伊卡哇"
  },
  {
   "version": "250330.1.0",
@@ -141,7 +158,8 @@
   "viewConditionId": 0,
   "assetId": 22,
   "index": 23,
-  "nameTextKey": 1890578563
+  "nameTextKey": 1890578563,
+  "chinese": "[野餐]哈奇喵"
  },
  {
   "version": "250330.1.0",
@@ -149,7 +167,8 @@
   "viewConditionId": 0,
   "assetId": 23,
   "index": 22,
-  "nameTextKey": 128499733
+  "nameTextKey": 128499733,
+  "chinese": "[野餐]乌萨奇"
  },
  {
   "version": "250410.1.0",
@@ -157,7 +176,8 @@
   "viewConditionId": 2504104,
   "assetId": 24,
   "index": 25,
-  "nameTextKey": -288660192
+  "nameTextKey": -288660192,
+  "chinese": "[野餐]栗子馒头"
  },
  {
   "version": "250350.1.0",
@@ -165,7 +185,8 @@
   "viewConditionId": 2503508,
   "assetId": 25,
   "index": 24,
-  "nameTextKey": -1714661962
+  "nameTextKey": -1714661962,
+  "chinese": "[野餐]飞鼠"
  },
  {
   "version": "250350.1.0",
@@ -173,7 +194,8 @@
   "viewConditionId": 2503508,
   "assetId": 26,
   "index": 26,
-  "nameTextKey": 12911628
+  "nameTextKey": 12911628,
+  "chinese": "[野餐]獭师"
  },
  {
   "version": "250410.1.0",
@@ -181,7 +203,8 @@
   "viewConditionId": 2504104,
   "assetId": 27,
   "index": 27,
-  "nameTextKey": 2009216154
+  "nameTextKey": 2009216154,
+  "chinese": "[野餐]狮萨"
  },
  {
   "version": "250330.1.0",
@@ -189,7 +212,8 @@
   "viewConditionId": 0,
   "assetId": 30,
   "index": 30,
-  "nameTextKey": -256012168
+  "nameTextKey": -256012168,
+  "chinese": "收藏：睡衣"
  },
  {
   "version": "250330.1.0",
@@ -197,7 +221,8 @@
   "viewConditionId": 0,
   "assetId": 31,
   "index": 31,
-  "nameTextKey": -2017812242
+  "nameTextKey": -2017812242,
+  "chinese": "[睡衣]吉伊卡哇"
  },
  {
   "version": "250330.1.0",
@@ -205,7 +230,8 @@
   "viewConditionId": 0,
   "assetId": 32,
   "index": 33,
-  "nameTextKey": 1773453762
+  "nameTextKey": 1773453762,
+  "chinese": "[睡衣]哈奇喵"
  },
  {
   "version": "250330.1.0",
@@ -213,7 +239,8 @@
   "viewConditionId": 0,
   "assetId": 33,
   "index": 32,
-  "nameTextKey": 515109204
+  "nameTextKey": 515109204,
+  "chinese": "[睡衣]乌萨奇"
  },
  {
   "version": "250450.1.0",
@@ -221,7 +248,8 @@
   "viewConditionId": 2504506,
   "assetId": 40,
   "index": 40,
-  "nameTextKey": -1074002241
+  "nameTextKey": -1074002241,
+  "chinese": "收藏：马戏团"
  },
  {
   "version": "250440.1.0",
@@ -229,7 +257,8 @@
   "viewConditionId": 2504407,
   "assetId": 41,
   "index": 41,
-  "nameTextKey": -923060695
+  "nameTextKey": -923060695,
+  "chinese": "[马戏团]吉伊卡哇"
  },
  {
   "version": "250450.1.0",
@@ -237,7 +266,8 @@
   "viewConditionId": 2504506,
   "assetId": 42,
   "index": 43,
-  "nameTextKey": 1374840723
+  "nameTextKey": 1374840723,
+  "chinese": "[马戏团]乌萨奇"
  },
  {
   "version": "250440.1.0",
@@ -245,7 +275,8 @@
   "viewConditionId": 2504407,
   "assetId": 43,
   "index": 42,
-  "nameTextKey": 653612805
+  "nameTextKey": 653612805,
+  "chinese": "[马戏团]哈奇喵"
  },
  {
   "version": "250440.1.0",
@@ -253,7 +284,8 @@
   "viewConditionId": 2504407,
   "assetId": 44,
   "index": 45,
-  "nameTextKey": -1198407002
+  "nameTextKey": -1198407002,
+  "chinese": "[马戏团]栗子馒头"
  },
  {
   "version": "250450.1.0",
@@ -261,7 +293,8 @@
   "viewConditionId": 2504506,
   "assetId": 45,
   "index": 44,
-  "nameTextKey": -812191184
+  "nameTextKey": -812191184,
+  "chinese": "[马戏团]飞鼠"
  },
  {
   "version": "250450.1.0",
@@ -269,7 +302,8 @@
   "viewConditionId": 2504506,
   "assetId": 46,
   "index": 46,
-  "nameTextKey": 1453302666
+  "nameTextKey": 1453302666,
+  "chinese": "[马戏团]獭师"
  },
  {
   "version": "250440.1.0",
@@ -277,7 +311,8 @@
   "viewConditionId": 2504407,
   "assetId": 47,
   "index": 47,
-  "nameTextKey": 563647260
+  "nameTextKey": 563647260,
+  "chinese": "[马戏团]狮萨"
  },
  {
   "version": "250330.1.0",
@@ -285,7 +320,8 @@
   "viewConditionId": 0,
   "assetId": 2001,
   "index": 2001,
-  "nameTextKey": 111033254
+  "nameTextKey": 111033254,
+  "chinese": "季票1"
  },
  {
   "version": "250510.1.0",
@@ -293,7 +329,8 @@
   "viewConditionId": 0,
   "assetId": 2002,
   "index": 2002,
-  "nameTextKey": -1617466852
+  "nameTextKey": -1617466852,
+  "chinese": "季票2"
  },
  {
   "version": "250350.1.0",
@@ -301,7 +338,8 @@
   "viewConditionId": 2503508,
   "assetId": 3001,
   "index": 3001,
-  "nameTextKey": -1105044285
+  "nameTextKey": -1105044285,
+  "chinese": "野餐活动护照（前半）"
  },
  {
   "version": "250410.1.0",
@@ -309,7 +347,8 @@
   "viewConditionId": 2504104,
   "assetId": 3002,
   "index": 3002,
-  "nameTextKey": 657132921
+  "nameTextKey": 657132921,
+  "chinese": "野餐活动护照（后半）"
  },
  {
   "version": "250440.1.0",
@@ -317,7 +356,8 @@
   "viewConditionId": 2504407,
   "assetId": 3003,
   "index": 3003,
-  "nameTextKey": 1345076719
+  "nameTextKey": 1345076719,
+  "chinese": "马戏团活动护照（前半）"
  },
  {
   "version": "250450.1.0",
@@ -325,7 +365,8 @@
   "viewConditionId": 2504506,
   "assetId": 3004,
   "index": 3004,
-  "nameTextKey": -834099124
+  "nameTextKey": -834099124,
+  "chinese": "马戏团活动护照（后半）"
  },
  {
   "version": "250510.1.0",
@@ -333,7 +374,8 @@
   "viewConditionId": 2505101,
   "assetId": 4001,
   "index": 4001,
-  "nameTextKey": 603284602
+  "nameTextKey": 603284602,
+  "chinese": "吉伊卡哇&哈奇喵生日'25"
  },
  {
   "version": "250550.1.0",
@@ -341,7 +383,8 @@
   "viewConditionId": 2505502,
   "assetId": 50,
   "index": 50,
-  "nameTextKey": -1494796290
+  "nameTextKey": -1494796290,
+  "chinese": "收藏：江户"
  },
  {
   "version": "250530.1.0",
@@ -349,7 +392,8 @@
   "viewConditionId": 2505302,
   "assetId": 51,
   "index": 51,
-  "nameTextKey": -773847192
+  "nameTextKey": -773847192,
+  "chinese": "[江户]吉伊卡哇"
  },
  {
   "version": "250550.1.0",
@@ -357,7 +401,8 @@
   "viewConditionId": 2505502,
   "assetId": 52,
   "index": 52,
-  "nameTextKey": 1072588356
+  "nameTextKey": 1072588356,
+  "chinese": "[江户]乌萨奇"
  },
  {
   "version": "250530.1.0",
@@ -365,7 +410,8 @@
   "viewConditionId": 2505302,
   "assetId": 53,
   "index": 53,
-  "nameTextKey": 1223251666
+  "nameTextKey": 1223251666,
+  "chinese": "[江户]哈奇喵"
  },
  {
   "version": "250550.1.0",
@@ -373,7 +419,8 @@
   "viewConditionId": 2505502,
   "assetId": 54,
   "index": 54,
-  "nameTextKey": -1584729113
+  "nameTextKey": -1584729113,
+  "chinese": "[江户]飞鼠"
  },
  {
   "version": "250550.1.0",
@@ -381,7 +428,8 @@
   "viewConditionId": 2505502,
   "assetId": 55,
   "index": 55,
-  "nameTextKey": -695352463
+  "nameTextKey": -695352463,
+  "chinese": "[江户]栗子馒头"
  },
  {
   "version": "250530.1.0",
@@ -389,7 +437,8 @@
   "viewConditionId": 2505302,
   "assetId": 56,
   "index": 56,
-  "nameTextKey": 1334088395
+  "nameTextKey": 1334088395,
+  "chinese": "[江户]獭师"
  },
  {
   "version": "250530.1.0",
@@ -397,7 +446,8 @@
   "viewConditionId": 2505302,
   "assetId": 57,
   "index": 57,
-  "nameTextKey": 948150877
+  "nameTextKey": 948150877,
+  "chinese": "[江户]狮萨"
  },
  {
   "version": "250530.1.0",
@@ -405,7 +455,8 @@
   "viewConditionId": 2505302,
   "assetId": 3005,
   "index": 3005,
-  "nameTextKey": -1185965862
+  "nameTextKey": -1185965862,
+  "chinese": "江户活动护照（前半）"
  },
  {
   "version": "250550.1.0",
@@ -413,7 +464,8 @@
   "viewConditionId": 2505502,
   "assetId": 3006,
   "index": 3006,
-  "nameTextKey": 541509984
+  "nameTextKey": 541509984,
+  "chinese": "江户活动护照（后半）"
  },
  {
   "version": "250630.1.0",
@@ -421,7 +473,8 @@
   "viewConditionId": 2506302,
   "assetId": 60,
   "index": 60,
-  "nameTextKey": -1916115907
+  "nameTextKey": -1916115907,
+  "chinese": "收藏：音乐节"
  },
  {
   "version": "250610.1.0",
@@ -429,7 +482,8 @@
   "viewConditionId": 2506102,
   "assetId": 61,
   "index": 61,
-  "nameTextKey": -87206741
+  "nameTextKey": -87206741,
+  "chinese": "[音乐节]吉伊卡哇"
  },
  {
   "version": "250610.1.0",
@@ -437,7 +491,8 @@
   "viewConditionId": 2506102,
   "assetId": 62,
   "index": 62,
-  "nameTextKey": 1673790737
+  "nameTextKey": 1673790737,
+  "chinese": "[音乐节]哈奇喵"
  },
  {
   "version": "250630.1.0",
@@ -445,7 +500,8 @@
   "viewConditionId": 2506302,
   "assetId": 63,
   "index": 63,
-  "nameTextKey": 348337543
+  "nameTextKey": 348337543,
+  "chinese": "[音乐节]乌萨奇"
  },
  {
   "version": "250630.1.0",
@@ -453,7 +509,8 @@
   "viewConditionId": 2506302,
   "assetId": 64,
   "index": 64,
-  "nameTextKey": -1968725980
+  "nameTextKey": -1968725980,
+  "chinese": "[音乐节]飞鼠"
  },
  {
   "version": "250610.1.0",
@@ -461,7 +518,8 @@
   "viewConditionId": 2506102,
   "assetId": 65,
   "index": 65,
-  "nameTextKey": -39808846
+  "nameTextKey": -39808846,
+  "chinese": "[音乐节]栗子馒头"
  },
  {
   "version": "250610.1.0",
@@ -469,7 +527,8 @@
   "viewConditionId": 2506102,
   "assetId": 66,
   "index": 66,
-  "nameTextKey": 1688846600
+  "nameTextKey": 1688846600,
+  "chinese": "[音乐节]獭师"
  },
  {
   "version": "250630.1.0",
@@ -477,7 +536,8 @@
   "viewConditionId": 2506302,
   "assetId": 67,
   "index": 67,
-  "nameTextKey": 330232222
+  "nameTextKey": 330232222,
+  "chinese": "[音乐节]狮萨"
  },
  {
   "version": "250610.1.0",
@@ -485,7 +545,8 @@
   "viewConditionId": 2506102,
   "assetId": 3007,
   "index": 3007,
-  "nameTextKey": 1463941622
+  "nameTextKey": 1463941622,
+  "chinese": "音乐节活动护照（前半）"
  },
  {
   "version": "250630.1.0",
@@ -493,7 +554,8 @@
   "viewConditionId": 2506302,
   "assetId": 3008,
   "index": 3008,
-  "nameTextKey": -939596697
+  "nameTextKey": -939596697,
+  "chinese": "音乐节活动护照（后半）"
  },
  {
   "version": "250610.1.0",
@@ -501,7 +563,8 @@
   "viewConditionId": 0,
   "assetId": 2003,
   "index": 2003,
-  "nameTextKey": -393192822
+  "nameTextKey": -393192822,
+  "chinese": "季票3"
  },
  {
   "version": "250730.1.0",
@@ -509,7 +572,8 @@
   "viewConditionId": 72005210,
   "assetId": 70,
   "index": 70,
-  "nameTextKey": -1798220420
+  "nameTextKey": -1798220420,
+  "chinese": "收藏：奇幻"
  },
  {
   "version": "250710.1.0",
@@ -517,7 +581,8 @@
   "viewConditionId": 72005110,
   "assetId": 71,
   "index": 71,
-  "nameTextKey": -472488470
+  "nameTextKey": -472488470,
+  "chinese": "[奇幻]吉伊卡哇"
  },
  {
   "version": "250730.1.0",
@@ -525,7 +590,8 @@
   "viewConditionId": 72005210,
   "assetId": 72,
   "index": 72,
-  "nameTextKey": 2061448272
+  "nameTextKey": 2061448272,
+  "chinese": "[奇幻]哈奇喵"
  },
  {
   "version": "250710.1.0",
@@ -533,7 +599,8 @@
   "viewConditionId": 72005110,
   "assetId": 73,
   "index": 73,
-  "nameTextKey": 232260806
+  "nameTextKey": 232260806,
+  "chinese": "[奇幻]乌萨奇"
  },
  {
   "version": "250710.1.0",
@@ -541,7 +608,8 @@
   "viewConditionId": 72005110,
   "assetId": 74,
   "index": 74,
-  "nameTextKey": -1816358555
+  "nameTextKey": -1816358555,
+  "chinese": "[奇幻]飞鼠"
  },
  {
   "version": "250730.1.0",
@@ -549,7 +617,8 @@
   "viewConditionId": 72005210,
   "assetId": 75,
   "index": 75,
-  "nameTextKey": -457465357
+  "nameTextKey": -457465357,
+  "chinese": "[奇幻]栗子馒头"
  },
  {
   "version": "250730.1.0",
@@ -557,7 +626,8 @@
   "viewConditionId": 72005210,
   "assetId": 76,
   "index": 76,
-  "nameTextKey": 2108878921
+  "nameTextKey": 2108878921,
+  "chinese": "[奇幻]獭师"
  },
  {
   "version": "250710.1.0",
@@ -565,7 +635,8 @@
   "viewConditionId": 72005110,
   "assetId": 77,
   "index": 77,
-  "nameTextKey": 179683551
+  "nameTextKey": 179683551,
+  "chinese": "[奇幻]狮萨"
  },
  {
   "version": "250710.1.0",
@@ -573,7 +644,8 @@
   "viewConditionId": 72005110,
   "assetId": 3009,
   "index": 3009,
-  "nameTextKey": -1325804303
+  "nameTextKey": -1325804303,
+  "chinese": "奇幻活动护照（前半）"
  },
  {
   "version": "250730.1.0",
@@ -581,7 +653,8 @@
   "viewConditionId": 72005210,
   "assetId": 3010,
   "index": 3010,
-  "nameTextKey": -801219308
+  "nameTextKey": -801219308,
+  "chinese": "奇幻活动护照（后半）"
  },
  {
   "version": "250710.1.0",
@@ -589,7 +662,8 @@
   "viewConditionId": 0,
   "assetId": 2004,
   "index": 2004,
-  "nameTextKey": 1995755305
+  "nameTextKey": 1995755305,
+  "chinese": "季票4"
  },
  {
   "version": "250810.1.0",
@@ -597,7 +671,8 @@
   "viewConditionId": 0,
   "assetId": 2005,
   "index": 2005,
-  "nameTextKey": 32767935
+  "nameTextKey": 32767935,
+  "chinese": "季票5"
  },
  {
   "version": "250810.1.0",
@@ -605,7 +680,8 @@
   "viewConditionId": 72006110,
   "assetId": 3011,
   "index": 3011,
-  "nameTextKey": -1489408638
+  "nameTextKey": -1489408638,
+  "chinese": "海滩活动护照（前半）"
  },
  {
   "version": "250820.1.0",
@@ -613,7 +689,8 @@
   "viewConditionId": 72006210,
   "assetId": 3012,
   "index": 3012,
-  "nameTextKey": 1043348536
+  "nameTextKey": 1043348536,
+  "chinese": "海滩活动护照（后半）"
  },
  {
   "version": "250820.1.0",
@@ -621,7 +698,8 @@
   "viewConditionId": 72006210,
   "assetId": 80,
   "index": 80,
-  "nameTextKey": 323570099
+  "nameTextKey": 323570099,
+  "chinese": "收藏：海滩"
  },
  {
   "version": "250810.1.0",
@@ -629,7 +707,8 @@
   "viewConditionId": 72006110,
   "assetId": 81,
   "index": 81,
-  "nameTextKey": 1682864421
+  "nameTextKey": 1682864421,
+  "chinese": "[海滩]吉伊卡哇"
  },
  {
   "version": "250810.1.0",
@@ -637,7 +716,8 @@
   "viewConditionId": 72006110,
   "assetId": 82,
   "index": 82,
-  "nameTextKey": -45668193
+  "nameTextKey": -45668193,
+  "chinese": "[海滩]哈奇喵"
  },
  {
   "version": "250820.1.0",
@@ -645,7 +725,8 @@
   "viewConditionId": 72006210,
   "assetId": 83,
   "index": 83,
-  "nameTextKey": -1975511031
+  "nameTextKey": -1975511031,
+  "chinese": "[海滩]乌萨奇"
  },
  {
   "version": "250820.1.0",
@@ -653,7 +734,8 @@
   "viewConditionId": 72006210,
   "assetId": 84,
   "index": 84,
-  "nameTextKey": 337939882
+  "nameTextKey": 337939882,
+  "chinese": "[海滩]飞鼠"
  },
  {
   "version": "250820.1.0",
@@ -661,7 +743,8 @@
   "viewConditionId": 72006210,
   "assetId": 85,
   "index": 85,
-  "nameTextKey": 1663286588
+  "nameTextKey": 1663286588,
+  "chinese": "[海滩]栗子馒头"
  },
  {
   "version": "250810.1.0",
@@ -669,7 +752,8 @@
   "viewConditionId": 72006110,
   "assetId": 86,
   "index": 86,
-  "nameTextKey": -97850234
+  "nameTextKey": -97850234,
+  "chinese": "[海滩]獭师"
  },
  {
   "version": "250810.1.0",
@@ -677,7 +761,8 @@
   "viewConditionId": 72006110,
   "assetId": 87,
   "index": 87,
-  "nameTextKey": -1926374384
+  "nameTextKey": -1926374384,
+  "chinese": "[海滩]狮萨"
  },
  {
   "version": "250910.1.0",
@@ -685,7 +770,8 @@
   "viewConditionId": 71006090,
   "assetId": 2006,
   "index": 2006,
-  "nameTextKey": -1728401915
+  "nameTextKey": -1728401915,
+  "chinese": "季票6"
  },
  {
   "version": "250910.1.0",
@@ -693,7 +779,8 @@
   "viewConditionId": 72007110,
   "assetId": 3013,
   "index": 3013,
-  "nameTextKey": 1228344494
+  "nameTextKey": 1228344494,
+  "chinese": "水果活动护照（前半）"
  },
  {
   "version": "250930.1.0",
@@ -701,7 +788,8 @@
   "viewConditionId": 72007210,
   "assetId": 3014,
   "index": 3014,
-  "nameTextKey": -682387187
+  "nameTextKey": -682387187,
+  "chinese": "水果活动护照（后半）"
  },
  {
   "version": "250930.1.0",
@@ -709,7 +797,8 @@
   "viewConditionId": 72007210,
   "assetId": 90,
   "index": 90,
-  "nameTextKey": 173177074
+  "nameTextKey": 173177074,
+  "chinese": "收藏：水果"
  },
  {
   "version": "250910.1.0",
@@ -717,7 +806,8 @@
   "viewConditionId": 72007110,
   "assetId": 91,
   "index": 91,
-  "nameTextKey": 2102741092
+  "nameTextKey": 2102741092,
+  "chinese": "[水果]吉伊卡哇"
  },
  {
   "version": "250930.1.0",
@@ -725,7 +815,8 @@
   "viewConditionId": 72007210,
   "assetId": 92,
   "index": 92,
-  "nameTextKey": -463726114
+  "nameTextKey": -463726114,
+  "chinese": "[水果]哈奇喵"
  },
  {
   "version": "250910.1.0",
@@ -733,7 +824,8 @@
   "viewConditionId": 72007110,
   "assetId": 93,
   "index": 93,
-  "nameTextKey": -1822742200
+  "nameTextKey": -1822742200,
+  "chinese": "[水果]乌萨奇"
  },
  {
   "version": "250930.1.0",
@@ -741,7 +833,8 @@
   "viewConditionId": 72007210,
   "assetId": 94,
   "index": 94,
-  "nameTextKey": 222280939
+  "nameTextKey": 222280939,
+  "chinese": "[水果]飞鼠"
  },
  {
   "version": "250910.1.0",
@@ -749,7 +842,8 @@
   "viewConditionId": 72007110,
   "assetId": 95,
   "index": 95,
-  "nameTextKey": 2050526333
+  "nameTextKey": 2050526333,
+  "chinese": "[水果]栗子馒头"
  },
  {
   "version": "250930.1.0",
@@ -757,7 +851,8 @@
   "viewConditionId": 72007210,
   "assetId": 96,
   "index": 96,
-  "nameTextKey": -483271225
+  "nameTextKey": -483271225,
+  "chinese": "[水果]獭师"
  },
  {
   "version": "250910.1.0",
@@ -765,7 +860,8 @@
   "viewConditionId": 72007110,
   "assetId": 97,
   "index": 97,
-  "nameTextKey": -1808339631
+  "nameTextKey": -1808339631,
+  "chinese": "[水果]狮萨"
  },
  {
   "version": "251020.1.0",
@@ -773,7 +869,8 @@
   "viewConditionId": 12510201,
   "assetId": 100,
   "index": 100,
-  "nameTextKey": -632116852
+  "nameTextKey": -632116852,
+  "chinese": "收藏：爱丽丝"
  },
  {
   "version": "251010.1.0",
@@ -781,7 +878,8 @@
   "viewConditionId": 12510101,
   "assetId": 101,
   "index": 101,
-  "nameTextKey": -1386899174
+  "nameTextKey": -1386899174,
+  "chinese": "[爱丽丝]吉伊卡哇"
  },
  {
   "version": "251010.1.0",
@@ -789,7 +887,8 @@
   "viewConditionId": 12510101,
   "assetId": 102,
   "index": 102,
-  "nameTextKey": 878495904
+  "nameTextKey": 878495904,
+  "chinese": "[爱丽丝]哈奇喵"
  },
  {
   "version": "251020.1.0",
@@ -797,7 +896,8 @@
   "viewConditionId": 12510201,
   "assetId": 103,
   "index": 103,
-  "nameTextKey": 1130100790
+  "nameTextKey": 1130100790,
+  "chinese": "[爱丽丝]乌萨奇"
  },
  {
   "version": "251020.1.0",
@@ -805,7 +905,8 @@
   "viewConditionId": 12510201,
   "assetId": 104,
   "index": 104,
-  "nameTextKey": -583045739
+  "nameTextKey": -583045739,
+  "chinese": "[爱丽丝]飞鼠"
  },
  {
   "version": "251020.1.0",
@@ -813,7 +914,8 @@
   "viewConditionId": 12510201,
   "assetId": 105,
   "index": 105,
-  "nameTextKey": -1439146749
+  "nameTextKey": -1439146749,
+  "chinese": "[爱丽丝]栗子馒头"
  },
  {
   "version": "251010.1.0",
@@ -821,7 +923,8 @@
   "viewConditionId": 12510101,
   "assetId": 106,
   "index": 106,
-  "nameTextKey": 858852537
+  "nameTextKey": 858852537,
+  "chinese": "[爱丽丝]獭师"
  },
  {
   "version": "251010.1.0",
@@ -829,7 +932,8 @@
   "viewConditionId": 12510101,
   "assetId": 107,
   "index": 107,
-  "nameTextKey": 1144405039
+  "nameTextKey": 1144405039,
+  "chinese": "[爱丽丝]狮萨"
  },
  {
   "version": "251010.1.0",
@@ -837,7 +941,8 @@
   "viewConditionId": 71007090,
   "assetId": 2007,
   "index": 2007,
-  "nameTextKey": -268591469
+  "nameTextKey": -268591469,
+  "chinese": "半周年纪念护照"
  },
  {
   "version": "251010.1.0",
@@ -845,7 +950,8 @@
   "viewConditionId": 72008110,
   "assetId": 3015,
   "index": 3015,
-  "nameTextKey": -1605064293
+  "nameTextKey": -1605064293,
+  "chinese": "爱丽丝活动护照"
  },
  {
   "version": "251110.1.0",
@@ -853,7 +959,8 @@
   "viewConditionId": 12511101,
   "assetId": 110,
   "index": 110,
-  "nameTextKey": -1018586931
+  "nameTextKey": -1018586931,
+  "chinese": "收藏：万圣节"
  },
  {
   "version": "251030.1.0",
@@ -861,7 +968,8 @@
   "viewConditionId": 12510301,
   "assetId": 111,
   "index": 111,
-  "nameTextKey": -1269913509
+  "nameTextKey": -1269913509,
+  "chinese": "[万圣节]吉伊卡哇"
  },
  {
   "version": "251110.1.0",
@@ -869,7 +977,8 @@
   "viewConditionId": 12511101,
   "assetId": 112,
   "index": 112,
-  "nameTextKey": 759691745
+  "nameTextKey": 759691745,
+  "chinese": "[万圣节]哈奇喵"
  },
  {
   "version": "251030.1.0",
@@ -877,7 +986,8 @@
   "viewConditionId": 12510301,
   "assetId": 113,
   "index": 113,
-  "nameTextKey": 1514195319
+  "nameTextKey": 1514195319,
+  "chinese": "[万圣节]乌萨奇"
  },
  {
   "version": "251110.1.0",
@@ -885,7 +995,8 @@
   "viewConditionId": 12511101,
   "assetId": 114,
   "index": 114,
-  "nameTextKey": -1004249900
+  "nameTextKey": -1004249900,
+  "chinese": "[万圣节]飞鼠"
  },
  {
   "version": "251110.1.0",
@@ -893,7 +1004,8 @@
   "viewConditionId": 12511101,
   "assetId": 115,
   "index": 115,
-  "nameTextKey": -1289524158
+  "nameTextKey": -1289524158,
+  "chinese": "[万圣节]栗子馒头"
  },
  {
   "version": "251030.1.0",
@@ -901,7 +1013,8 @@
   "viewConditionId": 12510301,
   "assetId": 116,
   "index": 116,
-  "nameTextKey": 707411448
+  "nameTextKey": 707411448,
+  "chinese": "[万圣节]獭师"
  },
  {
   "version": "251030.1.0",
@@ -909,7 +1022,8 @@
   "viewConditionId": 12510301,
   "assetId": 117,
   "index": 117,
-  "nameTextKey": 1563233646
+  "nameTextKey": 1563233646,
+  "chinese": "[万圣节]狮萨"
  },
  {
   "version": "251030.1.0",
@@ -917,7 +1031,8 @@
   "viewConditionId": 72009110,
   "assetId": 3016,
   "index": 3017,
-  "nameTextKey": 1314572471
+  "nameTextKey": 1314572471,
+  "chinese": "万圣节活动护照（前半）"
  },
  {
   "version": "251110.1.0",
@@ -925,7 +1040,8 @@
   "viewConditionId": 72009210,
   "assetId": 3017,
   "index": 3018,
-  "nameTextKey": -555363034
+  "nameTextKey": -555363034,
+  "chinese": "万圣节活动护照（后半）"
  },
  {
   "version": "251110.1.0",
@@ -933,7 +1049,8 @@
   "viewConditionId": 71008090,
   "assetId": 2008,
   "index": 2008,
-  "nameTextKey": 2135065346
+  "nameTextKey": 2135065346,
+  "chinese": "季票7"
  },
  {
   "version": "251210.1.0",
@@ -941,7 +1058,8 @@
   "viewConditionId": 71009090,
   "assetId": 2009,
   "index": 2009,
-  "nameTextKey": 138785684
+  "nameTextKey": 138785684,
+  "chinese": "季票8"
  },
  {
   "version": "251230.1.0",
@@ -949,7 +1067,8 @@
   "viewConditionId": 12512301,
   "assetId": 120,
   "index": 120,
-  "nameTextKey": -396047602
+  "nameTextKey": -396047602,
+  "chinese": "收藏：圣诞节"
  },
  {
   "version": "251210.1.0",
@@ -957,7 +1076,8 @@
   "viewConditionId": 12512101,
   "assetId": 121,
   "index": 121,
-  "nameTextKey": -1620837480
+  "nameTextKey": -1620837480,
+  "chinese": "[圣诞节]吉伊卡哇"
  },
  {
   "version": "251210.1.0",
@@ -965,7 +1085,8 @@
   "viewConditionId": 12512101,
   "assetId": 122,
   "index": 122,
-  "nameTextKey": 107653666
+  "nameTextKey": 107653666,
+  "chinese": "[圣诞节]哈奇喵"
  },
  {
   "version": "251230.1.0",
@@ -973,7 +1094,8 @@
   "viewConditionId": 12512301,
   "assetId": 123,
   "index": 123,
-  "nameTextKey": 1903008436
+  "nameTextKey": 1903008436,
+  "chinese": "[圣诞节]乌萨奇"
  },
  {
   "version": "251210.1.0",
@@ -981,7 +1103,8 @@
   "viewConditionId": 12512101,
   "assetId": 124,
   "index": 124,
-  "nameTextKey": -284618985
+  "nameTextKey": -284618985,
+  "chinese": "[圣诞节]飞鼠"
  },
  {
   "version": "251230.1.0",
@@ -989,7 +1112,8 @@
   "viewConditionId": 12512301,
   "assetId": 125,
   "index": 125,
-  "nameTextKey": -1743896703
+  "nameTextKey": -1743896703,
+  "chinese": "[圣诞节]栗子馒头"
  },
  {
   "version": "251210.1.0",
@@ -997,7 +1121,8 @@
   "viewConditionId": 12512101,
   "assetId": 126,
   "index": 126,
-  "nameTextKey": 17264187
+  "nameTextKey": 17264187,
+  "chinese": "[圣诞节]獭师"
  },
  {
   "version": "251230.1.0",
@@ -1005,7 +1130,8 @@
   "viewConditionId": 12512301,
   "assetId": 127,
   "index": 127,
-  "nameTextKey": 1979735725
+  "nameTextKey": 1979735725,
+  "chinese": "[圣诞节]狮萨"
  },
  {
   "version": "251210.1.0",
@@ -1013,7 +1139,8 @@
   "viewConditionId": 72010110,
   "assetId": 3018,
   "index": 3019,
-  "nameTextKey": -1444747856
+  "nameTextKey": -1444747856,
+  "chinese": "圣诞节活动护照（前半）"
  },
  {
   "version": "251230.1.0",
@@ -1021,7 +1148,8 @@
   "viewConditionId": 72010210,
   "assetId": 3019,
   "index": 3020,
-  "nameTextKey": -82637097
+  "nameTextKey": -82637097,
+  "chinese": "圣诞节活动护照（后半）"
  },
  {
   "version": "260110.1.0",
@@ -1029,7 +1157,8 @@
   "viewConditionId": 12601101,
   "assetId": 130,
   "index": 130,
-  "nameTextKey": -243271089
+  "nameTextKey": -243271089,
+  "chinese": "收藏：新春"
  },
  {
   "version": "260110.1.0",
@@ -1037,7 +1166,8 @@
   "viewConditionId": 12601101,
   "assetId": 131,
   "index": 131,
-  "nameTextKey": -2038904103
+  "nameTextKey": -2038904103,
+  "chinese": "[新春]吉伊卡哇"
  },
  {
   "version": "260110.1.0",
@@ -1045,7 +1175,8 @@
   "viewConditionId": 12601101,
   "assetId": 132,
   "index": 132,
-  "nameTextKey": 527539043
+  "nameTextKey": 527539043,
+  "chinese": "[新春]哈奇喵"
  },
  {
   "version": "260110.1.0",
@@ -1053,7 +1184,8 @@
   "viewConditionId": 12601101,
   "assetId": 133,
   "index": 133,
-  "nameTextKey": 1752607733
+  "nameTextKey": 1752607733,
+  "chinese": "[新春]乌萨奇"
  },
  {
   "version": "260110.1.0",
@@ -1061,7 +1193,8 @@
   "viewConditionId": 12601101,
   "assetId": 134,
   "index": 134,
-  "nameTextKey": -166576554
+  "nameTextKey": -166576554,
+  "chinese": "[新春]飞鼠"
  },
  {
   "version": "260110.1.0",
@@ -1069,7 +1202,8 @@
   "viewConditionId": 12601101,
   "assetId": 135,
   "index": 135,
-  "nameTextKey": -2129326400
+  "nameTextKey": -2129326400,
+  "chinese": "[新春]栗子馒头"
  },
  {
   "version": "260110.1.0",
@@ -1077,7 +1211,8 @@
   "viewConditionId": 12601101,
   "assetId": 136,
   "index": 136,
-  "nameTextKey": 404512634
+  "nameTextKey": 404512634,
+  "chinese": "[新春]獭师"
  },
  {
   "version": "260110.1.0",
@@ -1085,7 +1220,8 @@
   "viewConditionId": 12601101,
   "assetId": 137,
   "index": 137,
-  "nameTextKey": 1864069100
+  "nameTextKey": 1864069100,
+  "chinese": "[新春]狮萨"
  },
  {
   "version": "260110.1.0",
@@ -1093,7 +1229,8 @@
   "viewConditionId": 72011110,
   "assetId": 3020,
   "index": 3021,
-  "nameTextKey": -1944830399
+  "nameTextKey": -1944830399,
+  "chinese": "新春活动护照"
  },
  {
   "version": "260130.1.0",
@@ -1101,7 +1238,8 @@
   "viewConditionId": 2601307,
   "assetId": 4003,
   "index": 4003,
-  "nameTextKey": -839187114
+  "nameTextKey": -839187114,
+  "chinese": "乌萨奇生日'26"
  },
  {
   "version": "260230.1.0",
@@ -1109,7 +1247,8 @@
   "viewConditionId": 12602301,
   "assetId": 140,
   "index": 140,
-  "nameTextKey": -1103205240
+  "nameTextKey": -1103205240,
+  "chinese": "收藏：恐龙"
  },
  {
   "version": "260210.1.0",
@@ -1117,7 +1256,8 @@
   "viewConditionId": 12602101,
   "assetId": 141,
   "index": 141,
-  "nameTextKey": -918987746
+  "nameTextKey": -918987746,
+  "chinese": "[恐龙]吉伊卡哇"
  },
  {
   "version": "260210.1.0",
@@ -1125,7 +1265,8 @@
   "viewConditionId": 12602101,
   "assetId": 142,
   "index": 142,
-  "nameTextKey": 1345326500
+  "nameTextKey": 1345326500,
+  "chinese": "[恐龙]哈奇喵"
  },
  {
   "version": "260230.1.0",
@@ -1133,7 +1274,8 @@
   "viewConditionId": 12602301,
   "assetId": 143,
   "index": 143,
-  "nameTextKey": 657931570
+  "nameTextKey": 657931570,
+  "chinese": "[恐龙]乌萨奇"
  },
  {
   "version": "260230.1.0",
@@ -1141,7 +1283,8 @@
   "viewConditionId": 12602301,
   "assetId": 144,
   "index": 144,
-  "nameTextKey": -1185699695
+  "nameTextKey": -1185699695,
+  "chinese": "[恐龙]飞鼠"
  },
  {
   "version": "260230.1.0",
@@ -1149,7 +1292,8 @@
   "viewConditionId": 12602301,
   "assetId": 145,
   "index": 145,
-  "nameTextKey": -833316857
+  "nameTextKey": -833316857,
+  "chinese": "[恐龙]栗子馒头"
  },
  {
   "version": "260210.1.0",
@@ -1157,7 +1301,8 @@
   "viewConditionId": 12602101,
   "assetId": 146,
   "index": 146,
-  "nameTextKey": 1465764285
+  "nameTextKey": 1465764285,
+  "chinese": "[恐龙]獭师"
  },
  {
   "version": "260210.1.0",
@@ -1165,7 +1310,8 @@
   "viewConditionId": 12602101,
   "assetId": 147,
   "index": 147,
-  "nameTextKey": 542832939
+  "nameTextKey": 542832939,
+  "chinese": "[恐龙]狮萨"
  },
  {
   "version": "260210.1.0",
@@ -1173,7 +1319,8 @@
   "viewConditionId": 72012110,
   "assetId": 3021,
   "index": 3022,
-  "nameTextKey": 354250747
+  "nameTextKey": 354250747,
+  "chinese": "恐龙活动护照（前半）"
  },
  {
   "version": "260230.1.0",
@@ -1181,7 +1328,8 @@
   "viewConditionId": 72012210,
   "assetId": 3022,
   "index": 3023,
-  "nameTextKey": 1645895533
+  "nameTextKey": 1645895533,
+  "chinese": "恐龙活动护照（后半）"
  },
  {
   "version": "260330.1.0",
@@ -1189,7 +1337,8 @@
   "viewConditionId": 12603301,
   "assetId": 150,
   "index": 150,
-  "nameTextKey": -1490723383
+  "nameTextKey": -1490723383,
+  "chinese": "收藏：扮演店家"
  },
  {
   "version": "260310.1.0",
@@ -1197,7 +1346,8 @@
   "viewConditionId": 12603101,
   "assetId": 151,
   "index": 151,
-  "nameTextKey": -803050145
+  "nameTextKey": -803050145,
+  "chinese": "[扮演店家]吉伊卡哇"
  },
  {
   "version": "260310.1.0",
@@ -1205,7 +1355,8 @@
   "viewConditionId": 12603101,
   "assetId": 152,
   "index": 152,
-  "nameTextKey": 1227570405
+  "nameTextKey": 1227570405,
+  "chinese": "[扮演店家]哈奇喵"
  },
  {
   "version": "260330.1.0",
@@ -1213,7 +1364,8 @@
   "viewConditionId": 12603301,
   "assetId": 153,
   "index": 153,
-  "nameTextKey": 1043074163
+  "nameTextKey": 1043074163,
+  "chinese": "[扮演店家]乌萨奇"
  },
  {
   "version": "260330.1.0",
@@ -1221,7 +1373,8 @@
   "viewConditionId": 12603301,
   "assetId": 154,
   "index": 154,
-  "nameTextKey": -1605854768
+  "nameTextKey": -1605854768,
+  "chinese": "[扮演店家]飞鼠"
  },
  {
   "version": "260310.1.0",
@@ -1229,7 +1382,8 @@
   "viewConditionId": 12603101,
   "assetId": 155,
   "index": 155,
-  "nameTextKey": -682645178
+  "nameTextKey": -682645178,
+  "chinese": "[扮演店家]栗子馒头"
  },
  {
   "version": "260330.1.0",
@@ -1237,7 +1391,8 @@
   "viewConditionId": 12603301,
   "assetId": 156,
   "index": 156,
-  "nameTextKey": 1313274108
+  "nameTextKey": 1313274108,
+  "chinese": "[扮演店家]獭师"
  },
  {
   "version": "260310.1.0",
@@ -1245,7 +1400,8 @@
   "viewConditionId": 12603101,
   "assetId": 157,
   "index": 157,
-  "nameTextKey": 960612458
+  "nameTextKey": 960612458,
+  "chinese": "[扮演店家]狮萨"
  },
  {
   "version": "260310.1.0",
@@ -1253,7 +1409,8 @@
   "viewConditionId": 72013110,
   "assetId": 3023,
   "index": 3024,
-  "nameTextKey": -58799410
+  "nameTextKey": -58799410,
+  "chinese": "扮演店家活动护照（前半）"
  },
  {
   "version": "260330.1.0",
@@ -1261,7 +1418,8 @@
   "viewConditionId": 72013210,
   "assetId": 3024,
   "index": 3025,
-  "nameTextKey": -1954940328
+  "nameTextKey": -1954940328,
+  "chinese": "扮演店家活动护照（后半）"
  },
  {
   "version": "260420.1.0",
@@ -1269,7 +1427,8 @@
   "viewConditionId": 12604301,
   "assetId": 160,
   "index": 160,
-  "nameTextKey": -1945629174
+  "nameTextKey": -1945629174,
+  "chinese": "收藏：白雪公主"
  },
  {
   "version": "260410.1.0",
@@ -1277,7 +1436,8 @@
   "viewConditionId": 12604101,
   "assetId": 161,
   "index": 161,
-  "nameTextKey": -82887012
+  "nameTextKey": -82887012,
+  "chinese": "[白雪公主]吉伊卡哇"
  },
  {
   "version": "260420.1.0",
@@ -1285,7 +1445,8 @@
   "viewConditionId": 12604301,
   "assetId": 162,
   "index": 162,
-  "nameTextKey": 1644588838
+  "nameTextKey": 1644588838,
+  "chinese": "[白雪公主]哈奇喵"
  },
  {
   "version": "260410.1.0",
@@ -1293,7 +1454,8 @@
   "viewConditionId": 12604101,
   "assetId": 163,
   "index": 163,
-  "nameTextKey": 352411568
+  "nameTextKey": 352411568,
+  "chinese": "[白雪公主]乌萨奇"
  },
  {
   "version": "260410.1.0",
@@ -1301,7 +1463,8 @@
   "viewConditionId": 12604101,
   "assetId": 164,
   "index": 164,
-  "nameTextKey": -1956263405
+  "nameTextKey": -1956263405,
+  "chinese": "[白雪公主]飞鼠"
  },
  {
   "version": "260420.1.0",
@@ -1309,7 +1472,8 @@
   "viewConditionId": 12604301,
   "assetId": 165,
   "index": 165,
-  "nameTextKey": -60622203
+  "nameTextKey": -60622203,
+  "chinese": "[白雪公主]栗子馒头"
  },
  {
   "version": "260420.1.0",
@@ -1317,7 +1481,8 @@
   "viewConditionId": 12604301,
   "assetId": 166,
   "index": 166,
-  "nameTextKey": 1701555007
+  "nameTextKey": 1701555007,
+  "chinese": "[白雪公主]獭师"
  },
  {
   "version": "260410.1.0",
@@ -1325,7 +1490,8 @@
   "viewConditionId": 12604101,
   "assetId": 167,
   "index": 167,
-  "nameTextKey": 309107625
+  "nameTextKey": 309107625,
+  "chinese": "[白雪公主]狮萨"
  },
  {
   "version": "260410.1.0",
@@ -1333,7 +1499,8 @@
   "viewConditionId": 72014110,
   "assetId": 3025,
   "index": 3026,
-  "nameTextKey": 309373922
+  "nameTextKey": 309373922,
+  "chinese": "白雪公主活动护照"
  },
  {
   "version": "260530.1.0",
@@ -1341,7 +1508,8 @@
   "viewConditionId": 12605301,
   "assetId": 170,
   "index": 170,
-  "nameTextKey": -1793900725
+  "nameTextKey": -1793900725,
+  "chinese": "收藏：便当"
  },
  {
   "version": "260510.1.0",
@@ -1349,7 +1517,8 @@
   "viewConditionId": 12605101,
   "assetId": 171,
   "index": 171,
-  "nameTextKey": -502001699
+  "nameTextKey": -502001699,
+  "chinese": "[便当]吉伊卡哇"
  },
  {
   "version": "260510.1.0",
@@ -1357,7 +1526,8 @@
   "viewConditionId": 12605101,
   "assetId": 172,
   "index": 172,
-  "nameTextKey": 2065522279
+  "nameTextKey": 2065522279,
+  "chinese": "[便当]哈奇喵"
  },
  {
   "version": "260530.1.0",
@@ -1365,7 +1535,8 @@
   "viewConditionId": 12605301,
   "assetId": 173,
   "index": 173,
-  "nameTextKey": 203058929
+  "nameTextKey": 203058929,
+  "chinese": "[便当]乌萨奇"
  },
  {
   "version": "260530.1.0",
@@ -1373,7 +1544,8 @@
   "viewConditionId": 12605301,
   "assetId": 174,
   "index": 174,
-  "nameTextKey": -1837171886
+  "nameTextKey": -1837171886,
+  "chinese": "[便当]飞鼠"
  },
  {
   "version": "260510.1.0",
@@ -1381,7 +1553,8 @@
   "viewConditionId": 12605101,
   "assetId": 175,
   "index": 175,
-  "nameTextKey": -445002812
+  "nameTextKey": -445002812,
+  "chinese": "[便当]栗子馒头"
  },
  {
   "version": "260510.1.0",
@@ -1389,7 +1562,8 @@
   "viewConditionId": 12605101,
   "assetId": 176,
   "index": 176,
-  "nameTextKey": 2087754366
+  "nameTextKey": 2087754366,
+  "chinese": "[便当]獭师"
  },
  {
   "version": "260530.1.0",
@@ -1397,7 +1571,8 @@
   "viewConditionId": 12605301,
   "assetId": 177,
   "index": 177,
-  "nameTextKey": 192391912
+  "nameTextKey": 192391912,
+  "chinese": "[便当]狮萨"
  },
  {
   "version": "260510.1.0",
@@ -1405,7 +1580,8 @@
   "viewConditionId": 72015110,
   "assetId": 3027,
   "index": 3027,
-  "nameTextKey": 1702337396
+  "nameTextKey": 1702337396,
+  "chinese": "便当活动护照"
  },
  {
   "version": "260510.1.0",
@@ -1413,7 +1589,8 @@
   "viewConditionId": 2605107,
   "assetId": 4004,
   "index": 4004,
-  "nameTextKey": 1402966261
+  "nameTextKey": 1402966261,
+  "chinese": "吉伊卡哇&哈奇喵生日'26"
  },
  {
   "version": "260630.1.0",
@@ -1421,7 +1598,8 @@
   "viewConditionId": 12606301,
   "assetId": 180,
   "index": 180,
-  "nameTextKey": 311108484
+  "nameTextKey": 311108484,
+  "chinese": "收藏：雨天"
  },
  {
   "version": "260610.1.0",
@@ -1429,7 +1607,8 @@
   "viewConditionId": 12606101,
   "assetId": 181,
   "index": 181,
-  "nameTextKey": 1703678738
+  "nameTextKey": 1703678738,
+  "chinese": "[雨天]吉伊卡哇"
  },
  {
   "version": "260630.1.0",
@@ -1437,7 +1616,8 @@
   "viewConditionId": 12606301,
   "assetId": 182,
   "index": 182,
-  "nameTextKey": -58375512
+  "nameTextKey": -58375512,
+  "chinese": "[雨天]哈奇喵"
  },
  {
   "version": "260610.1.0",
@@ -1445,7 +1625,8 @@
   "viewConditionId": 12606101,
   "assetId": 183,
   "index": 183,
-  "nameTextKey": -1954385346
+  "nameTextKey": -1954385346,
+  "chinese": "[雨天]乌萨奇"
  },
  {
   "version": "260630.1.0",
@@ -1453,7 +1634,8 @@
   "viewConditionId": 12606301,
   "assetId": 184,
   "index": 184,
-  "nameTextKey": 367454109
+  "nameTextKey": 367454109,
+  "chinese": "[雨天]飞鼠"
  },
  {
   "version": "260630.1.0",
@@ -1461,7 +1643,8 @@
   "viewConditionId": 12606301,
   "assetId": 185,
   "index": 185,
-  "nameTextKey": 1658967819
+  "nameTextKey": 1658967819,
+  "chinese": "[雨天]栗子馒头"
  },
  {
   "version": "260610.1.0",
@@ -1469,7 +1652,8 @@
   "viewConditionId": 12606101,
   "assetId": 186,
   "index": 186,
-  "nameTextKey": -68647247
+  "nameTextKey": -68647247,
+  "chinese": "[雨天]獭师"
  },
  {
   "version": "260610.1.0",
@@ -1477,7 +1661,8 @@
   "viewConditionId": 12606101,
   "assetId": 187,
   "index": 187,
-  "nameTextKey": -1930447321
+  "nameTextKey": -1930447321,
+  "chinese": "[雨天]狮萨"
  },
  {
   "version": "260610.1.0",
@@ -1485,7 +1670,8 @@
   "viewConditionId": 72016110,
   "assetId": 3028,
   "index": 3028,
-  "nameTextKey": -171407643
+  "nameTextKey": -171407643,
+  "chinese": "雨天活动护照"
  },
  {
   "version": "260710.1.0",
@@ -1493,7 +1679,8 @@
   "viewConditionId": 12607101,
   "assetId": 190,
   "index": 190,
-  "nameTextKey": 193991365
+  "nameTextKey": 193991365,
+  "chinese": "收藏：冰淇淋"
  },
  {
   "version": "260710.1.0",
@@ -1501,7 +1688,8 @@
   "viewConditionId": 12607101,
   "assetId": 191,
   "index": 191,
-  "nameTextKey": 2090279507
+  "nameTextKey": 2090279507,
+  "chinese": "[冰淇淋]吉伊卡哇"
  },
  {
   "version": "260710.1.0",
@@ -1509,7 +1697,8 @@
   "viewConditionId": 12607101,
   "assetId": 192,
   "index": 192,
-  "nameTextKey": -442600471
+  "nameTextKey": -442600471,
+  "chinese": "[冰淇淋]哈奇喵"
  },
  {
   "version": "260710.1.0",
@@ -1517,7 +1706,8 @@
   "viewConditionId": 12607101,
   "assetId": 193,
   "index": 193,
-  "nameTextKey": -1835449473
+  "nameTextKey": -1835449473,
+  "chinese": "[冰淇淋]乌萨奇"
  },
  {
   "version": "260710.1.0",
@@ -1525,7 +1715,8 @@
   "viewConditionId": 12607101,
   "assetId": 194,
   "index": 194,
-  "nameTextKey": 217962204
+  "nameTextKey": 217962204,
+  "chinese": "[冰淇淋]飞鼠"
  },
  {
   "version": "260710.1.0",
@@ -1533,7 +1724,8 @@
   "viewConditionId": 12607101,
   "assetId": 195,
   "index": 195,
-  "nameTextKey": 2080040522
+  "nameTextKey": 2080040522,
+  "chinese": "[冰淇淋]栗子馒头"
  },
  {
   "version": "260710.1.0",
@@ -1541,7 +1733,8 @@
   "viewConditionId": 12607101,
   "assetId": 196,
   "index": 196,
-  "nameTextKey": -487344144
+  "nameTextKey": -487344144,
+  "chinese": "[冰淇淋]獭师"
  },
  {
   "version": "260710.1.0",
@@ -1549,7 +1742,8 @@
   "viewConditionId": 12607101,
   "assetId": 197,
   "index": 197,
-  "nameTextKey": -1779136666
+  "nameTextKey": -1779136666,
+  "chinese": "[冰淇淋]狮萨"
  },
  {
   "version": "260710.1.0",
@@ -1557,7 +1751,8 @@
   "viewConditionId": 12607101,
   "assetId": 3029,
   "index": 3029,
-  "nameTextKey": -2100316557
+  "nameTextKey": -2100316557,
+  "chinese": "冰淇淋活动护照"
  },
  {
   "version": "260810.1.0",
@@ -1565,7 +1760,8 @@
   "viewConditionId": 12608101,
   "assetId": 200,
   "index": 200,
-  "nameTextKey": -669771819
+  "nameTextKey": -669771819,
+  "chinese": "收藏：人鱼岛"
  },
  {
   "version": "260810.1.0",
@@ -1573,7 +1769,8 @@
   "viewConditionId": 12608101,
   "assetId": 201,
   "index": 201,
-  "nameTextKey": -1357699261
+  "nameTextKey": -1357699261,
+  "chinese": "[人鱼岛]吉伊卡哇"
  },
  {
   "version": "260810.1.0",
@@ -1581,7 +1778,8 @@
   "viewConditionId": 12608101,
   "assetId": 202,
   "index": 202,
-  "nameTextKey": 907704057
+  "nameTextKey": 907704057,
+  "chinese": "[人鱼岛]哈奇喵"
  },
  {
   "version": "260810.1.0",
@@ -1589,7 +1787,8 @@
   "viewConditionId": 12608101,
   "assetId": 203,
   "index": 203,
-  "nameTextKey": 1092437615
+  "nameTextKey": 1092437615,
+  "chinese": "[人鱼岛]乌萨奇"
  },
  {
   "version": "260810.1.0",
@@ -1597,7 +1796,8 @@
   "viewConditionId": 12608101,
   "assetId": 204,
   "index": 204,
-  "nameTextKey": -545664052
+  "nameTextKey": -545664052,
+  "chinese": "[人鱼岛]飞鼠"
  },
  {
   "version": "260810.1.0",
@@ -1605,7 +1805,8 @@
   "viewConditionId": 12608101,
   "assetId": 205,
   "index": 205,
-  "nameTextKey": -1468079270
+  "nameTextKey": -1468079270,
+  "chinese": "[人鱼岛]栗子馒头"
  },
  {
   "version": "260810.1.0",
@@ -1613,7 +1814,8 @@
   "viewConditionId": 12608101,
   "assetId": 206,
   "index": 206,
-  "nameTextKey": 829928160
+  "nameTextKey": 829928160,
+  "chinese": "[人鱼岛]獭师"
  },
  {
   "version": "260810.1.0",
@@ -1621,7 +1823,8 @@
   "viewConditionId": 12608101,
   "assetId": 207,
   "index": 207,
-  "nameTextKey": 1181778550
+  "nameTextKey": 1181778550,
+  "chinese": "[人鱼岛]狮萨"
  },
  {
   "version": "260810.1.0",
@@ -1629,7 +1832,8 @@
   "viewConditionId": 12608101,
   "assetId": 3030,
   "index": 3030,
-  "nameTextKey": -502775914
+  "nameTextKey": -502775914,
+  "chinese": "人鱼岛活动护照"
  },
  {
   "version": "260910.1.0",
@@ -1637,7 +1841,8 @@
   "viewConditionId": 12609101,
   "assetId": 210,
   "index": 210,
-  "nameTextKey": -1055971692
+  "nameTextKey": -1055971692,
+  "chinese": "收藏：赏月"
  },
  {
   "version": "260910.1.0",
@@ -1645,7 +1850,8 @@
   "viewConditionId": 12609101,
   "assetId": 211,
   "index": 211,
-  "nameTextKey": -1240984062
+  "nameTextKey": -1240984062,
+  "chinese": "[赏月]吉伊卡哇"
  },
  {
   "version": "260910.1.0",
@@ -1653,7 +1859,8 @@
   "viewConditionId": 12609101,
   "assetId": 212,
   "index": 212,
-  "nameTextKey": 788613048
+  "nameTextKey": 788613048,
+  "chinese": "[赏月]哈奇喵"
  },
  {
   "version": "260910.1.0",
@@ -1661,7 +1868,8 @@
   "viewConditionId": 12609101,
   "assetId": 213,
   "index": 213,
-  "nameTextKey": 1476818734
+  "nameTextKey": 1476818734,
+  "chinese": "[赏月]乌萨奇"
  },
  {
   "version": "260910.1.0",
@@ -1669,7 +1877,8 @@
   "viewConditionId": 12609101,
   "assetId": 214,
   "index": 214,
-  "nameTextKey": -966598003
+  "nameTextKey": -966598003,
+  "chinese": "[赏月]飞鼠"
  },
  {
   "version": "260910.1.0",
@@ -1677,7 +1886,8 @@
   "viewConditionId": 12609101,
   "assetId": 215,
   "index": 215,
-  "nameTextKey": -1318727141
+  "nameTextKey": -1318727141,
+  "chinese": "[赏月]栗子馒头"
  },
  {
   "version": "260910.1.0",
@@ -1685,7 +1895,8 @@
   "viewConditionId": 12609101,
   "assetId": 216,
   "index": 216,
-  "nameTextKey": 678200225
+  "nameTextKey": 678200225,
+  "chinese": "[赏月]獭师"
  },
  {
   "version": "260910.1.0",
@@ -1693,7 +1904,8 @@
   "viewConditionId": 12609101,
   "assetId": 217,
   "index": 217,
-  "nameTextKey": 1600893751
+  "nameTextKey": 1600893751,
+  "chinese": "[赏月]狮萨"
  },
  {
   "version": "260910.1.0",
@@ -1701,6 +1913,7 @@
   "viewConditionId": 12609101,
   "assetId": 3031,
   "index": 3031,
-  "nameTextKey": -1794175232
+  "nameTextKey": -1794175232,
+  "chinese": "赏月活动护照"
  }
 ]
