@@ -262,11 +262,11 @@ function* permutations(arr) {
 /* ============ data indexes ============ */
 const COSTUME_BY_ID = {};
 for (const c of DATA.costumes) COSTUME_BY_ID[c.id] = c;
-const CHAR_NAME = {};
-for (const ch of DATA.characters) CHAR_NAME[ch.id] = ch.main ? 'Chiikawa' : `Char ${ch.id}`;
+const CHAR_NAME = {1:'吉伊卡哇',2:'哈奇喵',3:'乌萨奇',4:'栗子馒头',5:'飞鼠',6:'獭师',7:'狮萨'};
 
 function costumeLabel(c) {
-  return `#${c.id} · ${CHAR_NAME[c.char] || 'Char ' + c.char} · ${RARITY_NAME[c.rarity] || c.rarity}`;
+  const name = (c.chinese || '').trim();
+  return name ? `#${c.id} · ${name}` : `#${c.id} · ${CHAR_NAME[c.char] || '角色 ' + c.char} · ${RARITY_NAME[c.rarity] || c.rarity}`;
 }
 function skillDesc(c) {
   const s = skillOf(c);
@@ -301,7 +301,7 @@ function renderRoster() {
     if (owned) ownedN++;
     if (ownedOnly && !owned) continue;
     const s = skillOf(c);
-    const text = `${c.id} ${CHAR_NAME[c.char]} ${RARITY_NAME[c.rarity]} ${c.tags.join(' ')} ${skillDesc(c)}`.toLowerCase();
+    const text = `${c.id} ${c.chinese || ''} ${CHAR_NAME[c.char] || ''} ${RARITY_NAME[c.rarity]} ${c.tags.join(' ')} ${skillDesc(c)}`.toLowerCase();
     if (filter && !text.includes(filter)) continue;
     shown++;
     const card = document.createElement('div');
