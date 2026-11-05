@@ -8,7 +8,8 @@
   "spriteName": "armor_icon_1001_m",
   "possessionEffectId": 21101,
   "equipmentPossessionEffectId": 21201,
-  "order": 1
+  "order": 1,
+  "chinese": "熊熊小挎包"
  },
  {
   "version": "250330.1.0",
@@ -19,7 +20,8 @@
   "spriteName": "armor_icon_1002_m",
   "possessionEffectId": 21101,
   "equipmentPossessionEffectId": 21202,
-  "order": 2
+  "order": 2,
+  "chinese": "鱼鱼小挎包"
  },
  {
   "version": "250330.1.0",
@@ -30,7 +32,8 @@
   "spriteName": "armor_icon_1003_m",
   "possessionEffectId": 21101,
   "equipmentPossessionEffectId": 21203,
-  "order": 3
+  "order": 3,
+  "chinese": "星星小挎包"
  },
  {
   "version": "250330.1.0",
@@ -41,7 +44,8 @@
   "spriteName": "armor_icon_1004_m",
   "possessionEffectId": 21101,
   "equipmentPossessionEffectId": 21204,
-  "order": 4
+  "order": 4,
+  "chinese": "橡子"
  },
  {
   "version": "250330.1.0",
@@ -52,7 +56,8 @@
   "spriteName": "armor_icon_1005_m",
   "possessionEffectId": 21101,
   "equipmentPossessionEffectId": 21205,
-  "order": 5
+  "order": 5,
+  "chinese": "雪糕棍"
  },
  {
   "version": "250330.1.0",
@@ -63,7 +68,8 @@
   "spriteName": "armor_icon_2001_m",
   "possessionEffectId": 22101,
   "equipmentPossessionEffectId": 22201,
-  "order": 6
+  "order": 6,
+  "chinese": "小鸡小挎包"
  },
  {
   "version": "250330.1.0",
@@ -74,7 +80,8 @@
   "spriteName": "armor_icon_2002_m",
   "possessionEffectId": 22101,
   "equipmentPossessionEffectId": 22202,
-  "order": 7
+  "order": 7,
+  "chinese": "大象小挎包"
  },
  {
   "version": "250330.1.0",
@@ -85,7 +92,8 @@
   "spriteName": "armor_icon_2003_m",
   "possessionEffectId": 22101,
   "equipmentPossessionEffectId": 22203,
-  "order": 8
+  "order": 8,
+  "chinese": "手电筒"
  },
  {
   "version": "250330.1.0",
@@ -96,7 +104,8 @@
   "spriteName": "armor_icon_2004_m",
   "possessionEffectId": 22101,
   "equipmentPossessionEffectId": 22204,
-  "order": 9
+  "order": 9,
+  "chinese": "泡泡"
  },
  {
   "version": "250330.1.0",
@@ -107,7 +116,8 @@
   "spriteName": "armor_icon_2005_m",
   "possessionEffectId": 22101,
   "equipmentPossessionEffectId": 22205,
-  "order": 10
+  "order": 10,
+  "chinese": "沙漏"
  },
  {
   "version": "250330.1.0",
@@ -118,7 +128,8 @@
   "spriteName": "armor_icon_3001_m",
   "possessionEffectId": 23101,
   "equipmentPossessionEffectId": 23201,
-  "order": 11
+  "order": 11,
+  "chinese": "小鸡时钟"
  },
  {
   "version": "250330.1.0",
@@ -129,7 +140,8 @@
   "spriteName": "armor_icon_3002_m",
   "possessionEffectId": 23101,
   "equipmentPossessionEffectId": 23202,
-  "order": 12
+  "order": 12,
+  "chinese": "粉色时钟"
  },
  {
   "version": "250330.1.0",
@@ -140,7 +152,8 @@
   "spriteName": "armor_icon_3003_m",
   "possessionEffectId": 23101,
   "equipmentPossessionEffectId": 23203,
-  "order": 13
+  "order": 13,
+  "chinese": "橡皮擦"
  },
  {
   "version": "250330.1.0",
@@ -151,7 +164,8 @@
   "spriteName": "armor_icon_3004_m",
   "possessionEffectId": 23101,
   "equipmentPossessionEffectId": 23204,
-  "order": 14
+  "order": 14,
+  "chinese": "铅笔"
  },
  {
   "version": "250330.1.0",
@@ -162,7 +176,8 @@
   "spriteName": "armor_icon_3005_m",
   "possessionEffectId": 23101,
   "equipmentPossessionEffectId": 23205,
-  "order": 15
+  "order": 15,
+  "chinese": "炸面衣"
  },
  {
   "version": "250330.1.0",
@@ -173,7 +188,8 @@
   "spriteName": "armor_icon_4001_m",
   "possessionEffectId": 24101,
   "equipmentPossessionEffectId": 24201,
-  "order": 16
+  "order": 16,
+  "chinese": "有些相似：吉伊卡哇"
  },
  {
   "version": "250330.1.0",
@@ -184,7 +200,8 @@
   "spriteName": "armor_icon_4002_m",
   "possessionEffectId": 24101,
   "equipmentPossessionEffectId": 24202,
-  "order": 17
+  "order": 17,
+  "chinese": "有些相似：哈奇喵"
  },
  {
   "version": "250330.1.0",
@@ -195,7 +212,8 @@
   "spriteName": "armor_icon_4003_m",
   "possessionEffectId": 24101,
   "equipmentPossessionEffectId": 24203,
-  "order": 18
+  "order": 18,
+  "chinese": "有些相似：乌萨奇"
  },
  {
   "version": "250330.1.0",
@@ -206,7 +224,8 @@
   "spriteName": "armor_icon_4004_m",
   "possessionEffectId": 24101,
   "equipmentPossessionEffectId": 24204,
-  "order": 19
+  "order": 19,
+  "chinese": "锅"
  },
  {
   "version": "250330.1.0",
@@ -217,7 +236,8 @@
   "spriteName": "armor_icon_4005_m",
   "possessionEffectId": 24101,
   "equipmentPossessionEffectId": 24205,
-  "order": 20
+  "order": 20,
+  "chinese": "花冠"
  },
  {
   "version": "250330.1.0",
@@ -228,7 +248,8 @@
   "spriteName": "armor_icon_5001_m",
   "possessionEffectId": 25101,
   "equipmentPossessionEffectId": 25201,
-  "order": 21
+  "order": 21,
+  "chinese": "开关"
  },
  {
   "version": "250330.1.0",
@@ -239,7 +260,8 @@
   "spriteName": "armor_icon_5002_m",
   "possessionEffectId": 25101,
   "equipmentPossessionEffectId": 25202,
-  "order": 22
+  "order": 22,
+  "chinese": "白色斗篷"
  },
  {
   "version": "250330.1.0",
@@ -250,7 +272,8 @@
   "spriteName": "armor_icon_5003_m",
   "possessionEffectId": 25101,
   "equipmentPossessionEffectId": 25203,
-  "order": 23
+  "order": 23,
+  "chinese": "发光的首饰"
  },
  {
   "version": "250330.1.0",
@@ -261,7 +284,8 @@
   "spriteName": "armor_icon_5004_m",
   "possessionEffectId": 25101,
   "equipmentPossessionEffectId": 25204,
-  "order": 24
+  "order": 24,
+  "chinese": "照相机"
  },
  {
   "version": "250330.1.0",
@@ -272,7 +296,8 @@
   "spriteName": "armor_icon_5005_m",
   "possessionEffectId": 25101,
   "equipmentPossessionEffectId": 25205,
-  "order": 25
+  "order": 25,
+  "chinese": "剑玉"
  },
  {
   "version": "250330.1.0",
@@ -283,7 +308,8 @@
   "spriteName": "armor_icon_5006_m",
   "possessionEffectId": 25101,
   "equipmentPossessionEffectId": 25206,
-  "order": 26
+  "order": 26,
+  "chinese": "受到夸奖的绸带"
  },
  {
   "version": "250330.1.0",
@@ -294,7 +320,8 @@
   "spriteName": "armor_icon_5007_m",
   "possessionEffectId": 25101,
   "equipmentPossessionEffectId": 25207,
-  "order": 27
+  "order": 27,
+  "chinese": "立体贴纸"
  },
  {
   "version": "250330.1.0",
@@ -305,7 +332,8 @@
   "spriteName": "armor_icon_5008_m",
   "possessionEffectId": 25101,
   "equipmentPossessionEffectId": 25208,
-  "order": 28
+  "order": 28,
+  "chinese": "气泡膜"
  },
  {
   "version": "250330.1.0",
@@ -316,7 +344,8 @@
   "spriteName": "armor_icon_5009_m",
   "possessionEffectId": 25101,
   "equipmentPossessionEffectId": 25209,
-  "order": 29
+  "order": 29,
+  "chinese": "熊玩偶"
  },
  {
   "version": "250330.1.0",
@@ -327,7 +356,8 @@
   "spriteName": "armor_icon_5010_m",
   "possessionEffectId": 25101,
   "equipmentPossessionEffectId": 25210,
-  "order": 30
+  "order": 30,
+  "chinese": "白色的某物"
  },
  {
   "version": "250330.1.0",
@@ -338,7 +368,8 @@
   "spriteName": "armor_icon_6001_m",
   "possessionEffectId": 26101,
   "equipmentPossessionEffectId": 26201,
-  "order": 31
+  "order": 31,
+  "chinese": "金字塔书籍"
  },
  {
   "version": "250330.1.0",
@@ -349,7 +380,8 @@
   "spriteName": "armor_icon_6002_m",
   "possessionEffectId": 26101,
   "equipmentPossessionEffectId": 26202,
-  "order": 32
+  "order": 32,
+  "chinese": "猪猪重石"
  },
  {
   "version": "250330.1.0",
@@ -360,7 +392,8 @@
   "spriteName": "armor_icon_6003_m",
   "possessionEffectId": 26101,
   "equipmentPossessionEffectId": 26203,
-  "order": 33
+  "order": 33,
+  "chinese": "吉他"
  },
  {
   "version": "250330.1.0",
@@ -371,7 +404,8 @@
   "spriteName": "armor_icon_6004_m",
   "possessionEffectId": 26101,
   "equipmentPossessionEffectId": 26204,
-  "order": 34
+  "order": 34,
+  "chinese": "扑克牌"
  },
  {
   "version": "250330.1.0",
@@ -382,7 +416,8 @@
   "spriteName": "armor_icon_6005_m",
   "possessionEffectId": 26101,
   "equipmentPossessionEffectId": 26205,
-  "order": 35
+  "order": 35,
+  "chinese": "巨大波子汽水糖帽子"
  },
  {
   "version": "250330.1.0",
@@ -393,7 +428,8 @@
   "spriteName": "armor_icon_6006_m",
   "possessionEffectId": 26101,
   "equipmentPossessionEffectId": 26206,
-  "order": 36
+  "order": 36,
+  "chinese": "透明色小丑"
  },
  {
   "version": "250330.1.0",
@@ -404,7 +440,8 @@
   "spriteName": "armor_icon_6007_m",
   "possessionEffectId": 26101,
   "equipmentPossessionEffectId": 26207,
-  "order": 37
+  "order": 37,
+  "chinese": "超级可口超人的斗篷"
  },
  {
   "version": "250330.1.0",
@@ -415,7 +452,8 @@
   "spriteName": "armor_icon_6008_m",
   "possessionEffectId": 26101,
   "equipmentPossessionEffectId": 26208,
-  "order": 38
+  "order": 38,
+  "chinese": "家钥匙"
  },
  {
   "version": "250330.1.0",
@@ -426,7 +464,8 @@
   "spriteName": "armor_icon_6009_m",
   "possessionEffectId": 26101,
   "equipmentPossessionEffectId": 26209,
-  "order": 39
+  "order": 39,
+  "chinese": "激光公爵卡"
  },
  {
   "version": "250330.1.0",
@@ -437,7 +476,8 @@
   "spriteName": "armor_icon_6010_m",
   "possessionEffectId": 26101,
   "equipmentPossessionEffectId": 26210,
-  "order": 40
+  "order": 40,
+  "chinese": "王冠"
  },
  {
   "version": "250330.1.0",
@@ -448,7 +488,8 @@
   "spriteName": "armor_icon_7001_m",
   "possessionEffectId": 27101,
   "equipmentPossessionEffectId": 27201,
-  "order": 41
+  "order": 41,
+  "chinese": "粉色熊玩偶"
  },
  {
   "version": "250330.1.0",
@@ -459,7 +500,8 @@
   "spriteName": "armor_icon_7002_m",
   "possessionEffectId": 27101,
   "equipmentPossessionEffectId": 27202,
-  "order": 42
+  "order": 42,
+  "chinese": "红色斗篷"
  },
  {
   "version": "260115.1.0",
@@ -470,7 +512,8 @@
   "spriteName": "armor_icon_7003_m",
   "possessionEffectId": 27102,
   "equipmentPossessionEffectId": 27203,
-  "order": 43
+  "order": 43,
+  "chinese": "金色橡实"
  },
  {
   "version": "260115.1.0",
@@ -481,7 +524,8 @@
   "spriteName": "armor_icon_7004_m",
   "possessionEffectId": 27102,
   "equipmentPossessionEffectId": 27204,
-  "order": 44
+  "order": 44,
+  "chinese": "发光环圈"
  },
  {
   "version": "260115.1.0",
@@ -492,7 +536,8 @@
   "spriteName": "armor_icon_7005_m",
   "possessionEffectId": 27102,
   "equipmentPossessionEffectId": 27205,
-  "order": 45
+  "order": 45,
+  "chinese": "手环"
  },
  {
   "version": "260115.1.0",
@@ -503,7 +548,8 @@
   "spriteName": "armor_icon_7006_m",
   "possessionEffectId": 27102,
   "equipmentPossessionEffectId": 27206,
-  "order": 46
+  "order": 46,
+  "chinese": "漂亮的石头"
  },
  {
   "version": "260410.1.0",
@@ -514,7 +560,8 @@
   "spriteName": "armor_icon_7007_m",
   "possessionEffectId": 27103,
   "equipmentPossessionEffectId": 27207,
-  "order": 47
+  "order": 47,
+  "chinese": "金色沙漏"
  },
  {
   "version": "260410.1.0",
@@ -525,7 +572,8 @@
   "spriteName": "armor_icon_7008_m",
   "possessionEffectId": 27103,
   "equipmentPossessionEffectId": 27208,
-  "order": 48
+  "order": 48,
+  "chinese": "金色时钟"
  },
  {
   "version": "260410.1.0",
@@ -536,7 +584,8 @@
   "spriteName": "armor_icon_7009_m",
   "possessionEffectId": 27104,
   "equipmentPossessionEffectId": 27209,
-  "order": 49
+  "order": 49,
+  "chinese": "金色橡皮擦"
  },
  {
   "version": "260410.1.0",
@@ -547,7 +596,8 @@
   "spriteName": "armor_icon_7010_m",
   "possessionEffectId": 27104,
   "equipmentPossessionEffectId": 27210,
-  "order": 50
+  "order": 50,
+  "chinese": "金色铅笔"
  },
  {
   "version": "260810.1.0",
@@ -558,7 +608,8 @@
   "spriteName": "armor_icon_7011_m",
   "possessionEffectId": 27105,
   "equipmentPossessionEffectId": 27211,
-  "order": 51
+  "order": 51,
+  "chinese": "人鱼鳞片"
  },
  {
   "version": "260810.1.0",
@@ -569,6 +620,7 @@
   "spriteName": "armor_icon_7012_m",
   "possessionEffectId": 27105,
   "equipmentPossessionEffectId": 27212,
-  "order": 52
+  "order": 52,
+  "chinese": "传单"
  }
 ]
