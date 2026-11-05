@@ -58,7 +58,8 @@ const BUFF_TYPES = {
   StatusAttackDown: 'enemyAtkDown', StatusDefenceDown: 'defDown', StatusSpeedDown: 'enemySpeedDown',
   StatusCriticalDefenceDown: 'critDefDown', RecastReset: 'recastReset',
 };
-const RARITY_NAME = { 1: 'SR', 2: 'HR', 3: 'UR' };
+// 服装阶级：costumeRarityId 1/2/3 → SR/HR/UR，官方用星标表示（★4/★5/★6）
+const RARITY_NAME = ZH_COSTUME_RARITY;
 
 /* ============ state ============ */
 const DEF_STATE = {
@@ -183,7 +184,7 @@ function teamCalc(orderedSlots, inp) {
       else if (b.kind === 'atkSpeed') attackMult *= (1 + 0.5 * b.value * b.uptime); // dps via more swings (approx)
       else if (b.kind === 'bossRate') { ctx.bossRateBuff = (ctx.bossRateBuff || 0) + b.value * b.uptime; }
       else if (b.kind === 'mobRate') { ctx.mobRateBuff = (ctx.mobRateBuff || 0) + b.value * b.uptime; }
-      else if (b.kind === 'recastReset') notes.push('RecastReset present (not scored)');
+      else if (b.kind === 'recastReset') notes.push('存在「特技再发动缩短」效果（不计入评分）');
     }
     for (const d of s.debuffs) {
       if (d.kind === 'defDown') defAmp *= (1 + d.value * d.uptime);
@@ -262,26 +263,46 @@ function* permutations(arr) {
 /* ============ data indexes ============ */
 const COSTUME_BY_ID = {};
 for (const c of DATA.costumes) COSTUME_BY_ID[c.id] = c;
-const CHAR_NAME = {1:'吉伊卡哇',2:'哈奇喵',3:'乌萨奇',4:'栗子馒头',5:'飞鼠',6:'獭师',7:'狮萨'};
+// 角色名取自官方中文表 hunt_character_<id>
+const CHAR_NAME = {};
+for (let i = 1; i <= 7; i++) CHAR_NAME[i] = ZH['hunt_character_' + i] || ('角色 ' + i);
+
+// 各类名称一律查官方中文表（zh.js）
+function costumeName(c) { return ZH['costume_name_' + c.id] || (c.chinese || '').trim(); }
+function skillName(id) { return ZH['costume_name_' + id] || ''; }
+function itemName(it) {
+  if (it.kind === 'weapon' || it.kind === 'armor') {
+    const m = /(\d{4})/.exec(it.sprite || '');
+    return m ? (ZH[it.kind + '_name_' + m[1]] || '') : '';
+  }
+  if (it.kind === 'assist') return ZH_ASSIST_BY_ID[it.id] || '';
+  if (it.kind === 'treasure') return ZH['treasure_item_name_' + it.id] || '';
+  return '';
+}
+// 标签：官方 textKey 为 4 位补零形式（tag_0011），游戏数据里是裸 id（11），两边都要试
+function tagName(t) {
+  return ZH['tag_' + t] || ZH['tag_' + String(t).padStart(4, '0')] || String(t);
+}
+function charName(id) { return CHAR_NAME[id] || ('角色 ' + id); }
 
 function costumeLabel(c) {
-  const name = (c.chinese || '').trim();
-  return name ? `#${c.id} · ${name}` : `#${c.id} · ${CHAR_NAME[c.char] || '角色 ' + c.char} · ${RARITY_NAME[c.rarity] || c.rarity}`;
+  const name = costumeName(c);
+  return name ? `#${c.id} · ${name}` : `#${c.id} · ${charName(c.char)} · ${RARITY_NAME[c.rarity] || c.rarity}`;
 }
 function skillDesc(c) {
   const s = skillOf(c);
-  if (!s) return 'no skill';
+  if (!s) return '无特技';
   const parts = [];
   for (const e of s.effects) {
     const v1 = skillValueAt(e, 1), v100 = skillValueAt(e, 100);
-    if (e.type === 'Attack') parts.push(`${e.range === 'Range' ? 'AoE' : 'Single'} ${fmt(v1)}×→${fmt(v100)}×`);
+    if (e.type === 'Attack') parts.push(`${ZH_RANGE[e.range] || e.range} ${fmt(v1)}×→${fmt(v100)}×`);
     else if (BUFF_TYPES[e.type]) {
-      const nm = BUFF_TYPES[e.type];
+      const nm = ZH_BUFF_LABEL[BUFF_TYPES[e.type]] || BUFF_TYPES[e.type];
       const sign = e.target === 'Enemy' ? '-' : '+';
-      parts.push(`${nm}${e.range === 'Range' ? '(all)' : ''} ${sign}${fmt(v1)}→${sign}${fmt(v100)} ${e.buffSec}s`);
+      parts.push(`${nm}${e.range === 'Range' ? '（全体）' : ''} ${sign}${fmt(v1)}→${sign}${fmt(v100)} ${e.buffSec}秒`);
     }
   }
-  parts.push(`${s.recastMs / 1000}s cd`);
+  parts.push(`${s.recastMs / 1000}秒 冷却`);
   return parts.join(' · ');
 }
 
@@ -301,7 +322,7 @@ function renderRoster() {
     if (owned) ownedN++;
     if (ownedOnly && !owned) continue;
     const s = skillOf(c);
-    const text = `${c.id} ${c.chinese || ''} ${CHAR_NAME[c.char] || ''} ${RARITY_NAME[c.rarity]} ${c.tags.join(' ')} ${skillDesc(c)}`.toLowerCase();
+    const text = `${c.id} ${costumeName(c)} ${charName(c.char)} ${RARITY_NAME[c.rarity]} ${c.tags.map(tagName).join(' ')} ${skillDesc(c)}`.toLowerCase();
     if (filter && !text.includes(filter)) continue;
     shown++;
     const card = document.createElement('div');
@@ -309,25 +330,25 @@ function renderRoster() {
     const badges = [];
     badges.push(`<span class="badge r${c.rarity}">${RARITY_NAME[c.rarity]}</span>`);
     if (s) {
-      if (s.effects.some(e => e.type === 'Attack' && e.range === 'Range')) badges.push('<span class="badge aoe">AoE</span>');
-      if (s.effects.some(e => e.type === 'Attack' && e.range === 'Single')) badges.push('<span class="badge nuke">Nuke</span>');
-      if (s.effects.some(e => e.target === 'Friend' && BUFF_TYPES[e.type])) badges.push('<span class="badge buff">Buff</span>');
-      if (s.effects.some(e => e.target === 'Enemy' && BUFF_TYPES[e.type])) badges.push('<span class="badge debuff">Debuff</span>');
+      if (s.effects.some(e => e.type === 'Attack' && e.range === 'Range')) badges.push('<span class="badge aoe">全体</span>');
+      if (s.effects.some(e => e.type === 'Attack' && e.range === 'Single')) badges.push('<span class="badge nuke">爆发</span>');
+      if (s.effects.some(e => e.target === 'Friend' && BUFF_TYPES[e.type])) badges.push('<span class="badge buff">增益</span>');
+      if (s.effects.some(e => e.target === 'Enemy' && BUFF_TYPES[e.type])) badges.push('<span class="badge debuff">减益</span>');
     }
-    for (const t of c.tags) badges.push(`<span class="badge tag">tag ${t}</span>`);
+    for (const t of c.tags) badges.push(`<span class="badge tag">标签 ${tagName(t)}</span>`);
     card.innerHTML = `
       <div class="head"><span class="title">${costumeLabel(c)}</span>
-        <button class="lockbtn ${isLocked(c.id) ? 'locked' : ''}" data-lock="${c.id}">${isLocked(c.id) ? '🔒 slot' : 'lock'}</button>
+        <button class="lockbtn ${isLocked(c.id) ? 'locked' : ''}" data-lock="${c.id}">${isLocked(c.id) ? '🔒 已锁定' : '锁定'}</button>
       </div>
       <div class="row">${badges.join('')}</div>
       <div class="row hint">${skillDesc(c)}</div>
       <div class="row lvl">
-        <label><input type="checkbox" data-own="${c.id}" ${owned ? 'checked' : ''}> owned</label>
-        ${owned ? `<label>costume lv <input type="number" min="1" max="200" value="${ownedLevel(c.id)}" data-lv="${c.id}"></label>` : ''}
+        <label><input type="checkbox" data-own="${c.id}" ${owned ? 'checked' : ''}> 已拥有</label>
+        ${owned ? `<label>服装等级 <input type="number" min="1" max="200" value="${ownedLevel(c.id)}" data-lv="${c.id}"></label>` : ''}
       </div>`;
     el.appendChild(card);
   }
-  document.getElementById('roster-count').textContent = `(${ownedN} owned, showing ${shown})`;
+  document.getElementById('roster-count').textContent = `（已拥有 ${ownedN}，显示 ${shown}）`;
   el.querySelectorAll('[data-own]').forEach(cb => cb.addEventListener('change', e => {
     const id = +e.target.dataset.own;
     if (e.target.checked) state.owned[id] = 100; else { delete state.owned[id]; deleteSlotLock(id); }
@@ -358,7 +379,7 @@ function optimize() {
   const inp = readInputs();
   const roster = ownedCostumes();
   const status = document.getElementById('opt-status');
-  if (roster.length === 0) { status.textContent = 'Mark some costumes as owned first.'; return; }
+  if (roster.length === 0) { status.textContent = '请先勾选一些已拥有的服装。'; return; }
   const ctx0 = buildTeamContext(inp);
 
   // locked slots
@@ -368,8 +389,8 @@ function optimize() {
   const lockedIds = new Set(locked.map(l => l.c.id));
   const freeRoster = roster.filter(x => !lockedIds.has(x.c.id));
   const need = 6 - locked.length;
-  if (need < 0) { status.textContent = 'Too many locked slots.'; return; }
-  if (freeRoster.length < need) { status.textContent = `Need ${need} more owned costumes for the free slots.`; return; }
+  if (need < 0) { status.textContent = '锁定的站位太多了。'; return; }
+  if (freeRoster.length < need) { status.textContent = `空位还缺 ${need} 套已拥有的服装。`; return; }
 
   // 1. score each costume standalone
   const scored = freeRoster.map(x => ({ x, r: slotCalc(x.c, x.lv, inp, ctx0) }));
@@ -415,17 +436,17 @@ function optimize() {
     const sc = orderScore(full, inp);
     if (sc > bestScore) { bestScore = sc; best = full; }
   }
-  renderResult(best, inp, 'optimized team');
-  status.textContent = `Evaluated ${scored.length} owned costumes, ${factorial(need)} orders.`;
+  renderResult(best, inp, '优化后的队伍');
+  status.textContent = `已评估 ${scored.length} 套服装、${factorial(need)} 种站位顺序。`;
 }
 function factorial(n) { let r = 1; for (let i = 2; i <= n; i++) r *= i; return r; }
 
 function optimizeOrderOnly() {
   const inp = readInputs();
   const roster = ownedCostumes();
-  if (roster.length < 6) { document.getElementById('opt-status').textContent = 'Need exactly ≥6 owned costumes; using the first 6 by sort order.'; }
+  if (roster.length < 6) { document.getElementById('opt-status').textContent = '需要至少 6 套已拥有的服装；将按排序取前 6 套。'; }
   const six = roster.slice(0, 6);
-  if (six.length < 6) { document.getElementById('opt-status').textContent = 'Need 6 owned costumes.'; return; }
+  if (six.length < 6) { document.getElementById('opt-status').textContent = '需要 6 套已拥有的服装。'; return; }
   const ctx0 = buildTeamContext(inp);
   const calcs = six.map(x => slotCalc(x.c, x.lv, inp, ctx0));
   let best = null, bestScore = -Infinity;
@@ -433,7 +454,7 @@ function optimizeOrderOnly() {
     const sc = orderScore(perm, inp);
     if (sc > bestScore) { bestScore = sc; best = perm; }
   }
-  renderResult(best, inp, 'order-only (your current 6)');
+  renderResult(best, inp, '仅调整站位（当前 6 人）');
 }
 
 /* ============ result rendering ============ */
@@ -442,47 +463,47 @@ function renderResult(orderedSlots, inp, title) {
   const sum = document.getElementById('team-summary');
   const critE = 1 + Math.min(1, tc.ctx.critRate) * (tc.ctx.critDmg - 1);
   sum.innerHTML = `
-    <span>Mode: <b>${inp.mode}</b> (${title})</span>
-    <span class="big">Team DPS ≈ ${fmt(tc.total)}× your attack</span>
-    <span>Crit: ${fmtPct(tc.ctx.critRate)} @ ${tc.ctx.critDmg.toFixed(2)}× (E=${critE.toFixed(3)}×)</span>
-    <span>Buff mult: ${tc.attackMult.toFixed(3)}× · Debuff amp: ${tc.defAmp.toFixed(3)}× · Tags: ${tc.tagMult.toFixed(3)}×</span>
-    <span>${tc.tagList.map(t => `tag ${t.tag} ×${t.n}`).join(', ') || 'no tag pairs'}</span>`;
+    <span>模式：<b>${ZH_MODE[inp.mode] || inp.mode}</b>（${title}）</span>
+    <span class="big">全队 DPS ≈ ${fmt(tc.total)}× 你的攻击力</span>
+    <span>暴击：${fmtPct(tc.ctx.critRate)} @ ${tc.ctx.critDmg.toFixed(2)}×（E=${critE.toFixed(3)}×）</span>
+    <span>增益倍率：${tc.attackMult.toFixed(3)}× · 减益削减：${tc.defAmp.toFixed(3)}× · 标签：${tc.tagMult.toFixed(3)}×</span>
+    <span>${tc.tagList.map(t => `标签 ${tagName(t.tag)} ×${t.n}`).join('、') || '无同标签组合'}</span>`;
 
-  const roles = ['opener', 'enabler', 'enabler', 'tempo', 'dps', 'finisher'];
+  const roles = ZH_ROLE;
   const wrap = document.getElementById('team-slots');
   wrap.innerHTML = '';
   tc.slots.forEach((s, i) => {
     const c = COSTUME_BY_ID[s.id];
     const div = document.createElement('div');
     div.className = 'slot' + (i === 5 ? ' carry' : i === 0 ? ' tank' : '');
-    const buffTxt = s.buffs.map(b => `${b.kind} +${fmt(b.value)} @${fmtPct(b.uptime, 0)}`).join('<br>');
-    const debTxt = s.debuffs.map(d => `${d.kind} ${fmt(d.value)} @${fmtPct(d.uptime, 0)}`).join('<br>');
+    const buffTxt = s.buffs.map(b => `${ZH_BUFF_LABEL[b.kind] || b.kind} +${fmt(b.value)} @${fmtPct(b.uptime, 0)}`).join('<br>');
+    const debTxt = s.debuffs.map(d => `${ZH_BUFF_LABEL[d.kind] || d.kind} ${fmt(d.value)} @${fmtPct(d.uptime, 0)}`).join('<br>');
     div.innerHTML = `
       <div class="pos">${i + 1}</div>
       <div class="role">${roles[i]}</div>
       <div class="name">${costumeLabel(c)} <span class="hint">Lv${s.lv}</span></div>
       <div class="nums">
-        <span>atk rate ×<b>${s.ar.toFixed(3)}</b> · swings <b>${s.swings.toFixed(2)}/s</b></span>
-        <span>normal <b>${fmt(s.normalDPS)}</b> + skill <b>${fmt(s.skillDPS)}</b></span>
-        <span>= <b>${fmt(s.dps)}</b> /s</span>
-        ${s.skillMult ? `<span>skill mult <b>${fmt(s.skillMult)}×</b> · cycle <b>${s.cycle.toFixed(1)}s</b></span>` : ''}
+        <span>攻击倍率 ×<b>${s.ar.toFixed(3)}</b> · 攻速 <b>${s.swings.toFixed(2)}/秒</b></span>
+        <span>普攻 <b>${fmt(s.normalDPS)}</b> + 特技 <b>${fmt(s.skillDPS)}</b></span>
+        <span>= <b>${fmt(s.dps)}</b> /秒</span>
+        ${s.skillMult ? `<span>特技倍率 <b>${fmt(s.skillMult)}×</b> · 循环 <b>${s.cycle.toFixed(1)}秒</b></span>` : ''}
         ${buffTxt ? `<span class="badge buff">${buffTxt}</span>` : ''}
         ${debTxt ? `<span class="badge debuff">${debTxt}</span>` : ''}
-        <span class="hint">${s.tags.map(t => 'tag ' + t).join(' ')}</span>
+        <span class="hint">${s.tags.map(t => '标签 ' + tagName(t)).join(' ')}</span>
       </div>`;
     wrap.appendChild(div);
   });
 
   // math breakdown
   const lines = [];
-  lines.push(`Why this order: your team shares ONE HP pool — nobody tanks and nobody dies early.`);
-  lines.push(`Order only decides skill fire sequence (FIFO, 0.5s unique / 2s assist gaps): enablers placed left of nukes.`);
+  lines.push(`为何这样排：全队共享同一个体力池 —— 没有人需要抗伤，也不会有人先倒下。`);
+  lines.push(`站位只决定特技发动顺序（FIFO，特技间隔 0.5 秒 / 支援间隔 2 秒）：开团角色要放在输出左边。`);
   lines.push('');
   orderedSlots.forEach((s, i) => {
-    lines.push(`Slot ${i + 1} ${costumeLabel(COSTUME_BY_ID[s.id])} Lv${s.lv}: normal ${fmt(s.normalDPS)} (1×${inp.normalRate}×${s.ar.toFixed(3)}ar×${s.swings.toFixed(2)}sw×rates) + skill ${fmt(s.skillDPS)} = ${fmt(s.dps)}/s`);
+    lines.push(`第 ${i + 1} 位 ${costumeLabel(COSTUME_BY_ID[s.id])} Lv${s.lv}：普攻 ${fmt(s.normalDPS)}（1×${inp.normalRate}×${s.ar.toFixed(3)}攻倍×${s.swings.toFixed(2)}攻速×倍率）+ 特技 ${fmt(s.skillDPS)} = ${fmt(s.dps)}/秒`);
   });
   lines.push('');
-  lines.push(`Team: Σdps ${fmt(tc.slots.reduce((a, s) => a + s.dps, 0))} × buff ${tc.attackMult.toFixed(3)} × debuff ${tc.defAmp.toFixed(3)} × tags ${tc.tagMult.toFixed(3)} = ${fmt(tc.total)}/s`);
+  lines.push(`全队：ΣDPS ${fmt(tc.slots.reduce((a, s) => a + s.dps, 0))} × 增益 ${tc.attackMult.toFixed(3)} × 减益 ${tc.defAmp.toFixed(3)} × 标签 ${tc.tagMult.toFixed(3)} = ${fmt(tc.total)}/秒`);
   if (tc.notes.length) lines.push(tc.notes.join(' '));
   document.getElementById('team-math').textContent = lines.join('\n');
 }
@@ -510,48 +531,48 @@ function setItemState(key, patch) {
 }
 function targetText(cf) {
   if (!cf) return '';
-  if (cf.target === 'Party') return '🎯 whole team';
-  if (cf.target === 'AssistCharacter') return `🎯 assist ${cf.targetIds.join(',')}`;
-  return `🎯 character ${cf.targetIds.join(',')}`;
+  if (cf.target === 'Party') return '🎯 全队';
+  if (cf.target === 'AssistCharacter') return `🎯 支援 ${cf.targetIds.join('、')}`;
+  return `🎯 角色 ${cf.targetIds.join('、')}`;
 }
 function itemEffectText(it) {
   if (it.kind === 'treasure') {
     const parts = [];
     for (const fxid of it.posFx || []) {
       const r = fxValueAt(fxid, 1);
-      if (r) parts.push(`<b>own:</b> ${r.status} ${fmt(r.v)}${r.scaled ? ' (promo-scaled)' : ''}`);
+      if (r) parts.push(`<b>持有：</b> ${ZH_STATUS[r.status] || r.status} ${fmt(r.v)}${r.scaled ? '（随账号进度成长）' : ''}`);
     }
     for (const ch of it.equipChain || []) {
       if (ch.select === 'Custom') {
         const cf = DATA.customFx[String(ch.target)];
         const r = cf ? fxValueAt(cf.fx, 1) : null;
         if (cf && r) {
-          const prog = cf.ref === 'ContentsProgress' ? ' (scales with account progress)' : ' (lv-scaled)';
-          parts.push(`<b>equip:</b> ${r.status} ${fmt(r.v)} ${targetText(cf)}${cf.cond ? ' [conditional]' : ''}${prog}`);
+          const prog = cf.ref === 'ContentsProgress' ? '（随账号进度成长）' : '（随等级成长）';
+          parts.push(`<b>装备：</b> ${ZH_STATUS[r.status] || r.status} ${fmt(r.v)} ${targetText(cf)}${cf.cond ? '［有条件］' : ''}${prog}`);
         }
       } else {
         const r = fxValueAt(ch.target, 1);
-        if (r) parts.push(`<b>equip:</b> ${r.status} ${fmt(r.v)} (lv-scaled)`);
+        if (r) parts.push(`<b>装备：</b> ${ZH_STATUS[r.status] || r.status} ${fmt(r.v)} （随等级成长）`);
       }
     }
-    return parts.join(' · ') || 'no effect data';
+    return parts.join(' · ') || '无效果数据';
   }
   const parts = [];
   const own = fxValueAt(it.posFx, 1);
-  if (own) parts.push(`<b>own:</b> ${own.status} ${fmt(own.v)}${own.scaled ? ' (scales w/ item lv)' : ''}`);
+  if (own) parts.push(`<b>持有：</b> ${ZH_STATUS[own.status] || own.status} ${fmt(own.v)}${own.scaled ? '（随道具等级成长）' : ''}`);
   const eq = fxValueAt(it.equipFx, 1);
-  if (eq) parts.push(`<b>equip:</b> ${eq.status} ${fmt(eq.v)}${eq.scaled ? ' (scales)' : ''}`);
-  return parts.join(' · ') || 'no effect data';
+  if (eq) parts.push(`<b>装备：</b> ${ZH_STATUS[eq.status] || eq.status} ${fmt(eq.v)}${eq.scaled ? '（成长型）' : ''}`);
+  return parts.join(' · ') || '无效果数据';
 }
 function keyholderText(g) {
   const cf = DATA.customFx[String(g.equipFx)];
   const fx = cf ? fxValueAt(cf.fx, 1) : null;
   const parts = [];
-  if (cf && fx) parts.push(`<b>equip:</b> ${fx.status} ${fmt(fx.v)} ${targetText(cf)} (scales w/ level)`);
+  if (cf && fx) parts.push(`<b>装备：</b> ${ZH_STATUS[fx.status] || fx.status} ${fmt(fx.v)} ${targetText(cf)} （随等级成长）`);
   const rf = DATA.customFx[String(g.rarityFx[0])];
   const rfx = rf ? fxValueAt(rf.fx, 1) : null;
-  if (rf && rfx) parts.push(`<b>rarity tiers:</b> up to ${g.rarityFx.length} effects (e.g. ${rfx.status} ${targetText(rf)})`);
-  return parts.join(' · ') || 'no effect data';
+  if (rf && rfx) parts.push(`<b>稀有度阶梯：</b> 最多 ${g.rarityFx.length} 条效果（例如 ${ZH_STATUS[rfx.status] || rfx.status} ${targetText(rf)}）`);
+  return parts.join(' · ') || '无效果数据';
 }
 function renderItems() {
   const el = document.getElementById('items');
@@ -565,28 +586,29 @@ function renderItems() {
       <div class="head"><span class="title">${title}</span></div>
       <div class="row hint">${text}</div>
       <div class="row lvl">
-        <label><input type="checkbox" data-own="${key}" ${st.own ? 'checked' : ''}> owned</label>
-        ${showEq ? `<label><input type="checkbox" data-eq="${key}" ${st.eq ? 'checked' : ''} ${st.own ? '' : 'disabled'}> equipped</label>` : ''}
-        ${levelSel ? `<label>lv <input type="number" min="1" max="${levelSel}" value="${(state.items[key] && state.items[key].lv) || 1}" data-lv="${key}" style="width:4em"></label>` : ''}
+        <label><input type="checkbox" data-own="${key}" ${st.own ? 'checked' : ''}> 已拥有</label>
+        ${showEq ? `<label><input type="checkbox" data-eq="${key}" ${st.eq ? 'checked' : ''} ${st.own ? '' : 'disabled'}> 已装备</label>` : ''}
+        ${levelSel ? `<label>等级 <input type="number" min="1" max="${levelSel}" value="${(state.items[key] && state.items[key].lv) || 1}" data-lv="${key}" style="width:4em"></label>` : ''}
       </div>`;
     el.appendChild(card);
   };
   if (!kind || kind === 'weapon' || kind === 'armor' || kind === 'assist' || kind === 'treasure') {
     for (const it of DATA.items) {
       if (kind && it.kind !== kind) continue;
-      addCard(it.kind + ':' + it.id, `${it.kind} #${it.id}${it.rarity ? ' · ' + it.rarity : ''}`, itemEffectText(it), true);
+      const nm = itemName(it);
+      addCard(it.kind + ':' + it.id, `${ZH_KIND[it.kind] || it.kind} #${it.id}${nm ? ' · ' + nm : ''}${it.rarity ? ' · ' + (ZH_RARITY[it.rarity] || it.rarity) : ''}`, itemEffectText(it), true);
     }
   }
   if (!kind || kind === 'home') {
     for (const h of DATA.homeItems) {
       const fx = fxValueAt(h.fx, 1);
-      addCard('home:' + h.id, `home item #${h.id} · ${h.type}`,
-        `<b>own:</b> ${fx ? fx.status : '?'} ×1.15 / ×1.20 / ×1.30 at item Lv1/2/3 (placement is cosmetic — owning is what counts)`, false, h.maxLv);
+      addCard('home:' + h.id, `小天地物品 #${h.id} · ${ZH_HOME_TYPE[h.type] || h.type}${ZH['home_item_' + h.id] ? ' · ' + ZH['home_item_' + h.id] : ''}`,
+        `<b>持有：</b> ${fx ? (ZH_STATUS[fx.status] || fx.status) : '?'} 道具等级 1/2/3 时为 ×1.15 / ×1.20 / ×1.30（摆放位置只是装饰，拥有即可生效）`, false, h.maxLv);
     }
   }
   if (!kind || kind === 'keyholder') {
     for (const g of DATA.keyholderGroups) {
-      addCard('kh:' + g.id, `keyholder #${g.id} · char ${g.chara} + assist ${g.assist}`, keyholderText(g), true);
+      addCard('kh:' + g.id, `钥匙扣 #${g.id} · ${charName(g.chara)}${ZH['assist_skill_' + g.assist] ? ' + ' + ZH['assist_skill_' + g.assist] : ''}`, keyholderText(g), true);
     }
   }
   el.querySelectorAll('[data-own]').forEach(cb => cb.addEventListener('change', e => {
@@ -618,6 +640,7 @@ function accumFx(sums, fxid, lv, note) {
 function renderItemSummary() {
   const lv = Math.max(1, +document.getElementById('item-level').value || 1);
   const sums = {};
+  const targeted = [];   // 修：原版在此处之前就 push，勾选珍藏品会抛 ReferenceError
   for (const it of DATA.items) {
     const st = itemState(it.kind + ':' + it.id);
     if (it.kind === 'treasure') {
@@ -629,9 +652,9 @@ function renderItemSummary() {
             if (!cf) continue;
             const r = fxValueAt(cf.fx, lv);
             if (!r) continue;
-            if (cf.cond) targeted.push(`${r.status} ×${fmt(r.v)} ${targetText(cf)} [condition ${cf.cond}]`);
-            else if (cf.target === 'Party') accumFx(sums, cf.fx, lv, 'treasure');
-            else targeted.push(`${r.status} ×${fmt(r.v)} ${targetText(cf)}`);
+            if (cf.cond) targeted.push(`${ZH_STATUS[r.status] || r.status} ×${fmt(r.v)} ${targetText(cf)} ［条件 ${cf.cond}］`);
+            else if (cf.target === 'Party') accumFx(sums, cf.fx, lv, '珍藏品');
+            else targeted.push(`${ZH_STATUS[r.status] || r.status} ×${fmt(r.v)} ${targetText(cf)}`);
           } else accumFx(sums, ch.target, lv);
         }
       }
@@ -642,25 +665,24 @@ function renderItemSummary() {
   }
   for (const h of DATA.homeItems) {
     const st = itemState('home:' + h.id);
-    if (st.own) accumFx(sums, h.fx, (state.items['home:' + h.id] && state.items['home:' + h.id].lv) || 1, 'home');
+    if (st.own) accumFx(sums, h.fx, (state.items['home:' + h.id] && state.items['home:' + h.id].lv) || 1, '小天地物品');
   }
-  const targeted = [];
   for (const g of DATA.keyholderGroups) {
     const st = itemState('kh:' + g.id);
     if (!(st.own && st.eq)) continue;
     const cf = DATA.customFx[String(g.equipFx)];
     if (!cf) continue;
-    if (cf.target === 'Party') accumFx(sums, cf.fx, lv, 'keyholder');
+    if (cf.target === 'Party') accumFx(sums, cf.fx, lv, '钥匙扣');
     else {
       const r = fxValueAt(cf.fx, lv);
-      if (r) targeted.push(`${r.status} ×${fmt(r.v)} ${targetText(cf)}`);
+      if (r) targeted.push(`${ZH_STATUS[r.status] || r.status} ×${fmt(r.v)} ${targetText(cf)}`);
     }
   }
   const el = document.getElementById('item-summary');
   const txt = Object.entries(sums).map(([st, s]) =>
-    `${st}: ${s.mult > 1 ? '×' + s.mult.toFixed(3) : ''}${s.add ? ' +' + fmt(s.add) : ''}`).join(' · ');
-  el.innerHTML = (txt ? `<b>Item totals (lv ${lv}):</b> ${txt}` : 'No items checked yet.') +
-    (targeted.length ? `<br><span class="hint">🎯 Targeted (only count when that character is in play): ${targeted.join(' · ')}</span>` : '');
+    `${ZH_STATUS[st] || st}：${s.mult > 1 ? '×' + s.mult.toFixed(3) : ''}${s.add ? ' +' + fmt(s.add) : ''}`).join(' · ');
+  el.innerHTML = (txt ? `<b>道具合计（等级 ${lv}）：</b> ${txt}` : '尚未勾选任何道具。') +
+    (targeted.length ? `<br><span class="hint">🎯 定向效果（仅当对应角色在场时生效）：${targeted.join(' · ')}</span>` : '');
   el.dataset.sums = JSON.stringify(sums);
 }
 
