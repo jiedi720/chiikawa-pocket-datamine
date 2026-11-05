@@ -8,7 +8,8 @@
   "spriteName": "weapon_icon_1001_m",
   "possessionEffectId": 11101,
   "equipmentPossessionEffectId": 11201,
-  "order": 1
+  "order": 1,
+  "chinese": "刺叉"
  },
  {
   "version": "250330.1.0",
@@ -19,7 +20,8 @@
   "spriteName": "weapon_icon_1002_m",
   "possessionEffectId": 11101,
   "equipmentPossessionEffectId": 11202,
-  "order": 2
+  "order": 2,
+  "chinese": "石头"
  },
  {
   "version": "250330.1.0",
@@ -30,7 +32,8 @@
   "spriteName": "weapon_icon_1003_m",
   "possessionEffectId": 11101,
   "equipmentPossessionEffectId": 11203,
-  "order": 3
+  "order": 3,
+  "chinese": "木棍"
  },
  {
   "version": "250330.1.0",
@@ -41,7 +44,8 @@
   "spriteName": "weapon_icon_1004_m",
   "possessionEffectId": 11101,
   "equipmentPossessionEffectId": 11204,
-  "order": 4
+  "order": 4,
+  "chinese": "逗猫棒"
  },
  {
   "version": "250330.1.0",
@@ -52,7 +56,8 @@
   "spriteName": "weapon_icon_1005_m",
   "possessionEffectId": 11101,
   "equipmentPossessionEffectId": 11205,
-  "order": 5
+  "order": 5,
+  "chinese": "腌萝卜"
  },
  {
   "version": "250330.1.0",
@@ -63,7 +68,8 @@
   "spriteName": "weapon_icon_2001_m",
   "possessionEffectId": 12101,
   "equipmentPossessionEffectId": 12201,
-  "order": 6
+  "order": 6,
+  "chinese": "耙子"
  },
  {
   "version": "250330.1.0",
@@ -74,7 +80,8 @@
   "spriteName": "weapon_icon_2002_m",
   "possessionEffectId": 12101,
   "equipmentPossessionEffectId": 12202,
-  "order": 7
+  "order": 7,
+  "chinese": "棍棒"
  },
  {
   "version": "250330.1.0",
@@ -85,7 +92,8 @@
   "spriteName": "weapon_icon_2003_m",
   "possessionEffectId": 12101,
   "equipmentPossessionEffectId": 12203,
-  "order": 8
+  "order": 8,
+  "chinese": "粉色刺叉"
  },
  {
   "version": "250330.1.0",
@@ -96,7 +104,8 @@
   "spriteName": "weapon_icon_2004_m",
   "possessionEffectId": 12101,
   "equipmentPossessionEffectId": 12204,
-  "order": 9
+  "order": 9,
+  "chinese": "蓝色刺叉"
  },
  {
   "version": "250330.1.0",
@@ -107,7 +116,8 @@
   "spriteName": "weapon_icon_2005_m",
   "possessionEffectId": 12101,
   "equipmentPossessionEffectId": 12205,
-  "order": 10
+  "order": 10,
+  "chinese": "讨伐棒"
  },
  {
   "version": "250330.1.0",
@@ -118,7 +128,8 @@
   "spriteName": "weapon_icon_3001_m",
   "possessionEffectId": 13101,
   "equipmentPossessionEffectId": 13201,
-  "order": 11
+  "order": 11,
+  "chinese": "扫帚"
  },
  {
   "version": "250330.1.0",
@@ -129,7 +140,8 @@
   "spriteName": "weapon_icon_3002_m",
   "possessionEffectId": 13101,
   "equipmentPossessionEffectId": 13202,
-  "order": 12
+  "order": 12,
+  "chinese": "纸扇"
  },
  {
   "version": "250330.1.0",
@@ -140,7 +152,8 @@
   "spriteName": "weapon_icon_3003_m",
   "possessionEffectId": 13101,
   "equipmentPossessionEffectId": 13203,
-  "order": 13
+  "order": 13,
+  "chinese": "木刀"
  },
  {
   "version": "250330.1.0",
@@ -151,7 +164,8 @@
   "spriteName": "weapon_icon_3004_m",
   "possessionEffectId": 13101,
   "equipmentPossessionEffectId": 13204,
-  "order": 14
+  "order": 14,
+  "chinese": "拳击手套"
  },
  {
   "version": "250330.1.0",
@@ -162,7 +176,8 @@
   "spriteName": "weapon_icon_3005_m",
   "possessionEffectId": 13101,
   "equipmentPossessionEffectId": 13205,
-  "order": 15
+  "order": 15,
+  "chinese": "玩具锤"
  },
  {
   "version": "250330.1.0",
@@ -173,7 +188,8 @@
   "spriteName": "weapon_icon_4001_m",
   "possessionEffectId": 14101,
   "equipmentPossessionEffectId": 14201,
-  "order": 16
+  "order": 16,
+  "chinese": "捕虫网"
  },
  {
   "version": "250330.1.0",
@@ -184,7 +200,8 @@
   "spriteName": "weapon_icon_4002_m",
   "possessionEffectId": 14101,
   "equipmentPossessionEffectId": 14202,
-  "order": 17
+  "order": 17,
+  "chinese": "剑"
  },
  {
   "version": "250330.1.0",
@@ -195,7 +212,8 @@
   "spriteName": "weapon_icon_4003_m",
   "possessionEffectId": 14101,
   "equipmentPossessionEffectId": 14203,
-  "order": 18
+  "order": 18,
+  "chinese": "斧头"
  },
  {
   "version": "250330.1.0",
@@ -206,7 +224,8 @@
   "spriteName": "weapon_icon_4004_m",
   "possessionEffectId": 14101,
   "equipmentPossessionEffectId": 14204,
-  "order": 19
+  "order": 19,
+  "chinese": "枪"
  },
  {
   "version": "250330.1.0",
@@ -217,7 +236,8 @@
   "spriteName": "weapon_icon_4005_m",
   "possessionEffectId": 14101,
   "equipmentPossessionEffectId": 14205,
-  "order": 20
+  "order": 20,
+  "chinese": "大锤"
  },
  {
   "version": "250330.1.0",
@@ -228,7 +248,8 @@
   "spriteName": "weapon_icon_5001_m",
   "possessionEffectId": 15101,
   "equipmentPossessionEffectId": 15201,
-  "order": 21
+  "order": 21,
+  "chinese": "弹弓"
  },
  {
   "version": "250330.1.0",
@@ -239,7 +260,8 @@
   "spriteName": "weapon_icon_5002_m",
   "possessionEffectId": 15101,
   "equipmentPossessionEffectId": 15202,
-  "order": 22
+  "order": 22,
+  "chinese": "锅铲"
  },
  {
   "version": "250330.1.0",
@@ -250,7 +272,8 @@
   "spriteName": "weapon_icon_5003_m",
   "possessionEffectId": 15101,
   "equipmentPossessionEffectId": 15203,
-  "order": 23
+  "order": 23,
+  "chinese": "铲子"
  },
  {
   "version": "250330.1.0",
@@ -261,7 +284,8 @@
   "spriteName": "weapon_icon_5004_m",
   "possessionEffectId": 15101,
   "equipmentPossessionEffectId": 15204,
-  "order": 24
+  "order": 24,
+  "chinese": "猫爪钩"
  },
  {
   "version": "250330.1.0",
@@ -272,7 +296,8 @@
   "spriteName": "weapon_icon_5005_m",
   "possessionEffectId": 15101,
   "equipmentPossessionEffectId": 15205,
-  "order": 25
+  "order": 25,
+  "chinese": "榔头"
  },
  {
   "version": "250330.1.0",
@@ -283,7 +308,8 @@
   "spriteName": "weapon_icon_5006_m",
   "possessionEffectId": 15101,
   "equipmentPossessionEffectId": 15206,
-  "order": 26
+  "order": 26,
+  "chinese": "手甲钩"
  },
  {
   "version": "250330.1.0",
@@ -294,7 +320,8 @@
   "spriteName": "weapon_icon_5007_m",
   "possessionEffectId": 15101,
   "equipmentPossessionEffectId": 15207,
-  "order": 27
+  "order": 27,
+  "chinese": "环刃"
  },
  {
   "version": "250330.1.0",
@@ -305,7 +332,8 @@
   "spriteName": "weapon_icon_5008_m",
   "possessionEffectId": 15101,
   "equipmentPossessionEffectId": 15208,
-  "order": 28
+  "order": 28,
+  "chinese": "双截棍"
  },
  {
   "version": "250330.1.0",
@@ -316,7 +344,8 @@
   "spriteName": "weapon_icon_5009_m",
   "possessionEffectId": 15101,
   "equipmentPossessionEffectId": 15209,
-  "order": 29
+  "order": 29,
+  "chinese": "铁棍"
  },
  {
   "version": "250330.1.0",
@@ -327,7 +356,8 @@
   "spriteName": "weapon_icon_5010_m",
   "possessionEffectId": 15101,
   "equipmentPossessionEffectId": 15210,
-  "order": 30
+  "order": 30,
+  "chinese": "晨星锤"
  },
  {
   "version": "250330.1.0",
@@ -338,7 +368,8 @@
   "spriteName": "weapon_icon_6001_m",
   "possessionEffectId": 16101,
   "equipmentPossessionEffectId": 16201,
-  "order": 31
+  "order": 31,
+  "chinese": "鸳鸯拐"
  },
  {
   "version": "250330.1.0",
@@ -349,7 +380,8 @@
   "spriteName": "weapon_icon_6002_m",
   "possessionEffectId": 16101,
   "equipmentPossessionEffectId": 16202,
-  "order": 32
+  "order": 32,
+  "chinese": "粉色剑"
  },
  {
   "version": "250330.1.0",
@@ -360,7 +392,8 @@
   "spriteName": "weapon_icon_6003_m",
   "possessionEffectId": 16101,
   "equipmentPossessionEffectId": 16203,
-  "order": 33
+  "order": 33,
+  "chinese": "黄色斧头"
  },
  {
   "version": "250330.1.0",
@@ -371,7 +404,8 @@
   "spriteName": "weapon_icon_6004_m",
   "possessionEffectId": 16101,
   "equipmentPossessionEffectId": 16204,
-  "order": 34
+  "order": 34,
+  "chinese": "蓝色大锤"
  },
  {
   "version": "250330.1.0",
@@ -382,7 +416,8 @@
   "spriteName": "weapon_icon_6005_m",
   "possessionEffectId": 16101,
   "equipmentPossessionEffectId": 16205,
-  "order": 35
+  "order": 35,
+  "chinese": "黄色双截棍"
  },
  {
   "version": "250330.1.0",
@@ -393,7 +428,8 @@
   "spriteName": "weapon_icon_6006_m",
   "possessionEffectId": 16101,
   "equipmentPossessionEffectId": 16206,
-  "order": 36
+  "order": 36,
+  "chinese": "粉色斧头"
  },
  {
   "version": "250330.1.0",
@@ -404,7 +440,8 @@
   "spriteName": "weapon_icon_6007_m",
   "possessionEffectId": 16101,
   "equipmentPossessionEffectId": 16207,
-  "order": 37
+  "order": 37,
+  "chinese": "粉色枪"
  },
  {
   "version": "250330.1.0",
@@ -415,7 +452,8 @@
   "spriteName": "weapon_icon_6008_m",
   "possessionEffectId": 16101,
   "equipmentPossessionEffectId": 16208,
-  "order": 38
+  "order": 38,
+  "chinese": "蓝色剑"
  },
  {
   "version": "250330.1.0",
@@ -426,7 +464,8 @@
   "spriteName": "weapon_icon_6009_m",
   "possessionEffectId": 16101,
   "equipmentPossessionEffectId": 16209,
-  "order": 39
+  "order": 39,
+  "chinese": "蓝色铁棍"
  },
  {
   "version": "250330.1.0",
@@ -437,7 +476,8 @@
   "spriteName": "weapon_icon_6010_m",
   "possessionEffectId": 16101,
   "equipmentPossessionEffectId": 16210,
-  "order": 40
+  "order": 40,
+  "chinese": "黄色晨星锤"
  },
  {
   "version": "250330.1.0",
@@ -448,7 +488,8 @@
   "spriteName": "weapon_icon_7001_m",
   "possessionEffectId": 17101,
   "equipmentPossessionEffectId": 17201,
-  "order": 41
+  "order": 41,
+  "chinese": "指虎"
  },
  {
   "version": "250330.1.0",
@@ -459,7 +500,8 @@
   "spriteName": "weapon_icon_7002_m",
   "possessionEffectId": 17101,
   "equipmentPossessionEffectId": 17202,
-  "order": 42
+  "order": 42,
+  "chinese": "金色刺叉"
  },
  {
   "version": "260115.1.0",
@@ -470,7 +512,8 @@
   "spriteName": "weapon_icon_7003_m",
   "possessionEffectId": 17102,
   "equipmentPossessionEffectId": 17203,
-  "order": 43
+  "order": 43,
+  "chinese": "金色剑"
  },
  {
   "version": "260115.1.0",
@@ -481,7 +524,8 @@
   "spriteName": "weapon_icon_7004_m",
   "possessionEffectId": 17102,
   "equipmentPossessionEffectId": 17204,
-  "order": 44
+  "order": 44,
+  "chinese": "金色斧头"
  },
  {
   "version": "260115.1.0",
@@ -492,7 +536,8 @@
   "spriteName": "weapon_icon_7005_m",
   "possessionEffectId": 17102,
   "equipmentPossessionEffectId": 17205,
-  "order": 45
+  "order": 45,
+  "chinese": "金色枪"
  },
  {
   "version": "260115.1.0",
@@ -503,7 +548,8 @@
   "spriteName": "weapon_icon_7006_m",
   "possessionEffectId": 17102,
   "equipmentPossessionEffectId": 17206,
-  "order": 46
+  "order": 46,
+  "chinese": "金色大锤"
  },
  {
   "version": "260410.1.0",
@@ -514,7 +560,8 @@
   "spriteName": "weapon_icon_7007_m",
   "possessionEffectId": 17103,
   "equipmentPossessionEffectId": 17207,
-  "order": 47
+  "order": 47,
+  "chinese": "金色弹弓"
  },
  {
   "version": "260410.1.0",
@@ -525,7 +572,8 @@
   "spriteName": "weapon_icon_7008_m",
   "possessionEffectId": 17103,
   "equipmentPossessionEffectId": 17208,
-  "order": 48
+  "order": 48,
+  "chinese": "金色锅铲"
  },
  {
   "version": "260410.1.0",
@@ -536,7 +584,8 @@
   "spriteName": "weapon_icon_7009_m",
   "possessionEffectId": 17104,
   "equipmentPossessionEffectId": 17209,
-  "order": 49
+  "order": 49,
+  "chinese": "金色铲子"
  },
  {
   "version": "260410.1.0",
@@ -547,7 +596,8 @@
   "spriteName": "weapon_icon_7010_m",
   "possessionEffectId": 17104,
   "equipmentPossessionEffectId": 17210,
-  "order": 50
+  "order": 50,
+  "chinese": "金色猫爪钩"
  },
  {
   "version": "260810.1.0",
@@ -558,7 +608,8 @@
   "spriteName": "weapon_icon_7011_m",
   "possessionEffectId": 17105,
   "equipmentPossessionEffectId": 17211,
-  "order": 51
+  "order": 51,
+  "chinese": "弹呦呦"
  },
  {
   "version": "260810.1.0",
@@ -569,6 +620,7 @@
   "spriteName": "weapon_icon_7012_m",
   "possessionEffectId": 17105,
   "equipmentPossessionEffectId": 17212,
-  "order": 52
+  "order": 52,
+  "chinese": "獭师之剑"
  }
 ]
