@@ -54,6 +54,12 @@ button.locked { background: var(--gold); border-color: var(--gold); color: #fff;
 }
 .card.owned { border-color: var(--accent2); background: #f2fbf7; }
 .card .head { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
+.card .hdmain { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.card .ico {
+  width: 42px; height: 42px; flex: none;
+  object-fit: contain; border-radius: 9px;
+  background: #faf3e7; border: 1px solid var(--line);
+}
 .card .title { font-weight: 700; font-size: .88rem; }
 .badge { border-radius: 6px; padding: 1px 6px; font-size: .72rem; color: #fff; white-space: nowrap; }
 .badge.r1 { background: #c05b9c; } .badge.r2 { background: #d9893b; } .badge.r3 { background: #7aa0d8; }

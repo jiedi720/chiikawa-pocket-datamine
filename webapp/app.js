@@ -285,6 +285,22 @@ function tagName(t) {
 }
 function charName(id) { return CHAR_NAME[id] || ('角色 ' + id); }
 
+// 列表缩略图：img.js 按官方中文编号存放图标。查不到就返回空串，条目保持纯文字。
+function imgTag(key) {
+  const f = (typeof IMG !== 'undefined' && key) ? IMG[key] : null;
+  if (!f) return '';
+  return `<img class="ico" src="img/${f}" alt="" loading="lazy" onerror="this.style.display='none'">`;
+}
+// 武器/防具用 sprite 里的 4 位编号（与官方中文名同键），支援用自身 id
+function itemImgKey(it) {
+  if (it.kind === 'weapon' || it.kind === 'armor') {
+    const m = /(\d{4})/.exec(it.sprite || '');
+    return m ? it.kind + '_' + m[1] : '';
+  }
+  if (it.kind === 'assist') return 'assist_' + it.id;
+  return '';
+}
+
 function costumeLabel(c) {
   const name = costumeName(c);
   return name ? `#${c.id} · ${name}` : `#${c.id} · ${charName(c.char)} · ${RARITY_NAME[c.rarity] || c.rarity}`;
@@ -337,7 +353,7 @@ function renderRoster() {
     }
     for (const t of c.tags) badges.push(`<span class="badge tag">标签 ${tagName(t)}</span>`);
     card.innerHTML = `
-      <div class="head"><span class="title">${costumeLabel(c)}</span>
+      <div class="head"><span class="hdmain">${imgTag('costume_' + c.id)}<span class="title">${costumeLabel(c)}</span></span>
         <button class="lockbtn ${isLocked(c.id) ? 'locked' : ''}" data-lock="${c.id}">${isLocked(c.id) ? '🔒 已锁定' : '锁定'}</button>
       </div>
       <div class="row">${badges.join('')}</div>
@@ -578,12 +594,12 @@ function renderItems() {
   const el = document.getElementById('items');
   const kind = document.getElementById('item-kind').value;
   el.innerHTML = '';
-  const addCard = (key, title, text, showEq, levelSel) => {
+  const addCard = (key, title, text, showEq, levelSel, imgKey) => {
     const st = itemState(key);
     const card = document.createElement('div');
     card.className = 'card' + (st.own ? ' owned' : '');
     card.innerHTML = `
-      <div class="head"><span class="title">${title}</span></div>
+      <div class="head"><span class="hdmain">${imgTag(imgKey || '')}<span class="title">${title}</span></span></div>
       <div class="row hint">${text}</div>
       <div class="row lvl">
         <label><input type="checkbox" data-own="${key}" ${st.own ? 'checked' : ''}> 已拥有</label>
@@ -596,7 +612,7 @@ function renderItems() {
     for (const it of DATA.items) {
       if (kind && it.kind !== kind) continue;
       const nm = itemName(it);
-      addCard(it.kind + ':' + it.id, `${ZH_KIND[it.kind] || it.kind} #${it.id}${nm ? ' · ' + nm : ''}${it.rarity ? ' · ' + (ZH_RARITY[it.rarity] || it.rarity) : ''}`, itemEffectText(it), true);
+      addCard(it.kind + ':' + it.id, `${ZH_KIND[it.kind] || it.kind} #${it.id}${nm ? ' · ' + nm : ''}${it.rarity ? ' · ' + (ZH_RARITY[it.rarity] || it.rarity) : ''}`, itemEffectText(it), true, undefined, itemImgKey(it));
     }
   }
   if (!kind || kind === 'home') {
