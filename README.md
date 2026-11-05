@@ -1,31 +1,33 @@
-# Chiikawa Pocket — Complete Datamine (v2.4.1)
+# 口袋吉伊卡哇 — 完整拆包资料（v2.4.1）
 
-> A full offline datamine of **Chiikawa Pocket (Global)** — `jp.co.applibot.chiikawapocketgl` v2.4.1 (Unity IL2CPP).
-> All 236 master-data tables decoded, every game formula recovered from native code and verified, plus guides, a team calculator webapp, and the full deobfuscated codebase structure.
+> 本仓库默认显示简体中文 README。英文原文见 **[README.en.md](README.en.md)**。
+
+> **《口袋吉伊卡哇》（Chiikawa Pocket，国际服）** `jp.co.applibot.chiikawapocketgl` v2.4.1（Unity IL2CPP）的完整离线拆包。
+> 236 张主数据表全部解码，所有游戏公式均从原生代码中还原并验证，另附玩法指南、队伍计算器网页工具，以及完整去混淆的代码结构。
 >
-> **Unofficial fan research.** Not affiliated with Applibot or the Chiikawa IP holders. Published for educational/datamining purposes. No game binaries are hosted here (see [What's not here](#whats-not-here-and-why)).
+> **非官方玩家研究项目。** 与 Applibot 及吉伊卡哇 IP 权利方无任何关联。仅用于教育与拆包研究。本仓库不托管任何游戏二进制文件（见[「未收录的内容及原因」](#未收录的内容及原因)）。
 
 ---
 
-##  The documentation (start here)
+## 文档（从这里开始）
 
-| Doc | What it is |
+| 文档 | 内容 |
 |---|---|
-| **[analysis/MECHANICS.md](analysis/MECHANICS.md)** | How every game system works |
-| **[analysis/MATH.md](analysis/MATH.md)** | Every important formula, explained with worked examples |
-| **[analysis/OPTIMAL_PLAY.md](analysis/OPTIMAL_PLAY.md)** | The mathematically optimal way to play each mechanic |
-| **[analysis/TEAM_SETUP.md](analysis/TEAM_SETUP.md)** | Team/formation math: what order changes, optimal arrangement |
-| **[analysis/LITTLE_HOUSE.md](analysis/LITTLE_HOUSE.md)** | The little-house items (Treasure system): verified owned + equip bonuses, conditions, best items |
-| **[analysis/KEYCHAIN.md](analysis/KEYCHAIN.md)** | The keychain (Keyholder) system: targeted equip effects, rarity tiers, merge costs |
-| **[analysis/MYROOM.md](analysis/MYROOM.md)** | Disambiguation: the code's "MyRoom" (cosmetic editor) vs the little-house items |
-| **[analysis/REPORT.md](analysis/REPORT.md)** | The technical datamine report (formats, systems, proof) |
-| **[analysis/formulas_decompiled.md](analysis/formulas_decompiled.md)** · **[batch2](analysis/formulas_decompiled_batch2.md)** · **[batch3](analysis/formulas_decompiled_batch3.md)** · **[batch4](analysis/formulas_decompiled_batch4.md)** | 90+ calculator/mechanics functions decompiled to C |
-| **[analysis/report_data_digests.md](analysis/report_data_digests.md)** | Big reference tables (all 153 Config constants, EXP curves, 168 skills with scaling, cost bands) |
-| **[webapp/](webapp/)** | **Team & Order Calculator** — open `webapp/index.html` in a browser |
+| **[analysis/MECHANICS.md](analysis/MECHANICS.md)** | 各个游戏系统的运作方式 |
+| **[analysis/MATH.md](analysis/MATH.md)** | 所有重要公式，附逐步演算示例 |
+| **[analysis/OPTIMAL_PLAY.md](analysis/OPTIMAL_PLAY.md)** | 每种机制在数学上的最优玩法 |
+| **[analysis/TEAM_SETUP.md](analysis/TEAM_SETUP.md)** | 编队与站位数学：顺序改变了什么、怎样排列最优 |
+| **[analysis/LITTLE_HOUSE.md](analysis/LITTLE_HOUSE.md)** | 小小屋物品（Treasure 系统）：经核实的持有／装备加成、触发条件、最优物品 |
+| **[analysis/KEYCHAIN.md](analysis/KEYCHAIN.md)** | 钥匙扣（Keyholder）系统：定向装备效果、稀有度分级、合成消耗 |
+| **[analysis/MYROOM.md](analysis/MYROOM.md)** | 概念辨析：代码里的「MyRoom」（外观编辑器）与小小屋物品的区别 |
+| **[analysis/REPORT.md](analysis/REPORT.md)** | 技术拆包报告（格式、系统、论证） |
+| **[analysis/formulas_decompiled.md](analysis/formulas_decompiled.md)** · **[batch2](analysis/formulas_decompiled_batch2.md)** · **[batch3](analysis/formulas_decompiled_batch3.md)** · **[batch4](analysis/formulas_decompiled_batch4.md)** | 90+ 个计算器／机制函数反编译为 C |
+| **[analysis/report_data_digests.md](analysis/report_data_digests.md)** | 大型参考表（全部 153 个 Config 常量、经验曲线、168 个技能及其成长、消耗区间） |
+| **[webapp/](webapp/)** | **队伍与顺序计算器** — 用浏览器打开 `webapp/index.html` |
 
-##  The game's actual math (the highlights)
+## 游戏实际使用的公式（精华）
 
-**Damage (normal attack):**
+**普通攻击伤害：**
 ```
 damage = Attack × NormalAttackDamageRate × CostumeAttackRate
        × (boss ? BossDamageRate : MobDamageRate) × DefenceDebuffAmp ÷ AttackDebuff
@@ -33,54 +35,53 @@ if rand(0,1) < CritRate:  ×= CriticalDamage × CriticalDefenceDebuffAmp
 if ConstantDamage > 0:    flat override (never crits)
 ```
 
-**Crit expectation:** `E = 1 + CritRate × (CritDamage − 1)` — base crit rate is **0%** (+0.1%/level), base crit damage **1.2×** (+1%/level).
+**暴击期望：** `E = 1 + CritRate × (CritDamage − 1)` — 基础暴击率 **0%**（每级 +0.1%），基础暴击伤害 **1.2×**（每级 +1%）。
 
-**Every stat:** `final = BaseValue × CorrectValue × StatusUpRate + StatusUpValue` — your displayed attack is a small linear base × an enormous collection multiplier (why owning everything beats leveling anything).
+**所有属性：** `final = BaseValue × CorrectValue × StatusUpRate + StatusUpValue` — 面板攻击力 = 很小的线性基础值 × 庞大的收集倍率（这正是「全收集」远胜「单点升级」的原因）。
 
-**Level scaling (everything):** linear `start + (end−start)×(L−startLv)/(endLv−startLv)`, Permil = ÷1000, no clamping. Skill example: Super Rare AoE 56×→650× attack from L1→L100.
+**等级成长（所有数值）：** 线性 `start + (end−start)×(L−startLv)/(endLv−startLv)`；Permil = ÷1000；不做上下限截断。技能示例：超稀有群体技能从 L1 的 56× 成长到 L100 的 650× 攻击力。
 
-**Formation:** single-target hits always strike the leftmost alive slot (front = shield); skills fire in formation order from a FIFO queue (0.5s unique / 2s assist gaps) — buffs go left of your nuke, carry goes far right.
+**编队：** 单体攻击永远命中**最左侧的存活位置**（前排 = 肉盾）；技能按编队顺序从 FIFO 队列发出（特技 0.5 秒／支援 2 秒间隔）——增益角色放在主输出的左侧，主 C 放最右。
 
-**Economy:** idle gold = stage rate × GoldAcquire, 12h cap, ad = +6h ×3/day; stage rates inflate 18/min → 10²¹/min; enemy HP reaches ~10⁴⁰ (BigDecimal everywhere; letter suffixes are base-26 alphabet — `264i` = 2.64×10²⁹).
+**经济：** 挂机金币 = 关卡速率 × GoldAcquire，12 小时上限，看广告 +6 小时 ×3 次／天；关卡速率从 18／分钟膨胀到 10²¹／分钟；敌方 HP 可达约 10⁴⁰（全程 BigDecimal；字母后缀采用 26 进制字母表 — `264i` = 2.64×10²⁹）。
 
-**Cooking:** pure multiplier chain — genre match 1.5×, main/sub slot 1.0/0.3×, rarity SR 3×/HR 1×/UR 0.3× (inverted!), boost 2× → 9× from correct assignment.
+**料理：** 纯倍率连乘 — 类型匹配 1.5×、主／副位 1.0／0.3×、稀有度 SR 3×／HR 1×／UR 0.3×（越高稀有度反而越低！）、加成 2× → 配置正确可达 9×。
 
-**Costs:** Attack enhance = 3 gold/level vs Critical Rate = 10¹⁴ gold/level (deliberate late-game sink); gacha 500 gems/11-draw vs 1500/35 (−5.7%); ad draw free 11×3/day.
+**消耗：** 攻击强化 = 3 金币／级，而暴击率 = 10¹⁴ 金币／级（刻意设置的后期金币回收口）；扭蛋 500 宝石／11 连 对 1500 宝石／35 连（便宜 5.7%）；广告免费 11 连 ×3 次／天。
 
-Full formulas with derivations: **[analysis/MATH.md](analysis/MATH.md)**.
+完整公式与推导：**[analysis/MATH.md](analysis/MATH.md)**。
 
-##  The data
+## 数据
 
-- **[analysis/masterdata/](analysis/masterdata/)** — all **236 master-data tables decoded to JSON** (byte-exact): 8,648 stages, 25,008 enemy statuses, 146 costumes, 168 skills/186 effects, 2,823 possession effects, 2,084 shop items, gacha structures, cooking, study, weeding, league…
-- **[dumps/MasterData/](dumps/MasterData/)** — the raw `.bytes` master files as pulled from the device
-- **[analysis/schema.json](analysis/schema.json)** — extracted message/enum schemas (568 classes, 1,331 enums) + [proto_descriptors.json](analysis/proto_descriptors.json) (partial .proto recovery)
-- **[analysis/skills_resolved.json](analysis/skills_resolved.json)** — every skill effect with level-scaled values resolved
-- **[dumps/il2cppdumper/dump.cs](dumps/il2cppdumper/dump.cs)** — the deobfuscated C# structure of the entire game (every class, field, method + native address)
-- **[dumps/il2cppdumper/DummyDll/](dumps/il2cppdumper/DummyDll/)** — reconstructed managed DLL stubs (all assemblies incl. Assembly-CSharp)
-- **[decompiled/jadx-base/](decompiled/jadx-base/)** — decompiled Java layer (mostly platform SDKs; game logic is IL2CPP-side)
+- **[analysis/masterdata/](analysis/masterdata/)** — **236 张主数据表全部解码为 JSON**（逐字节精确）：8,648 个关卡、25,008 条敌方状态、146 套服装、168 个技能／186 个效果、2,823 个持有效果、2,084 个商店商品，以及扭蛋结构、料理、特训、除草、联赛……
+- **[dumps/MasterData/](dumps/MasterData/)** — 从设备拉取的原始 `.bytes` 主数据文件
+- **[analysis/schema.json](analysis/schema.json)** — 提取出的 message／enum 结构（568 个类、1,331 个枚举）+ [proto_descriptors.json](analysis/proto_descriptors.json)（部分 `.proto` 恢复）
+- **[analysis/skills_resolved.json](analysis/skills_resolved.json)** — 每个技能效果均已解析出按等级缩放后的数值
+- **[dumps/il2cppdumper/dump.cs](dumps/il2cppdumper/dump.cs)** — 整个游戏去混淆后的 C# 结构（每个类、字段、方法 + 原生地址）
+- **[dumps/il2cppdumper/DummyDll/](dumps/il2cppdumper/DummyDll/)** — 重建的托管 DLL 桩（含 Assembly-CSharp 在内的全部程序集）
+- **[decompiled/jadx-base/](decompiled/jadx-base/)** — 反编译的 Java 层（主要是平台 SDK；游戏逻辑在 IL2CPP 侧）
 
-##  The calculator webapp
+## 计算器网页工具
 
-Open **[webapp/index.html](webapp/index.html)** in any browser (no server). Enter your account stats, mark owned costumes, and it computes your best 6-costume team **and** the optimal order — using the real formulas (skill scaling at your levels, crit expectation, buff uptimes, tag synergy, survival/queue-aware ordering over all 720 permutations). Includes a buffs/items browser (149 items with possession/equipment effects) and a math reference tab.
+用任意浏览器打开 **[webapp/index.html](webapp/index.html)**（无需服务器）。输入账号属性、勾选已拥有的服装，它就会用真实公式算出最优的 6 服装队伍**以及**最佳站位顺序（含技能等级缩放、暴击期望、增益覆盖率、标签协同，并对全部 720 种排列做兼顾生存与队列的排序）。另附增益／物品浏览器（149 件物品的持有与装备效果）和数学参考标签页。
 
-##  How it was datamined (pipeline)
+## 拆包流程
 
-1. Pulled the installed APK splits + runtime master data from an emulator over ADB (root).
-2. The shipped `global-metadata.dat` is encrypted — recovered the **decrypted** copy from the running game's memory mapping.
-3. Il2CppDumper → full C# structure (`dump.cs`, DummyDll, script.json).
-4. Reverse-engineered the MasterData `.bytes` format (tagless, proto-style, varint/fixed-8 mix) and wrote a byte-exact parser → all 236 tables to JSON.
-5. Recovered calculation code from `libil2cpp.so` (ARM64) via Capstone disassembly + Ghidra/PyGhidra decompilation of 90+ functions (damage, status aggregation, skill queue, cooking, CP…).
+1. 通过 ADB（root）从模拟器拉取已安装的 APK 分包与运行时主数据。
+2. 随包附带的 `global-metadata.dat` 是加密的 — 从运行中的游戏内存映射里还原出**解密后**的副本。
+3. Il2CppDumper → 完整 C# 结构（`dump.cs`、DummyDll、script.json）。
+4. 逆向出 MasterData `.bytes` 格式（无标签、类 proto、varint／fixed-8 混合），编写逐字节精确的解析器 → 236 张表全部转为 JSON。
+5. 借助 Capstone 反汇编 + Ghidra／PyGhidra 反编译 90+ 个函数，从 `libil2cpp.so`（ARM64）还原计算代码（伤害、状态聚合、技能队列、料理、CP……）。
 
-Reproduction scripts (our own): **[scripts/](scripts/)** — parser, schema extractor, disassemblers, decompile drivers, dataset exporters. Downloaded toolchains (Ghidra, jadx, Il2CppDumper) are not included — versions/links in each script header.
+复现脚本（本项目自研）：**[scripts/](scripts/)** — 解析器、结构提取器、反汇编器、反编译驱动、数据集导出器。下载的第三方工具链（Ghidra、jadx、Il2CppDumper）未包含在内 — 版本与链接见各脚本头部。
 
+## 未收录的内容及原因
 
-## What's not here and why
+- **APK 与 Unity 资源包**（受版权保护的游戏文件；且超过 800 MB，超出 GitHub 限制）。
+- **`libil2cpp.so`、`il2cpp.h`、`script.json`**（二进制／体积过大；`dump.cs` + DummyDll 已包含同样信息）。
+- **扭蛋概率、主数据文本、挂机奖励最终数值** — 由**服务器端**（GS2）计算，客户端里没有，因此无法离线拆包。你在别处看到的任何「概率」都来自服务器，而不是 APK。
+- 工具链（Ghidra／jadx／Il2CppDumper）— 需要下载什么见 `scripts/`。
 
-- **The APK and Unity asset pack** (copyrighted game files; also >800 MB — over GitHub's limits).
-- **`libil2cpp.so`, `il2cpp.h`, `script.json`** (binary/oversized; `dump.cs` + DummyDll carry the same information).
-- **Gacha rates, master text, idle-reward final values** — computed **server-side** (GS2); they are not in the client, so they can't be datamined offline. Any "rate" you see quoted elsewhere comes from the server, not the APK.
-- Toolchains (Ghidra/jadx/Il2CppDumper) — see `scripts/` for what to download.
+## 免责声明
 
-##  Disclaimer
-
-Fan-made, unofficial research project for education and interoperability discussion. All game data, names, and assets belong to their respective owners (Applibot / Chiikawa IP holders). If you are a rights holder and want anything here removed, open an issue and it will be taken down promptly. No copyrighted game binaries are distributed in this repository.
+玩家自制的非官方研究项目，仅用于教育与互操作性讨论。所有游戏数据、名称与素材归各自权利人所有（Applibot ／ 吉伊卡哇 IP 权利方）。若您是权利方并希望移除此处任何内容，请提一个 issue，我们会立即下架。本仓库不分发任何受版权保护的游戏二进制文件。
