@@ -26,27 +26,27 @@
       <h2>1 · 账号面板</h2>
       <p class="hint">数据取自游戏内状态页。倍率直接填倍数（1.20 = +20%）。</p>
       <div class="grid2">
-        <label>暴击率（0–1） <input id="in-critRate" type="number" step="0.01" value="0.10"></label>
-        <label>暴击伤害（×） <input id="in-critDmg" type="number" step="0.1" value="1.5"></label>
-        <label>普通攻击伤害倍率 <input id="in-normalRate" type="number" step="0.1" value="1.0"></label>
-        <label>特技＆支援伤害倍率 <input id="in-skillRate" type="number" step="0.1" value="1.0"></label>
-        <label>特技伤害倍率 <input id="in-uniqueRate" type="number" step="0.1" value="1.0"></label>
-        <label>对 Boss 的伤害倍率 <input id="in-bossRate" type="number" step="0.1" value="1.5"></label>
-        <label>对非 Boss 的伤害 <input id="in-mobRate" type="number" step="0.1" value="1.0"></label>
-        <label>攻击速度（次/秒） <input id="in-atkSpeed" type="number" step="0.01" value="0.66"></label>
-        <label>冷却缩减（0–0.9） <input id="in-cdr" type="number" step="0.01" value="0"></label>
-        <label>体力削减倍率 <input id="in-defDebuff" type="number" step="0.05" value="1.0"></label>
+        <label data-en="Crit rate (0–1)">暴击率（0–1） <input id="in-critRate" type="number" step="0.01" value="0.10" data-en="Crit rate (0–1)"></label>
+        <label data-en="Crit damage (×)">暴击伤害（×） <input id="in-critDmg" type="number" step="0.1" value="1.5" data-en="Crit damage (×)"></label>
+        <label data-en="Normal atk rate">普通攻击伤害倍率 <input id="in-normalRate" type="number" step="0.1" value="1.0" data-en="Normal atk rate"></label>
+        <label data-en="Skill dmg rate">特技＆支援伤害倍率 <input id="in-skillRate" type="number" step="0.1" value="1.0" data-en="Skill dmg rate"></label>
+        <label data-en="Unique skill rate">特技伤害倍率 <input id="in-uniqueRate" type="number" step="0.1" value="1.0" data-en="Unique skill rate"></label>
+        <label data-en="Boss dmg rate">对 Boss 的伤害倍率 <input id="in-bossRate" type="number" step="0.1" value="1.5" data-en="Boss dmg rate"></label>
+        <label data-en="Mob dmg rate">对非 Boss 的伤害 <input id="in-mobRate" type="number" step="0.1" value="1.0" data-en="Mob dmg rate"></label>
+        <label data-en="Attack speed (swings/s)">攻击速度（次/秒） <input id="in-atkSpeed" type="number" step="0.01" value="0.66" data-en="Attack speed (swings/s)"></label>
+        <label data-en="Cooldown reduction (0–0.9)">冷却缩减（0–0.9） <input id="in-cdr" type="number" step="0.01" value="0" data-en="Cooldown reduction (0–0.9)"></label>
+        <label data-en="Defence-debuff amp">体力削减倍率 <input id="in-defDebuff" type="number" step="0.05" value="1.0" data-en="Defence-debuff amp"></label>
       </div>
       <h2>2 · 模式</h2>
       <div class="grid1">
-        <label>战斗场景
-          <select id="in-mode">
+        <label data-en="Fight context">战斗场景
+          <select id="in-mode" data-en="Fight context">
             <option value="balanced" selected>均衡（清波 + Boss）</option>
             <option value="farm">刷本 / 清波（以杂兵为主）</option>
             <option value="boss">Boss 墙（单体爆发）</option>
           </select>
         </label>
-        <label>标签协同权重 %/每名额外成员 <input id="in-tagWeight" type="number" step="0.5" value="2"></label>
+        <label data-en="Tag synergy weight %/extra member">标签协同权重 %/每名额外成员 <input id="in-tagWeight" type="number" step="0.5" value="2" data-en="Tag synergy weight %/extra member"></label>
       </div>
       <h2>3 · 计算</h2>
       <div class="grid1">
@@ -131,5 +131,6 @@ Buffs/debuffs must be LEFT of your nuke to affect it. CP = HP×0.6 + Σ(normal×
 <script src="zh.js"></script>
 <script src="data.js"></script>
 <script src="app.js"></script>
+<script src="en-tip.js"></script>
 </body>
 </html>
