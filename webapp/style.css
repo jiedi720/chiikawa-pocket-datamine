@@ -88,4 +88,15 @@ pre {
 }
 footer { padding: 12px 24px 24px; color: var(--soft); font-size: .78rem; }
 .lockbtn { padding: 2px 8px; font-size: .72rem; }
+/* 原英文名 tooltip */
+#en-tip {
+  position: absolute; z-index: 999; pointer-events: none;
+  background: #4a3f35; color: #fdf6ec;
+  padding: 4px 9px; border-radius: 7px;
+  font-size: .76rem; line-height: 1.35; white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(74,63,53,.28);
+  opacity: 0; transform: translateY(-3px);
+  transition: opacity .12s ease, transform .12s ease;
+}
+#en-tip.show { opacity: 1; transform: translateY(0); }
 @media (max-width: 1100px) { .cols { grid-template-columns: 1fr; } .slots { grid-template-columns: repeat(3, 1fr); } }
