@@ -8,7 +8,8 @@
    71001
   ],
   "nameTextKey": 2010309190,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "米饭"
  },
  {
   "version": "250330.1.0",
@@ -19,7 +20,8 @@
    71007
   ],
   "nameTextKey": -287591428,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "拌饭"
  },
  {
   "version": "250330.1.0",
@@ -31,7 +33,8 @@
    71008
   ],
   "nameTextKey": 129504969,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "寿司"
  },
  {
   "version": "250330.1.0",
@@ -43,7 +46,8 @@
    71008
   ],
   "nameTextKey": 1891575391,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "梅子饭团"
  },
  {
   "version": "250330.1.0",
@@ -55,7 +59,8 @@
    72006
   ],
   "nameTextKey": -373917723,
-  "cookingMenuRarityId": 2
+  "cookingMenuRarityId": 2,
+  "chinese": "蛋包饭"
  },
  {
   "version": "250330.1.0",
@@ -67,7 +72,8 @@
    72010
   ],
   "nameTextKey": -1632549005,
-  "cookingMenuRarityId": 2
+  "cookingMenuRarityId": 2,
+  "chinese": "猪肉鸡蛋饭团"
  },
  {
   "version": "260530.1.0",
@@ -78,7 +84,8 @@
    73011
   ],
   "nameTextKey": 235821794,
-  "cookingMenuRarityId": 3
+  "cookingMenuRarityId": 3,
+  "chinese": "寿司泡饭"
  },
  {
   "version": "250330.1.0",
@@ -89,7 +96,8 @@
    73001
   ],
   "nameTextKey": 2030660212,
-  "cookingMenuRarityId": 3
+  "cookingMenuRarityId": 3,
+  "chinese": "咖喱饭"
  },
  {
   "version": "250330.1.0",
@@ -101,7 +109,8 @@
    73010
   ],
   "nameTextKey": 432989073,
-  "cookingMenuRarityId": 3
+  "cookingMenuRarityId": 3,
+  "chinese": "早餐套餐"
  },
  {
   "version": "250330.1.0",
@@ -113,7 +122,8 @@
    71006
   ],
   "nameTextKey": 1858720519,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "白吐司"
  },
  {
   "version": "250330.1.0",
@@ -124,7 +134,8 @@
    71001
   ],
   "nameTextKey": -138378563,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "果酱吐司"
  },
  {
   "version": "250330.1.0",
@@ -136,7 +147,8 @@
    71010
   ],
   "nameTextKey": 514008968,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "蜜瓜包"
  },
  {
   "version": "250330.1.0",
@@ -148,7 +160,8 @@
    71010
   ],
   "nameTextKey": 1772361502,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "披萨包子"
  },
  {
   "version": "250330.1.0",
@@ -160,7 +173,8 @@
    72006
   ],
   "nameTextKey": -257079644,
-  "cookingMenuRarityId": 2
+  "cookingMenuRarityId": 2,
+  "chinese": "巧克力豆小面包"
  },
  {
   "version": "250330.1.0",
@@ -171,7 +185,8 @@
    72005
   ],
   "nameTextKey": 387279779,
-  "cookingMenuRarityId": 2
+  "cookingMenuRarityId": 2,
+  "chinese": "猪肉蜜瓜包"
  },
  {
   "version": "250330.1.0",
@@ -183,7 +198,8 @@
    73006
   ],
   "nameTextKey": 1611815733,
-  "cookingMenuRarityId": 3
+  "cookingMenuRarityId": 3,
+  "chinese": "比萨"
  },
  {
   "version": "250330.1.0",
@@ -195,7 +211,8 @@
    73008
   ],
   "nameTextKey": 853782610,
-  "cookingMenuRarityId": 3
+  "cookingMenuRarityId": 3,
+  "chinese": "法式漩涡吐司"
  },
  {
   "version": "250330.1.0",
@@ -206,7 +223,8 @@
    71007
   ],
   "nameTextKey": -588394114,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "乌冬面"
  },
  {
   "version": "250330.1.0",
@@ -217,7 +235,8 @@
    71009
   ],
   "nameTextKey": -1410670104,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "荞麦面"
  },
  {
   "version": "250330.1.0",
@@ -229,7 +248,8 @@
    71006
   ],
   "nameTextKey": 898528331,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "番茄酱意面"
  },
  {
   "version": "250330.1.0",
@@ -240,7 +260,8 @@
    71005
   ],
   "nameTextKey": 1116292317,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "柑橘素面"
  },
  {
   "version": "250330.1.0",
@@ -252,7 +273,8 @@
    72010
   ],
   "nameTextKey": -1400429071,
-  "cookingMenuRarityId": 2
+  "cookingMenuRarityId": 2,
+  "chinese": "杂炊乌冬面"
  },
  {
   "version": "250330.1.0",
@@ -263,7 +285,8 @@
    72007
   ],
   "nameTextKey": 1010317408,
-  "cookingMenuRarityId": 2
+  "cookingMenuRarityId": 2,
+  "chinese": "黄油酱油烧乌冬面"
  },
  {
   "version": "250330.1.0",
@@ -275,7 +298,8 @@
    73008
   ],
   "nameTextKey": 1262422262,
-  "cookingMenuRarityId": 3
+  "cookingMenuRarityId": 3,
+  "chinese": "郎拉面（加蒜加酱）"
  },
  {
   "version": "250330.1.0",
@@ -287,7 +311,8 @@
    73010
   ],
   "nameTextKey": 737706259,
-  "cookingMenuRarityId": 3
+  "cookingMenuRarityId": 3,
+  "chinese": "呲溜呲溜拼盘"
  },
  {
   "version": "250330.1.0",
@@ -299,7 +324,8 @@
    71010
   ],
   "nameTextKey": 1560260997,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "烤香肠"
  },
  {
   "version": "250330.1.0",
@@ -311,7 +337,8 @@
    71008
   ],
   "nameTextKey": -973676481,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "煎蛋卷"
  },
  {
   "version": "250330.1.0",
@@ -322,7 +349,8 @@
    71011
   ],
   "nameTextKey": -1292775255,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "烤香菇"
  },
  {
   "version": "250330.1.0",
@@ -333,7 +361,8 @@
    71007
   ],
   "nameTextKey": 747980042,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "炙烤青花鱼"
  },
  {
   "version": "250330.1.0",
@@ -345,7 +374,8 @@
    72010
   ],
   "nameTextKey": -1030020058,
-  "cookingMenuRarityId": 2
+  "cookingMenuRarityId": 2,
+  "chinese": "咸甜煮鱼"
  },
  {
   "version": "260530.1.0",
@@ -357,7 +387,8 @@
    73010
   ],
   "nameTextKey": -1248062288,
-  "cookingMenuRarityId": 3
+  "cookingMenuRarityId": 3,
+  "chinese": "炸鸡"
  },
  {
   "version": "250330.1.0",
@@ -368,7 +399,8 @@
    72009
   ],
   "nameTextKey": 623053089,
-  "cookingMenuRarityId": 2
+  "cookingMenuRarityId": 2,
+  "chinese": "关东煮"
  },
  {
   "version": "250330.1.0",
@@ -380,7 +412,8 @@
    73010
   ],
   "nameTextKey": 1378105783,
-  "cookingMenuRarityId": 3
+  "cookingMenuRarityId": 3,
+  "chinese": "牛排"
  },
  {
   "version": "250330.1.0",
@@ -392,7 +425,8 @@
    73010
   ],
   "nameTextKey": 1689851860,
-  "cookingMenuRarityId": 3
+  "cookingMenuRarityId": 3,
+  "chinese": "寿喜锅"
  },
  {
   "version": "250330.1.0",
@@ -403,7 +437,8 @@
    71001
   ],
   "nameTextKey": 331228994,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "果冻"
  },
  {
   "version": "250330.1.0",
@@ -415,7 +450,8 @@
    71010
   ],
   "nameTextKey": -1967687944,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "冰淇淋"
  },
  {
   "version": "250330.1.0",
@@ -426,7 +462,8 @@
    71001
   ],
   "nameTextKey": -38779282,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "布丁"
  },
  {
   "version": "250330.1.0",
@@ -437,7 +474,8 @@
    71007
   ],
   "nameTextKey": 349430619,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "松饼"
  },
  {
   "version": "250330.1.0",
@@ -449,7 +487,8 @@
    72006
   ],
   "nameTextKey": -1915047199,
-  "cookingMenuRarityId": 2
+  "cookingMenuRarityId": 2,
+  "chinese": "可露丽"
  },
  {
   "version": "250330.1.0",
@@ -460,7 +499,8 @@
    72011
   ],
   "nameTextKey": -86146441,
-  "cookingMenuRarityId": 2
+  "cookingMenuRarityId": 2,
+  "chinese": "泡芙"
  },
  {
   "version": "250330.1.0",
@@ -472,7 +512,8 @@
    73008
   ],
   "nameTextKey": 493203312,
-  "cookingMenuRarityId": 3
+  "cookingMenuRarityId": 3,
+  "chinese": "蛋糕"
  },
  {
   "version": "250330.1.0",
@@ -483,7 +524,8 @@
    73011
   ],
   "nameTextKey": 2107778709,
-  "cookingMenuRarityId": 3
+  "cookingMenuRarityId": 3,
+  "chinese": "草莓芭菲"
  },
  {
   "version": "250330.1.0",
@@ -495,7 +537,8 @@
    71010
   ],
   "nameTextKey": 178591235,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "草莓牛奶"
  },
  {
   "version": "250330.1.0",
@@ -506,7 +549,8 @@
    71005
   ],
   "nameTextKey": -1817425991,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "茶"
  },
  {
   "version": "250330.1.0",
@@ -517,7 +561,8 @@
    71001
   ],
   "nameTextKey": 2060444300,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "可乐"
  },
  {
   "version": "250330.1.0",
@@ -528,7 +573,8 @@
    71009
   ],
   "nameTextKey": 231264794,
-  "cookingMenuRarityId": 1
+  "cookingMenuRarityId": 1,
+  "chinese": "桃子气泡水"
  },
  {
   "version": "250330.1.0",
@@ -539,7 +585,8 @@
    72001
   ],
   "nameTextKey": -473517258,
-  "cookingMenuRarityId": 2
+  "cookingMenuRarityId": 2,
+  "chinese": "姜汁汽水"
  },
  {
   "version": "250330.1.0",
@@ -551,7 +598,8 @@
    72006
   ],
   "nameTextKey": 1937354407,
-  "cookingMenuRarityId": 2
+  "cookingMenuRarityId": 2,
+  "chinese": "咖啡"
  },
  {
   "version": "250330.1.0",
@@ -562,7 +610,8 @@
    73005
   ],
   "nameTextKey": 75406897,
-  "cookingMenuRarityId": 3
+  "cookingMenuRarityId": 3,
+  "chinese": "维也纳咖啡"
  },
  {
   "version": "250330.1.0",
@@ -573,6 +622,7 @@
    73001
   ],
   "nameTextKey": 1452242262,
-  "cookingMenuRarityId": 3
+  "cookingMenuRarityId": 3,
+  "chinese": "冰淇淋可乐"
  }
 ]
