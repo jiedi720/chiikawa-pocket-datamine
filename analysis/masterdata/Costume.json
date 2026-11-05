@@ -40,7 +40,8 @@
   "promotionCostumePossessionEffectId": 110016,
   "costumeRarityId": 1,
   "sortOrder": 1,
-  "detailLabelTextKey": 860863496
+  "detailLabelTextKey": 860863496,
+  "chinese": "[普通]吉伊卡哇"
  },
  {
   "version": "250330.1.0",
@@ -83,7 +84,8 @@
   "promotionCostumePossessionEffectId": 120016,
   "costumeRarityId": 1,
   "sortOrder": 2,
-  "detailLabelTextKey": 570037222
+  "detailLabelTextKey": 570037222,
+  "chinese": "[普通]哈奇喵"
  },
  {
   "version": "250330.1.0",
@@ -126,7 +128,8 @@
   "promotionCostumePossessionEffectId": 130016,
   "costumeRarityId": 1,
   "sortOrder": 3,
-  "detailLabelTextKey": -1723435901
+  "detailLabelTextKey": -1723435901,
+  "chinese": "[普通]乌萨奇"
  },
  {
   "version": "250330.1.0",
@@ -169,7 +172,8 @@
   "promotionCostumePossessionEffectId": 140016,
   "costumeRarityId": 1,
   "sortOrder": 5,
-  "detailLabelTextKey": 76631098
+  "detailLabelTextKey": 76631098,
+  "chinese": "[普通]栗子馒头"
  },
  {
   "version": "250330.1.0",
@@ -212,7 +216,8 @@
   "promotionCostumePossessionEffectId": 150016,
   "costumeRarityId": 1,
   "sortOrder": 4,
-  "detailLabelTextKey": -1137890465
+  "detailLabelTextKey": -1137890465,
+  "chinese": "[普通]飞鼠"
  },
  {
   "version": "250330.1.0",
@@ -255,7 +260,8 @@
   "promotionCostumePossessionEffectId": 160016,
   "costumeRarityId": 1,
   "sortOrder": 6,
-  "detailLabelTextKey": -1365736271
+  "detailLabelTextKey": -1365736271,
+  "chinese": "[普通]獭师"
  },
  {
   "version": "250330.1.0",
@@ -298,7 +304,8 @@
   "promotionCostumePossessionEffectId": 170016,
   "costumeRarityId": 1,
   "sortOrder": 7,
-  "detailLabelTextKey": 371516372
+  "detailLabelTextKey": 371516372,
+  "chinese": "[普通]狮萨"
  },
  {
   "version": "250330.1.0",
@@ -341,7 +348,8 @@
   "promotionCostumePossessionEffectId": 210016,
   "costumeRarityId": 2,
   "sortOrder": 11,
-  "detailLabelTextKey": 1961871064
+  "detailLabelTextKey": 1961871064,
+  "chinese": "[睡衣]吉伊卡哇"
  },
  {
   "version": "250330.1.0",
@@ -384,7 +392,8 @@
   "promotionCostumePossessionEffectId": 220016,
   "costumeRarityId": 2,
   "sortOrder": 12,
-  "detailLabelTextKey": 1717201206
+  "detailLabelTextKey": 1717201206,
+  "chinese": "[睡衣]哈奇喵"
  },
  {
   "version": "250330.1.0",
@@ -427,7 +436,8 @@
   "promotionCostumePossessionEffectId": 230016,
   "costumeRarityId": 2,
   "sortOrder": 13,
-  "detailLabelTextKey": -555348397
+  "detailLabelTextKey": -555348397,
+  "chinese": "[睡衣]乌萨奇"
  },
  {
   "version": "250330.1.0",
@@ -470,7 +480,8 @@
   "promotionCostumePossessionEffectId": 310016,
   "costumeRarityId": 3,
   "sortOrder": 101,
-  "detailLabelTextKey": 1234169704
+  "detailLabelTextKey": 1234169704,
+  "chinese": "[野餐]吉伊卡哇"
  },
  {
   "version": "250330.1.0",
@@ -513,7 +524,8 @@
   "promotionCostumePossessionEffectId": 320016,
   "costumeRarityId": 3,
   "sortOrder": 102,
-  "detailLabelTextKey": 1530544262
+  "detailLabelTextKey": 1530544262,
+  "chinese": "[野餐]哈奇喵"
  },
  {
   "version": "250330.1.0",
@@ -556,7 +568,8 @@
   "promotionCostumePossessionEffectId": 330016,
   "costumeRarityId": 3,
   "sortOrder": 103,
-  "detailLabelTextKey": -477747229
+  "detailLabelTextKey": -477747229,
+  "chinese": "[野餐]乌萨奇"
  },
  {
   "version": "250410.1.0",
@@ -599,7 +612,8 @@
   "promotionCostumePossessionEffectId": 340016,
   "costumeRarityId": 3,
   "sortOrder": 105,
-  "detailLabelTextKey": 2119245658
+  "detailLabelTextKey": 2119245658,
+  "chinese": "[野餐]栗子馒头"
  },
  {
   "version": "250350.1.0",
@@ -642,7 +656,8 @@
   "promotionCostumePossessionEffectId": 350016,
   "costumeRarityId": 3,
   "sortOrder": 104,
-  "detailLabelTextKey": -957515713
+  "detailLabelTextKey": -957515713,
+  "chinese": "[野餐]飞鼠"
  },
  {
   "version": "250350.1.0",
@@ -685,7 +700,8 @@
   "promotionCostumePossessionEffectId": 360016,
   "costumeRarityId": 3,
   "sortOrder": 106,
-  "detailLabelTextKey": -732375087
+  "detailLabelTextKey": -732375087,
+  "chinese": "[野餐]獭师"
  },
  {
   "version": "250410.1.0",
@@ -728,7 +744,8 @@
   "promotionCostumePossessionEffectId": 370016,
   "costumeRarityId": 3,
   "sortOrder": 107,
-  "detailLabelTextKey": 1826926772
+  "detailLabelTextKey": 1826926772,
+  "chinese": "[野餐]狮萨"
  },
  {
   "version": "250440.1.0",
@@ -771,7 +788,8 @@
   "promotionCostumePossessionEffectId": 310026,
   "costumeRarityId": 3,
   "sortOrder": 111,
-  "detailLabelTextKey": -796475694
+  "detailLabelTextKey": -796475694,
+  "chinese": "[马戏团]吉伊卡哇"
  },
  {
   "version": "250440.1.0",
@@ -814,7 +832,8 @@
   "promotionCostumePossessionEffectId": 320026,
   "costumeRarityId": 3,
   "sortOrder": 112,
-  "detailLabelTextKey": -1036840644
+  "detailLabelTextKey": -1036840644,
+  "chinese": "[马戏团]哈奇喵"
  },
  {
   "version": "250450.1.0",
@@ -857,7 +876,8 @@
   "promotionCostumePossessionEffectId": 330026,
   "costumeRarityId": 3,
   "sortOrder": 113,
-  "detailLabelTextKey": 2056222297
+  "detailLabelTextKey": 2056222297,
+  "chinese": "[马戏团]乌萨奇"
  },
  {
   "version": "250440.1.0",
@@ -900,7 +920,8 @@
   "promotionCostumePossessionEffectId": 340026,
   "costumeRarityId": 3,
   "sortOrder": 115,
-  "detailLabelTextKey": -413643040
+  "detailLabelTextKey": -413643040,
+  "chinese": "[马戏团]栗子馒头"
  },
  {
   "version": "250450.1.0",
@@ -943,7 +964,8 @@
   "promotionCostumePossessionEffectId": 350026,
   "costumeRarityId": 3,
   "sortOrder": 114,
-  "detailLabelTextKey": 1608788357
+  "detailLabelTextKey": 1608788357,
+  "chinese": "[马戏团]飞鼠"
  },
  {
   "version": "250450.1.0",
@@ -986,7 +1008,8 @@
   "promotionCostumePossessionEffectId": 360026,
   "costumeRarityId": 3,
   "sortOrder": 116,
-  "detailLabelTextKey": 1297188459
+  "detailLabelTextKey": 1297188459,
+  "chinese": "[马戏团]獭师"
  },
  {
   "version": "250440.1.0",
@@ -1029,7 +1052,8 @@
   "promotionCostumePossessionEffectId": 370026,
   "costumeRarityId": 3,
   "sortOrder": 117,
-  "detailLabelTextKey": -168959730
+  "detailLabelTextKey": -168959730,
+  "chinese": "[马戏团]狮萨"
  },
  {
   "version": "250530.1.0",
@@ -1072,7 +1096,8 @@
   "promotionCostumePossessionEffectId": 310036,
   "costumeRarityId": 3,
   "sortOrder": 121,
-  "detailLabelTextKey": -1484681660
+  "detailLabelTextKey": -1484681660,
+  "chinese": "[江户]吉伊卡哇"
  },
  {
   "version": "250550.1.0",
@@ -1115,7 +1140,8 @@
   "promotionCostumePossessionEffectId": 320036,
   "costumeRarityId": 3,
   "sortOrder": 122,
-  "detailLabelTextKey": -1254874710
+  "detailLabelTextKey": -1254874710,
+  "chinese": "[江户]哈奇喵"
  },
  {
   "version": "250530.1.0",
@@ -1158,7 +1184,8 @@
   "promotionCostumePossessionEffectId": 330036,
   "costumeRarityId": 3,
   "sortOrder": 123,
-  "detailLabelTextKey": 227034831
+  "detailLabelTextKey": 227034831,
+  "chinese": "[江户]乌萨奇"
  },
  {
   "version": "250550.1.0",
@@ -1201,7 +1228,8 @@
   "promotionCostumePossessionEffectId": 340036,
   "costumeRarityId": 3,
   "sortOrder": 125,
-  "detailLabelTextKey": -1872789898
+  "detailLabelTextKey": -1872789898,
+  "chinese": "[江户]栗子馒头"
  },
  {
   "version": "250550.1.0",
@@ -1244,7 +1272,8 @@
   "promotionCostumePossessionEffectId": 350036,
   "costumeRarityId": 3,
   "sortOrder": 124,
-  "detailLabelTextKey": 685971731
+  "detailLabelTextKey": 685971731,
+  "chinese": "[江户]飞鼠"
  },
  {
   "version": "260830.1.0",
@@ -1287,7 +1316,8 @@
   "promotionCostumePossessionEffectId": 360036,
   "costumeRarityId": 3,
   "sortOrder": 126,
-  "detailLabelTextKey": 978761469
+  "detailLabelTextKey": 978761469,
+  "chinese": "[江户]獭师"
  },
  {
   "version": "250530.1.0",
@@ -1330,7 +1360,8 @@
   "promotionCostumePossessionEffectId": 370036,
   "costumeRarityId": 3,
   "sortOrder": 127,
-  "detailLabelTextKey": -2098540136
+  "detailLabelTextKey": -2098540136,
+  "chinese": "[江户]狮萨"
  },
  {
   "version": "250610.1.0",
@@ -1373,7 +1404,8 @@
   "promotionCostumePossessionEffectId": 310046,
   "costumeRarityId": 3,
   "sortOrder": 131,
-  "detailLabelTextKey": 971316199
+  "detailLabelTextKey": 971316199,
+  "chinese": "[音乐节]吉伊卡哇"
  },
  {
   "version": "250610.1.0",
@@ -1416,7 +1448,8 @@
   "promotionCostumePossessionEffectId": 320046,
   "costumeRarityId": 3,
   "sortOrder": 132,
-  "detailLabelTextKey": 726709257
+  "detailLabelTextKey": 726709257,
+  "chinese": "[音乐节]哈奇喵"
  },
  {
   "version": "250630.1.0",
@@ -1459,7 +1492,8 @@
   "promotionCostumePossessionEffectId": 330046,
   "costumeRarityId": 3,
   "sortOrder": 133,
-  "detailLabelTextKey": -1813195924
+  "detailLabelTextKey": -1813195924,
+  "chinese": "[音乐节]乌萨奇"
  },
  {
   "version": "260830.1.0",
@@ -1502,7 +1536,8 @@
   "promotionCostumePossessionEffectId": 340046,
   "costumeRarityId": 3,
   "sortOrder": 135,
-  "detailLabelTextKey": 238808021
+  "detailLabelTextKey": 238808021,
+  "chinese": "[音乐节]栗子馒头"
  },
  {
   "version": "250630.1.0",
@@ -1545,7 +1580,8 @@
   "promotionCostumePossessionEffectId": 350046,
   "costumeRarityId": 3,
   "sortOrder": 134,
-  "detailLabelTextKey": -1232630608
+  "detailLabelTextKey": -1232630608,
+  "chinese": "[音乐节]飞鼠"
  },
  {
   "version": "250610.1.0",
@@ -1588,7 +1624,8 @@
   "promotionCostumePossessionEffectId": 360046,
   "costumeRarityId": 3,
   "sortOrder": 136,
-  "detailLabelTextKey": -1540218018
+  "detailLabelTextKey": -1540218018,
+  "chinese": "[音乐节]獭师"
  },
  {
   "version": "260830.1.0",
@@ -1631,7 +1668,8 @@
   "promotionCostumePossessionEffectId": 370046,
   "costumeRarityId": 3,
   "sortOrder": 137,
-  "detailLabelTextKey": 479085627
+  "detailLabelTextKey": 479085627,
+  "chinese": "[音乐节]狮萨"
  },
  {
   "version": "250710.1.0",
@@ -1674,7 +1712,8 @@
   "promotionCostumePossessionEffectId": 310056,
   "costumeRarityId": 3,
   "sortOrder": 141,
-  "detailLabelTextKey": 1323445105
+  "detailLabelTextKey": 1323445105,
+  "chinese": "[奇幻]吉伊卡哇"
  },
  {
   "version": "260830.1.0",
@@ -1717,7 +1756,8 @@
   "promotionCostumePossessionEffectId": 320056,
   "costumeRarityId": 3,
   "sortOrder": 142,
-  "detailLabelTextKey": 1549239455
+  "detailLabelTextKey": 1549239455,
+  "chinese": "[奇幻]哈奇喵"
  },
  {
   "version": "260830.1.0",
@@ -1760,7 +1800,8 @@
   "promotionCostumePossessionEffectId": 330056,
   "costumeRarityId": 3,
   "sortOrder": 143,
-  "detailLabelTextKey": -454302726
+  "detailLabelTextKey": -454302726,
+  "chinese": "[奇幻]乌萨奇"
  },
  {
   "version": "250730.1.0",
@@ -1803,7 +1844,8 @@
   "promotionCostumePossessionEffectId": 340056,
   "costumeRarityId": 3,
   "sortOrder": 145,
-  "detailLabelTextKey": 2034031427
+  "detailLabelTextKey": 2034031427,
+  "chinese": "[奇幻]栗子馒头"
  },
  {
   "version": "250710.1.0",
@@ -1846,7 +1888,8 @@
   "promotionCostumePossessionEffectId": 350056,
   "costumeRarityId": 3,
   "sortOrder": 144,
-  "detailLabelTextKey": -1048527834
+  "detailLabelTextKey": -1048527834,
+  "chinese": "[奇幻]飞鼠"
  },
  {
   "version": "260830.1.0",
@@ -1889,7 +1932,8 @@
   "promotionCostumePossessionEffectId": 360056,
   "costumeRarityId": 3,
   "sortOrder": 146,
-  "detailLabelTextKey": -751496248
+  "detailLabelTextKey": -751496248,
+  "chinese": "[奇幻]獭师"
  },
  {
   "version": "250710.1.0",
@@ -1932,7 +1976,8 @@
   "promotionCostumePossessionEffectId": 370056,
   "costumeRarityId": 3,
   "sortOrder": 147,
-  "detailLabelTextKey": 1804170413
+  "detailLabelTextKey": 1804170413,
+  "chinese": "[奇幻]狮萨"
  },
  {
   "version": "260830.1.0",
@@ -1975,7 +2020,8 @@
   "promotionCostumePossessionEffectId": 310066,
   "costumeRarityId": 3,
   "sortOrder": 151,
-  "detailLabelTextKey": -672433461
+  "detailLabelTextKey": -672433461,
+  "chinese": "[海滩]吉伊卡哇"
  },
  {
   "version": "250810.1.0",
@@ -2018,7 +2064,8 @@
   "promotionCostumePossessionEffectId": 320066,
   "costumeRarityId": 3,
   "sortOrder": 152,
-  "detailLabelTextKey": -983640795
+  "detailLabelTextKey": -983640795,
+  "chinese": "[海滩]哈奇喵"
  },
  {
   "version": "260830.1.0",
@@ -2061,7 +2108,8 @@
   "promotionCostumePossessionEffectId": 330066,
   "costumeRarityId": 3,
   "sortOrder": 153,
-  "detailLabelTextKey": 2112008768
+  "detailLabelTextKey": 2112008768,
+  "chinese": "[海滩]乌萨奇"
  },
  {
   "version": "250820.1.0",
@@ -2104,7 +2152,8 @@
   "promotionCostumePossessionEffectId": 340066,
   "costumeRarityId": 3,
   "sortOrder": 155,
-  "detailLabelTextKey": -533361927
+  "detailLabelTextKey": -533361927,
+  "chinese": "[海滩]栗子馒头"
  },
  {
   "version": "260830.1.0",
@@ -2147,7 +2196,8 @@
   "promotionCostumePossessionEffectId": 350066,
   "costumeRarityId": 3,
   "sortOrder": 154,
-  "detailLabelTextKey": 1485434268
+  "detailLabelTextKey": 1485434268,
+  "chinese": "[海滩]飞鼠"
  },
  {
   "version": "250810.1.0",
@@ -2190,7 +2240,8 @@
   "promotionCostumePossessionEffectId": 360066,
   "costumeRarityId": 3,
   "sortOrder": 156,
-  "detailLabelTextKey": 1245463154
+  "detailLabelTextKey": 1245463154,
+  "chinese": "[海滩]獭师"
  },
  {
   "version": "260830.1.0",
@@ -2233,7 +2284,8 @@
   "promotionCostumePossessionEffectId": 370066,
   "costumeRarityId": 3,
   "sortOrder": 157,
-  "detailLabelTextKey": -226482921
+  "detailLabelTextKey": -226482921,
+  "chinese": "[海滩]狮萨"
  },
  {
   "version": "250910.1.0",
@@ -2276,7 +2328,8 @@
   "promotionCostumePossessionEffectId": 310076,
   "costumeRarityId": 3,
   "sortOrder": 161,
-  "detailLabelTextKey": -1595127203
+  "detailLabelTextKey": -1595127203,
+  "chinese": "[水果]吉伊卡哇"
  },
  {
   "version": "250930.1.0",
@@ -2319,7 +2372,8 @@
   "promotionCostumePossessionEffectId": 320076,
   "costumeRarityId": 3,
   "sortOrder": 162,
-  "detailLabelTextKey": -1302731341
+  "detailLabelTextKey": -1302731341,
+  "chinese": "[水果]哈奇喵"
  },
  {
   "version": "250910.1.0",
@@ -2362,7 +2416,8 @@
   "promotionCostumePossessionEffectId": 330076,
   "costumeRarityId": 3,
   "sortOrder": 163,
-  "detailLabelTextKey": 182813398
+  "detailLabelTextKey": 182813398,
+  "chinese": "[水果]乌萨奇"
  },
  {
   "version": "250910.1.0",
@@ -2405,7 +2460,8 @@
   "promotionCostumePossessionEffectId": 340076,
   "costumeRarityId": 3,
   "sortOrder": 165,
-  "detailLabelTextKey": -1758283153
+  "detailLabelTextKey": -1758283153,
+  "chinese": "[水果]栗子馒头"
  },
  {
   "version": "250930.1.0",
@@ -2448,7 +2504,8 @@
   "promotionCostumePossessionEffectId": 350076,
   "costumeRarityId": 3,
   "sortOrder": 164,
-  "detailLabelTextKey": 797891850
+  "detailLabelTextKey": 797891850,
+  "chinese": "[水果]飞鼠"
  },
  {
   "version": "250930.1.0",
@@ -2491,7 +2548,8 @@
   "promotionCostumePossessionEffectId": 360076,
   "costumeRarityId": 3,
   "sortOrder": 166,
-  "detailLabelTextKey": 1027306212
+  "detailLabelTextKey": 1027306212,
+  "chinese": "[水果]獭师"
  },
  {
   "version": "250910.1.0",
@@ -2534,7 +2592,8 @@
   "promotionCostumePossessionEffectId": 370076,
   "costumeRarityId": 3,
   "sortOrder": 167,
-  "detailLabelTextKey": -2054744703
+  "detailLabelTextKey": -2054744703,
+  "chinese": "[水果]狮萨"
  },
  {
   "version": "251010.1.0",
@@ -2577,7 +2636,8 @@
   "promotionCostumePossessionEffectId": 310086,
   "costumeRarityId": 3,
   "sortOrder": 171,
-  "detailLabelTextKey": 810768332
+  "detailLabelTextKey": 810768332,
+  "chinese": "[爱丽丝]吉伊卡哇"
  },
  {
   "version": "251010.1.0",
@@ -2620,7 +2680,8 @@
   "promotionCostumePossessionEffectId": 320086,
   "costumeRarityId": 3,
   "sortOrder": 172,
-  "detailLabelTextKey": 585562146
+  "detailLabelTextKey": 585562146,
+  "chinese": "[爱丽丝]哈奇喵"
  },
  {
   "version": "251020.1.0",
@@ -2663,7 +2724,8 @@
   "promotionCostumePossessionEffectId": 330086,
   "costumeRarityId": 3,
   "sortOrder": 173,
-  "detailLabelTextKey": -1705337017
+  "detailLabelTextKey": -1705337017,
+  "chinese": "[爱丽丝]乌萨奇"
  },
  {
   "version": "251020.1.0",
@@ -2706,7 +2768,8 @@
   "promotionCostumePossessionEffectId": 340086,
   "costumeRarityId": 3,
   "sortOrder": 175,
-  "detailLabelTextKey": 126724094
+  "detailLabelTextKey": 126724094,
+  "chinese": "[爱丽丝]栗子馒头"
  },
  {
   "version": "251020.1.0",
@@ -2749,7 +2812,8 @@
   "promotionCostumePossessionEffectId": 350086,
   "costumeRarityId": 3,
   "sortOrder": 174,
-  "detailLabelTextKey": -1087258469
+  "detailLabelTextKey": -1087258469,
+  "chinese": "[爱丽丝]飞鼠"
  },
  {
   "version": "251010.1.0",
@@ -2792,7 +2856,8 @@
   "promotionCostumePossessionEffectId": 360086,
   "costumeRarityId": 3,
   "sortOrder": 176,
-  "detailLabelTextKey": -1383829643
+  "detailLabelTextKey": -1383829643,
+  "chinese": "[爱丽丝]獭师"
  },
  {
   "version": "251010.1.0",
@@ -2835,7 +2900,8 @@
   "promotionCostumePossessionEffectId": 370086,
   "costumeRarityId": 3,
   "sortOrder": 177,
-  "detailLabelTextKey": 355993616
+  "detailLabelTextKey": 355993616,
+  "chinese": "[爱丽丝]狮萨"
  },
  {
   "version": "251010.1.0",
@@ -2878,7 +2944,8 @@
   "promotionCostumePossessionEffectId": 210026,
   "costumeRarityId": 2,
   "sortOrder": 21,
-  "detailLabelTextKey": -303655070
+  "detailLabelTextKey": -303655070,
+  "chinese": "[烹饪]吉伊卡哇"
  },
  {
   "version": "251010.1.0",
@@ -2921,7 +2988,8 @@
   "promotionCostumePossessionEffectId": 220026,
   "costumeRarityId": 2,
   "sortOrder": 22,
-  "detailLabelTextKey": -11323252
+  "detailLabelTextKey": -11323252,
+  "chinese": "[烹饪]哈奇喵"
  },
  {
   "version": "251010.1.0",
@@ -2964,7 +3032,8 @@
   "promotionCostumePossessionEffectId": 230026,
   "costumeRarityId": 2,
   "sortOrder": 23,
-  "detailLabelTextKey": 1206869993
+  "detailLabelTextKey": 1206869993,
+  "chinese": "[烹饪]乌萨奇"
  },
  {
   "version": "251030.1.0",
@@ -3007,7 +3076,8 @@
   "promotionCostumePossessionEffectId": 310096,
   "costumeRarityId": 3,
   "sortOrder": 178,
-  "detailLabelTextKey": 1196713818
+  "detailLabelTextKey": 1196713818,
+  "chinese": "[万圣节]吉伊卡哇"
  },
  {
   "version": "251110.1.0",
@@ -3050,7 +3120,8 @@
   "promotionCostumePossessionEffectId": 320096,
   "costumeRarityId": 3,
   "sortOrder": 179,
-  "detailLabelTextKey": 1440860340
+  "detailLabelTextKey": 1440860340,
+  "chinese": "[万圣节]哈奇喵"
  },
  {
   "version": "251030.1.0",
@@ -3093,7 +3164,8 @@
   "promotionCostumePossessionEffectId": 330096,
   "costumeRarityId": 3,
   "sortOrder": 180,
-  "detailLabelTextKey": -312627247
+  "detailLabelTextKey": -312627247,
+  "chinese": "[万圣节]乌萨奇"
  },
  {
   "version": "251110.1.0",
@@ -3136,7 +3208,8 @@
   "promotionCostumePossessionEffectId": 340096,
   "costumeRarityId": 3,
   "sortOrder": 182,
-  "detailLabelTextKey": 1888130920
+  "detailLabelTextKey": 1888130920,
+  "chinese": "[万圣节]栗子馒头"
  },
  {
   "version": "260830.1.0",
@@ -3179,7 +3252,8 @@
   "promotionCostumePossessionEffectId": 350096,
   "costumeRarityId": 3,
   "sortOrder": 181,
-  "detailLabelTextKey": -935923699
+  "detailLabelTextKey": -935923699,
+  "chinese": "[万圣节]飞鼠"
  },
  {
   "version": "251030.1.0",
@@ -3222,7 +3296,8 @@
   "promotionCostumePossessionEffectId": 360096,
   "costumeRarityId": 3,
   "sortOrder": 183,
-  "detailLabelTextKey": -628924445
+  "detailLabelTextKey": -628924445,
+  "chinese": "[万圣节]獭师"
  },
  {
   "version": "251030.1.0",
@@ -3265,7 +3340,8 @@
   "promotionCostumePossessionEffectId": 370096,
   "costumeRarityId": 3,
   "sortOrder": 184,
-  "detailLabelTextKey": 1648310406
+  "detailLabelTextKey": 1648310406,
+  "chinese": "[万圣节]狮萨"
  },
  {
   "version": "251210.1.0",
@@ -3308,7 +3384,8 @@
   "promotionCostumePossessionEffectId": 310106,
   "costumeRarityId": 3,
   "sortOrder": 185,
-  "detailLabelTextKey": 664006335
+  "detailLabelTextKey": 664006335,
+  "chinese": "[圣诞节]吉伊卡哇"
  },
  {
   "version": "251210.1.0",
@@ -3351,7 +3428,8 @@
   "promotionCostumePossessionEffectId": 320106,
   "costumeRarityId": 3,
   "sortOrder": 186,
-  "detailLabelTextKey": 891699537
+  "detailLabelTextKey": 891699537,
+  "chinese": "[圣诞节]哈奇喵"
  },
  {
   "version": "251230.1.0",
@@ -3394,7 +3472,8 @@
   "promotionCostumePossessionEffectId": 330106,
   "costumeRarityId": 3,
   "sortOrder": 187,
-  "detailLabelTextKey": -1919277516
+  "detailLabelTextKey": -1919277516,
+  "chinese": "[圣诞节]乌萨奇"
  },
  {
   "version": "260830.1.0",
@@ -3437,7 +3516,8 @@
   "promotionCostumePossessionEffectId": 340106,
   "costumeRarityId": 3,
   "sortOrder": 189,
-  "detailLabelTextKey": 273489549
+  "detailLabelTextKey": 273489549,
+  "chinese": "[圣诞节]栗子馒头"
  },
  {
   "version": "251210.1.0",
@@ -3480,7 +3560,8 @@
   "promotionCostumePossessionEffectId": 350106,
   "costumeRarityId": 3,
   "sortOrder": 188,
-  "detailLabelTextKey": -1460569624
+  "detailLabelTextKey": -1460569624,
+  "chinese": "[圣诞节]飞鼠"
  },
  {
   "version": "251210.1.0",
@@ -3523,7 +3604,8 @@
   "promotionCostumePossessionEffectId": 360106,
   "costumeRarityId": 3,
   "sortOrder": 190,
-  "detailLabelTextKey": -1169893882
+  "detailLabelTextKey": -1169893882,
+  "chinese": "[圣诞节]獭师"
  },
  {
   "version": "251230.1.0",
@@ -3566,7 +3648,8 @@
   "promotionCostumePossessionEffectId": 370106,
   "costumeRarityId": 3,
   "sortOrder": 191,
-  "detailLabelTextKey": 49852771
+  "detailLabelTextKey": 49852771,
+  "chinese": "[圣诞节]狮萨"
  },
  {
   "version": "260110.1.0",
@@ -3609,7 +3692,8 @@
   "promotionCostumePossessionEffectId": 310116,
   "costumeRarityId": 3,
   "sortOrder": 192,
-  "detailLabelTextKey": 1351933481
+  "detailLabelTextKey": 1351933481,
+  "chinese": "[新春]吉伊卡哇"
  },
  {
   "version": "260110.1.0",
@@ -3652,7 +3736,8 @@
   "promotionCostumePossessionEffectId": 320116,
   "costumeRarityId": 3,
   "sortOrder": 193,
-  "detailLabelTextKey": 1109488071
+  "detailLabelTextKey": 1109488071,
+  "chinese": "[新春]哈奇喵"
  },
  {
   "version": "260830.1.0",
@@ -3695,7 +3780,8 @@
   "promotionCostumePossessionEffectId": 330116,
   "costumeRarityId": 3,
   "sortOrder": 194,
-  "detailLabelTextKey": -90368350
+  "detailLabelTextKey": -90368350,
+  "chinese": "[新春]乌萨奇"
  },
  {
   "version": "260830.1.0",
@@ -3738,7 +3824,8 @@
   "promotionCostumePossessionEffectId": 340116,
   "costumeRarityId": 3,
   "sortOrder": 196,
-  "detailLabelTextKey": 1732914715
+  "detailLabelTextKey": 1732914715,
+  "chinese": "[新春]栗子馒头"
  },
  {
   "version": "260830.1.0",
@@ -3781,7 +3868,8 @@
   "promotionCostumePossessionEffectId": 350116,
   "costumeRarityId": 3,
   "sortOrder": 195,
-  "detailLabelTextKey": -537507458
+  "detailLabelTextKey": -537507458,
+  "chinese": "[新春]飞鼠"
  },
  {
   "version": "260830.1.0",
@@ -3824,7 +3912,8 @@
   "promotionCostumePossessionEffectId": 360116,
   "costumeRarityId": 3,
   "sortOrder": 197,
-  "detailLabelTextKey": -851188080
+  "detailLabelTextKey": -851188080,
+  "chinese": "[新春]獭师"
  },
  {
   "version": "260110.1.0",
@@ -3867,7 +3956,8 @@
   "promotionCostumePossessionEffectId": 370116,
   "costumeRarityId": 3,
   "sortOrder": 198,
-  "detailLabelTextKey": 1979679221
+  "detailLabelTextKey": 1979679221,
+  "chinese": "[新春]狮萨"
  },
  {
   "version": "260210.1.0",
@@ -3910,7 +4000,8 @@
   "promotionCostumePossessionEffectId": 310126,
   "costumeRarityId": 3,
   "sortOrder": 199,
-  "detailLabelTextKey": -912420973
+  "detailLabelTextKey": -912420973,
+  "chinese": "[恐龙]吉伊卡哇"
  },
  {
   "version": "260210.1.0",
@@ -3953,7 +4044,8 @@
   "promotionCostumePossessionEffectId": 320126,
   "costumeRarityId": 3,
   "sortOrder": 200,
-  "detailLabelTextKey": -618127235
+  "detailLabelTextKey": -618127235,
+  "chinese": "[恐龙]哈奇喵"
  },
  {
   "version": "260230.1.0",
@@ -3996,7 +4088,8 @@
   "promotionCostumePossessionEffectId": 330126,
   "costumeRarityId": 3,
   "sortOrder": 201,
-  "detailLabelTextKey": 1670661912
+  "detailLabelTextKey": 1670661912,
+  "chinese": "[恐龙]乌萨奇"
  },
  {
   "version": "260230.1.0",
@@ -4039,7 +4132,8 @@
   "promotionCostumePossessionEffectId": 340126,
   "costumeRarityId": 3,
   "sortOrder": 203,
-  "detailLabelTextKey": -29130847
+  "detailLabelTextKey": -29130847,
+  "chinese": "[恐龙]栗子馒头"
  },
  {
   "version": "260230.1.0",
@@ -4082,7 +4176,8 @@
   "promotionCostumePossessionEffectId": 350126,
   "costumeRarityId": 3,
   "sortOrder": 202,
-  "detailLabelTextKey": 1191123140
+  "detailLabelTextKey": 1191123140,
+  "chinese": "[恐龙]飞鼠"
  },
  {
   "version": "260210.1.0",
@@ -4125,7 +4220,8 @@
   "promotionCostumePossessionEffectId": 360126,
   "costumeRarityId": 3,
   "sortOrder": 204,
-  "detailLabelTextKey": 1414182698
+  "detailLabelTextKey": 1414182698,
+  "chinese": "[恐龙]獭师"
  },
  {
   "version": "260210.1.0",
@@ -4168,7 +4264,8 @@
   "promotionCostumePossessionEffectId": 370126,
   "costumeRarityId": 3,
   "sortOrder": 205,
-  "detailLabelTextKey": -319369137
+  "detailLabelTextKey": -319369137,
+  "chinese": "[恐龙]狮萨"
  },
  {
   "version": "260310.1.0",
@@ -4211,7 +4308,8 @@
   "promotionCostumePossessionEffectId": 310136,
   "costumeRarityId": 3,
   "sortOrder": 206,
-  "detailLabelTextKey": -1097154811
+  "detailLabelTextKey": -1097154811,
+  "chinese": "[扮演店家]吉伊卡哇"
  },
  {
   "version": "260310.1.0",
@@ -4254,7 +4352,8 @@
   "promotionCostumePossessionEffectId": 320136,
   "costumeRarityId": 3,
   "sortOrder": 207,
-  "detailLabelTextKey": -1406201621
+  "detailLabelTextKey": -1406201621,
+  "chinese": "[扮演店家]哈奇喵"
  },
  {
   "version": "260830.1.0",
@@ -4297,7 +4396,8 @@
   "promotionCostumePossessionEffectId": 330136,
   "costumeRarityId": 3,
   "sortOrder": 208,
-  "detailLabelTextKey": 345208718
+  "detailLabelTextKey": 345208718,
+  "chinese": "[扮演店家]乌萨奇"
  },
  {
   "version": "260310.1.0",
@@ -4340,7 +4440,8 @@
   "promotionCostumePossessionEffectId": 340136,
   "costumeRarityId": 3,
   "sortOrder": 210,
-  "detailLabelTextKey": -1992011977
+  "detailLabelTextKey": -1992011977,
+  "chinese": "[扮演店家]栗子馒头"
  },
  {
   "version": "260330.1.0",
@@ -4383,7 +4484,8 @@
   "promotionCostumePossessionEffectId": 350136,
   "costumeRarityId": 3,
   "sortOrder": 209,
-  "detailLabelTextKey": 838346834
+  "detailLabelTextKey": 838346834,
+  "chinese": "[扮演店家]飞鼠"
  },
  {
   "version": "260330.1.0",
@@ -4426,7 +4528,8 @@
   "promotionCostumePossessionEffectId": 360136,
   "costumeRarityId": 3,
   "sortOrder": 211,
-  "detailLabelTextKey": 592283580
+  "detailLabelTextKey": 592283580,
+  "chinese": "[扮演店家]獭师"
  },
  {
   "version": "260310.1.0",
@@ -4469,7 +4572,8 @@
   "promotionCostumePossessionEffectId": 370136,
   "costumeRarityId": 3,
   "sortOrder": 212,
-  "detailLabelTextKey": -1678647079
+  "detailLabelTextKey": -1678647079,
+  "chinese": "[扮演店家]狮萨"
  },
  {
   "version": "260410.1.0",
@@ -4512,7 +4616,8 @@
   "promotionCostumePossessionEffectId": 310146,
   "costumeRarityId": 3,
   "sortOrder": 214,
-  "detailLabelTextKey": 553527974
+  "detailLabelTextKey": 553527974,
+  "chinese": "[白雪公主]吉伊卡哇"
  },
  {
   "version": "260420.1.0",
@@ -4555,7 +4660,8 @@
   "promotionCostumePossessionEffectId": 320146,
   "costumeRarityId": 3,
   "sortOrder": 215,
-  "detailLabelTextKey": 843810120
+  "detailLabelTextKey": 843810120,
+  "chinese": "[白雪公主]哈奇喵"
  },
  {
   "version": "260410.1.0",
@@ -4598,7 +4704,8 @@
   "promotionCostumePossessionEffectId": 330146,
   "costumeRarityId": 3,
   "sortOrder": 216,
-  "detailLabelTextKey": -1963466195
+  "detailLabelTextKey": -1963466195,
+  "chinese": "[白雪公主]乌萨奇"
  },
  {
   "version": "260830.1.0",
@@ -4641,7 +4748,8 @@
   "promotionCostumePossessionEffectId": 340146,
   "costumeRarityId": 3,
   "sortOrder": 218,
-  "detailLabelTextKey": 388029076
+  "detailLabelTextKey": 388029076,
+  "chinese": "[白雪公主]栗子馒头"
  },
  {
   "version": "260410.1.0",
@@ -4684,7 +4792,8 @@
   "promotionCostumePossessionEffectId": 350146,
   "costumeRarityId": 3,
   "sortOrder": 217,
-  "detailLabelTextKey": -1348682255
+  "detailLabelTextKey": -1348682255,
+  "chinese": "[白雪公主]飞鼠"
  },
  {
   "version": "260420.1.0",
@@ -4727,7 +4836,8 @@
   "promotionCostumePossessionEffectId": 360146,
   "costumeRarityId": 3,
   "sortOrder": 219,
-  "detailLabelTextKey": -1121381857
+  "detailLabelTextKey": -1121381857,
+  "chinese": "[白雪公主]獭师"
  },
  {
   "version": "260410.1.0",
@@ -4770,7 +4880,8 @@
   "promotionCostumePossessionEffectId": 370146,
   "costumeRarityId": 3,
   "sortOrder": 220,
-  "detailLabelTextKey": 93681018
+  "detailLabelTextKey": 93681018,
+  "chinese": "[白雪公主]狮萨"
  },
  {
   "version": "260510.1.0",
@@ -4813,7 +4924,8 @@
   "promotionCostumePossessionEffectId": 310156,
   "costumeRarityId": 3,
   "sortOrder": 221,
-  "detailLabelTextKey": 1475942960
+  "detailLabelTextKey": 1475942960,
+  "chinese": "[便当]吉伊卡哇"
  },
  {
   "version": "260510.1.0",
@@ -4856,7 +4968,8 @@
   "promotionCostumePossessionEffectId": 320156,
   "costumeRarityId": 3,
   "sortOrder": 222,
-  "detailLabelTextKey": 1162655198
+  "detailLabelTextKey": 1162655198,
+  "chinese": "[便当]哈奇喵"
  },
  {
   "version": "260830.1.0",
@@ -4899,7 +5012,8 @@
   "promotionCostumePossessionEffectId": 330156,
   "costumeRarityId": 3,
   "sortOrder": 223,
-  "detailLabelTextKey": -34549061
+  "detailLabelTextKey": -34549061,
+  "chinese": "[便当]乌萨奇"
  },
  {
   "version": "260510.1.0",
@@ -4942,7 +5056,8 @@
   "promotionCostumePossessionEffectId": 340156,
   "costumeRarityId": 3,
   "sortOrder": 225,
-  "detailLabelTextKey": 1613228546
+  "detailLabelTextKey": 1613228546,
+  "chinese": "[便当]栗子馒头"
  },
  {
   "version": "260530.1.0",
@@ -4985,7 +5100,8 @@
   "promotionCostumePossessionEffectId": 350156,
   "costumeRarityId": 3,
   "sortOrder": 224,
-  "detailLabelTextKey": -660894361
+  "detailLabelTextKey": -660894361,
+  "chinese": "[便当]飞鼠"
  },
  {
   "version": "260510.1.0",
@@ -5028,7 +5144,8 @@
   "promotionCostumePossessionEffectId": 360156,
   "costumeRarityId": 3,
   "sortOrder": 226,
-  "detailLabelTextKey": -902946167
+  "detailLabelTextKey": -902946167,
+  "chinese": "[便当]獭师"
  },
  {
   "version": "260530.1.0",
@@ -5071,7 +5188,8 @@
   "promotionCostumePossessionEffectId": 370156,
   "costumeRarityId": 3,
   "sortOrder": 227,
-  "detailLabelTextKey": 1922188780
+  "detailLabelTextKey": 1922188780,
+  "chinese": "[便当]狮萨"
  },
  {
   "version": "260610.1.0",
@@ -5114,7 +5232,8 @@
   "promotionCostumePossessionEffectId": 310166,
   "costumeRarityId": 3,
   "sortOrder": 228,
-  "detailLabelTextKey": -823112822
+  "detailLabelTextKey": -823112822,
+  "chinese": "[雨天]吉伊卡哇"
  },
  {
   "version": "260630.1.0",
@@ -5157,7 +5276,8 @@
   "promotionCostumePossessionEffectId": 320166,
   "costumeRarityId": 3,
   "sortOrder": 229,
-  "detailLabelTextKey": -599399324
+  "detailLabelTextKey": -599399324,
+  "chinese": "[雨天]哈奇喵"
  },
  {
   "version": "260610.1.0",
@@ -5200,7 +5320,8 @@
   "promotionCostumePossessionEffectId": 330166,
   "costumeRarityId": 3,
   "sortOrder": 230,
-  "detailLabelTextKey": 1694073601
+  "detailLabelTextKey": 1694073601,
+  "chinese": "[雨天]乌萨奇"
  },
  {
   "version": "260630.1.0",
@@ -5243,7 +5364,8 @@
   "promotionCostumePossessionEffectId": 340166,
   "costumeRarityId": 3,
   "sortOrder": 232,
-  "detailLabelTextKey": -114377800
+  "detailLabelTextKey": -114377800,
+  "chinese": "[雨天]栗子馒头"
  },
  {
   "version": "260630.1.0",
@@ -5286,7 +5408,8 @@
   "promotionCostumePossessionEffectId": 350166,
   "costumeRarityId": 3,
   "sortOrder": 231,
-  "detailLabelTextKey": 1100143837
+  "detailLabelTextKey": 1100143837,
+  "chinese": "[雨天]飞鼠"
  },
  {
   "version": "260616.1.0",
@@ -5329,7 +5452,8 @@
   "promotionCostumePossessionEffectId": 360166,
   "costumeRarityId": 3,
   "sortOrder": 233,
-  "detailLabelTextKey": 1395094323
+  "detailLabelTextKey": 1395094323,
+  "chinese": "[雨天]獭师"
  },
  {
   "version": "260830.1.0",
@@ -5372,7 +5496,8 @@
   "promotionCostumePossessionEffectId": 370166,
   "costumeRarityId": 3,
   "sortOrder": 234,
-  "detailLabelTextKey": -342158250
+  "detailLabelTextKey": -342158250,
+  "chinese": "[雨天]狮萨"
  },
  {
   "version": "260710.1.0",
@@ -5415,7 +5540,8 @@
   "promotionCostumePossessionEffectId": 310176,
   "costumeRarityId": 3,
   "sortOrder": 235,
-  "detailLabelTextKey": -1174963428
+  "detailLabelTextKey": -1174963428,
+  "chinese": "[冰淇淋]吉伊卡哇"
  },
  {
   "version": "260830.1.0",
@@ -5458,7 +5584,8 @@
   "promotionCostumePossessionEffectId": 320176,
   "costumeRarityId": 3,
   "sortOrder": 236,
-  "detailLabelTextKey": -1421683470
+  "detailLabelTextKey": -1421683470,
+  "chinese": "[冰淇淋]哈奇喵"
  },
  {
   "version": "260710.1.0",
@@ -5501,7 +5628,8 @@
   "promotionCostumePossessionEffectId": 330176,
   "costumeRarityId": 3,
   "sortOrder": 237,
-  "detailLabelTextKey": 335459223
+  "detailLabelTextKey": 335459223,
+  "chinese": "[冰淇淋]乌萨奇"
  },
  {
   "version": "260710.1.0",
@@ -5544,7 +5672,8 @@
   "promotionCostumePossessionEffectId": 340176,
   "costumeRarityId": 3,
   "sortOrder": 239,
-  "detailLabelTextKey": -1909880018
+  "detailLabelTextKey": -1909880018,
+  "chinese": "[冰淇淋]栗子馒头"
  },
  {
   "version": "260710.1.0",
@@ -5587,7 +5716,8 @@
   "promotionCostumePossessionEffectId": 350176,
   "costumeRarityId": 3,
   "sortOrder": 238,
-  "detailLabelTextKey": 915795019
+  "detailLabelTextKey": 915795019,
+  "chinese": "[冰淇淋]飞鼠"
  },
  {
   "version": "260710.1.0",
@@ -5630,7 +5760,8 @@
   "promotionCostumePossessionEffectId": 360176,
   "costumeRarityId": 3,
   "sortOrder": 240,
-  "detailLabelTextKey": 606094245
+  "detailLabelTextKey": 606094245,
+  "chinese": "[冰淇淋]獭师"
  },
  {
   "version": "260710.1.0",
@@ -5673,7 +5804,8 @@
   "promotionCostumePossessionEffectId": 370176,
   "costumeRarityId": 3,
   "sortOrder": 241,
-  "detailLabelTextKey": -1667488576
+  "detailLabelTextKey": -1667488576,
+  "chinese": "[冰淇淋]狮萨"
  },
  {
   "version": "260810.1.0",
@@ -5716,7 +5848,8 @@
   "promotionCostumePossessionEffectId": 310186,
   "costumeRarityId": 3,
   "sortOrder": 242,
-  "detailLabelTextKey": 692610701
+  "detailLabelTextKey": 692610701,
+  "chinese": "[人鱼岛]吉伊卡哇"
  },
  {
   "version": "260810.1.0",
@@ -5759,7 +5892,8 @@
   "promotionCostumePossessionEffectId": 320186,
   "costumeRarityId": 3,
   "sortOrder": 243,
-  "detailLabelTextKey": 1006487907
+  "detailLabelTextKey": 1006487907,
+  "chinese": "[人鱼岛]哈奇喵"
  },
  {
   "version": "260810.1.0",
@@ -5802,7 +5936,8 @@
   "promotionCostumePossessionEffectId": 330186,
   "costumeRarityId": 3,
   "sortOrder": 244,
-  "detailLabelTextKey": -2092847610
+  "detailLabelTextKey": -2092847610,
+  "chinese": "[人鱼岛]乌萨奇"
  },
  {
   "version": "260810.1.0",
@@ -5845,7 +5980,8 @@
   "promotionCostumePossessionEffectId": 340186,
   "costumeRarityId": 3,
   "sortOrder": 246,
-  "detailLabelTextKey": 513185471
+  "detailLabelTextKey": 513185471,
+  "chinese": "[人鱼岛]栗子馒头"
  },
  {
   "version": "260810.1.0",
@@ -5888,7 +6024,8 @@
   "promotionCostumePossessionEffectId": 350186,
   "costumeRarityId": 3,
   "sortOrder": 245,
-  "detailLabelTextKey": -1507135014
+  "detailLabelTextKey": -1507135014,
+  "chinese": "[人鱼岛]飞鼠"
  },
  {
   "version": "260810.1.0",
@@ -5931,7 +6068,8 @@
   "promotionCostumePossessionEffectId": 360186,
   "costumeRarityId": 3,
   "sortOrder": 247,
-  "detailLabelTextKey": -1264624076
+  "detailLabelTextKey": -1264624076,
+  "chinese": "[人鱼岛]獭师"
  },
  {
   "version": "260810.1.0",
@@ -5974,7 +6112,8 @@
   "promotionCostumePossessionEffectId": 370186,
   "costumeRarityId": 3,
   "sortOrder": 248,
-  "detailLabelTextKey": 203635025
+  "detailLabelTextKey": 203635025,
+  "chinese": "[人鱼岛]狮萨"
  },
  {
   "version": "260910.1.0",
@@ -6017,7 +6156,8 @@
   "promotionCostumePossessionEffectId": 310196,
   "costumeRarityId": 3,
   "sortOrder": 249,
-  "detailLabelTextKey": 1582257691
+  "detailLabelTextKey": 1582257691,
+  "chinese": "[赏月]吉伊卡哇"
  },
  {
   "version": "260910.1.0",
@@ -6060,7 +6200,8 @@
   "promotionCostumePossessionEffectId": 320196,
   "costumeRarityId": 3,
   "sortOrder": 250,
-  "detailLabelTextKey": 1291516405
+  "detailLabelTextKey": 1291516405,
+  "chinese": "[赏月]哈奇喵"
  },
  {
   "version": "260910.1.0",
@@ -6103,7 +6244,8 @@
   "promotionCostumePossessionEffectId": 330196,
   "costumeRarityId": 3,
   "sortOrder": 251,
-  "detailLabelTextKey": -196698480
+  "detailLabelTextKey": -196698480,
+  "chinese": "[赏月]乌萨奇"
  },
  {
   "version": "260910.1.0",
@@ -6146,7 +6288,8 @@
   "promotionCostumePossessionEffectId": 340196,
   "costumeRarityId": 3,
   "sortOrder": 253,
-  "detailLabelTextKey": 1771152937
+  "detailLabelTextKey": 1771152937,
+  "chinese": "[赏月]栗子馒头"
  },
  {
   "version": "260910.1.0",
@@ -6189,7 +6332,8 @@
   "promotionCostumePossessionEffectId": 350196,
   "costumeRarityId": 3,
   "sortOrder": 252,
-  "detailLabelTextKey": -785530548
+  "detailLabelTextKey": -785530548,
+  "chinese": "[赏月]飞鼠"
  },
  {
   "version": "260910.1.0",
@@ -6232,7 +6376,8 @@
   "promotionCostumePossessionEffectId": 360196,
   "costumeRarityId": 3,
   "sortOrder": 254,
-  "detailLabelTextKey": -1013420382
+  "detailLabelTextKey": -1013420382,
+  "chinese": "[赏月]獭师"
  },
  {
   "version": "260910.1.0",
@@ -6275,6 +6420,7 @@
   "promotionCostumePossessionEffectId": 370196,
   "costumeRarityId": 3,
   "sortOrder": 255,
-  "detailLabelTextKey": 2065959367
+  "detailLabelTextKey": 2065959367,
+  "chinese": "[赏月]狮萨"
  }
 ]
