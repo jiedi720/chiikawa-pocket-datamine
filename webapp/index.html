@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chiikawa Pocket — Team Calculator</title>
+<title>口袋吉伊卡哇 — 队伍计算器</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-  <h1>🌸 Chiikawa Pocket — Team &amp; Order Calculator</h1>
-  <p class="sub">Built from the v2.4.1 datamine — real formulas, no guesswork. Attack is normalized to <b>1</b>, so all results are multiples of your in-game attack.</p>
+  <h1>🌸 口袋吉伊卡哇 — 队伍与站位计算器</h1>
+  <p class="sub">基于 v2.4.1 拆包数据 —— 真实公式，不靠猜。攻击力已归一化为 <b>1</b>，所以所有结果都是你游戏内攻击力的倍数。</p>
 </header>
 
 <nav class="tabs">
-  <button class="tab active" data-tab="optimizer">Team Optimizer</button>
-  <button class="tab" data-tab="items">Buffs &amp; Items</button>
-  <button class="tab" data-tab="math">Math Reference</button>
+  <button class="tab active" data-tab="optimizer">队伍优化</button>
+  <button class="tab" data-tab="items">加成与道具</button>
+  <button class="tab" data-tab="math">公式速查</button>
 </nav>
 
 <main>
@@ -23,54 +23,54 @@
 <section id="tab-optimizer" class="tabpage active">
   <div class="cols">
     <div class="panel" id="account-panel">
-      <h2>1 · Account stats</h2>
-      <p class="hint">From your in-game status screen. Rates: enter as multipliers (1.20 = +20%).</p>
+      <h2>1 · 账号面板</h2>
+      <p class="hint">数据取自游戏内状态页。倍率直接填倍数（1.20 = +20%）。</p>
       <div class="grid2">
-        <label>Crit rate (0–1) <input id="in-critRate" type="number" step="0.01" value="0.10"></label>
-        <label>Crit damage (×) <input id="in-critDmg" type="number" step="0.1" value="1.5"></label>
-        <label>Normal atk rate <input id="in-normalRate" type="number" step="0.1" value="1.0"></label>
-        <label>Skill dmg rate <input id="in-skillRate" type="number" step="0.1" value="1.0"></label>
-        <label>Unique skill rate <input id="in-uniqueRate" type="number" step="0.1" value="1.0"></label>
-        <label>Boss dmg rate <input id="in-bossRate" type="number" step="0.1" value="1.5"></label>
-        <label>Mob dmg rate <input id="in-mobRate" type="number" step="0.1" value="1.0"></label>
-        <label>Attack speed (swings/s) <input id="in-atkSpeed" type="number" step="0.01" value="0.66"></label>
-        <label>Cooldown reduction (0–0.9) <input id="in-cdr" type="number" step="0.01" value="0"></label>
-        <label>Defence-debuff amp <input id="in-defDebuff" type="number" step="0.05" value="1.0"></label>
+        <label>暴击率（0–1） <input id="in-critRate" type="number" step="0.01" value="0.10"></label>
+        <label>暴击伤害（×） <input id="in-critDmg" type="number" step="0.1" value="1.5"></label>
+        <label>普通攻击伤害倍率 <input id="in-normalRate" type="number" step="0.1" value="1.0"></label>
+        <label>特技＆支援伤害倍率 <input id="in-skillRate" type="number" step="0.1" value="1.0"></label>
+        <label>特技伤害倍率 <input id="in-uniqueRate" type="number" step="0.1" value="1.0"></label>
+        <label>对 Boss 的伤害倍率 <input id="in-bossRate" type="number" step="0.1" value="1.5"></label>
+        <label>对非 Boss 的伤害 <input id="in-mobRate" type="number" step="0.1" value="1.0"></label>
+        <label>攻击速度（次/秒） <input id="in-atkSpeed" type="number" step="0.01" value="0.66"></label>
+        <label>冷却缩减（0–0.9） <input id="in-cdr" type="number" step="0.01" value="0"></label>
+        <label>体力削减倍率 <input id="in-defDebuff" type="number" step="0.05" value="1.0"></label>
       </div>
-      <h2>2 · Mode</h2>
+      <h2>2 · 模式</h2>
       <div class="grid1">
-        <label>Fight context
+        <label>战斗场景
           <select id="in-mode">
-            <option value="balanced" selected>Balanced (waves + boss)</option>
-            <option value="farm">Farm / wave-clear (mob focus)</option>
-            <option value="boss">Boss wall (single-target burst)</option>
+            <option value="balanced" selected>均衡（清波 + Boss）</option>
+            <option value="farm">刷本 / 清波（以杂兵为主）</option>
+            <option value="boss">Boss 墙（单体爆发）</option>
           </select>
         </label>
-        <label>Tag synergy weight %/extra member <input id="in-tagWeight" type="number" step="0.5" value="2"></label>
+        <label>标签协同权重 %/每名额外成员 <input id="in-tagWeight" type="number" step="0.5" value="2"></label>
       </div>
-      <h2>3 · Optimize</h2>
+      <h2>3 · 计算</h2>
       <div class="grid1">
-        <button id="btn-optimize" class="primary">⚡ Find best team &amp; order</button>
-        <button id="btn-orderonly">🔀 Optimize order of current 6</button>
-        <button id="btn-clearlocks">Unlock all slots</button>
+        <button id="btn-optimize" class="primary">⚡ 找出最佳队伍与站位</button>
+        <button id="btn-orderonly">🔀 只优化当前 6 人站位</button>
+        <button id="btn-clearlocks">解除全部站位锁定</button>
       </div>
       <div id="opt-status" class="hint"></div>
     </div>
 
     <div class="panel" id="roster-panel">
-      <h2>4 · Your costumes <span id="roster-count" class="hint"></span></h2>
+      <h2>4 · 你的服装 <span id="roster-count" class="hint"></span></h2>
       <div class="roster-tools">
-        <input id="roster-filter" type="search" placeholder="Filter (id / char / tag / skill type)…">
-        <label><input type="checkbox" id="roster-ownedonly"> owned only</label>
-        <button id="btn-allowned">Mark all owned</button>
-        <button id="btn-noneowned">Mark none owned</button>
+        <input id="roster-filter" type="search" placeholder="筛选（编号 / 角色 / 标签 / 技能类型）…">
+        <label><input type="checkbox" id="roster-ownedonly"> 只看已拥有</label>
+        <button id="btn-allowned">全部标记为已拥有</button>
+        <button id="btn-noneowned">全部标记为未拥有</button>
       </div>
       <div id="roster" class="roster"></div>
     </div>
   </div>
 
   <div class="panel" id="result-panel">
-    <h2>Result — recommended order (slot 1 = front/tank → slot 6 = carry)</h2>
+    <h2>结果 — 推荐站位（第 1 位 = 前排／肉盾 → 第 6 位 = 主 C）</h2>
     <div id="team-summary"></div>
     <div id="team-slots" class="slots"></div>
     <div id="team-math"></div>
@@ -80,17 +80,17 @@
 <!-- ===================== TAB: ITEMS ===================== -->
 <section id="tab-items" class="tabpage">
   <div class="panel">
-    <h2>Buffs &amp; Items — possession / equipment effects</h2>
-    <p class="hint">Check what you own and set your average item level. Multiplicative bonuses auto-sum; click "Apply to account stats" to fold them into the optimizer.</p>
+    <h2>加成与道具 — 持有／装备效果</h2>
+    <p class="hint">勾选你拥有的道具并设置平均等级。乘算加成会自动累加；点「应用到账号数值」把它们折算进计算器。</p>
     <div class="roster-tools">
       <select id="item-kind">
-        <option value="">All kinds</option><option value="weapon">Weapons</option>
-        <option value="armor">Armor</option><option value="assist">Assist skills</option>
-        <option value="treasure">Treasures</option><option value="home">Home items</option>
-        <option value="keyholder">Keyholders</option>
+        <option value="">全部种类</option><option value="weapon">武器</option>
+        <option value="armor">防具</option><option value="assist">支援</option>
+        <option value="treasure">珍藏品</option><option value="home">小天地物品</option>
+        <option value="keyholder">钥匙扣</option>
       </select>
-      <label>Avg item level <input id="item-level" type="number" value="1" min="1" max="200" style="width:5em"></label>
-      <button id="btn-applyitems" class="primary">Apply to account stats</button>
+      <label>平均道具等级 <input id="item-level" type="number" value="1" min="1" max="200" style="width:5em"></label>
+      <button id="btn-applyitems" class="primary">应用到账号数值</button>
     </div>
     <div id="item-summary"></div>
     <div id="items" class="roster"></div>
@@ -100,33 +100,35 @@
 <!-- ===================== TAB: MATH ===================== -->
 <section id="tab-math" class="tabpage">
   <div class="panel" id="math-ref">
-    <h2>The formulas this calculator uses (from the datamine)</h2>
-    <h3>Per-hit damage</h3>
+    <h2>本计算器使用的公式（来自拆包数据）</h2>
+    <h3>单次伤害</h3>
     <pre>damage = attack × hitRate × attackRate(costume) × bossOrMobRate × defenceDebuff ÷ attackDebuff
 crit (one roll &lt; critRate): × critDamage × critDefenceDebuff
 expected crit multiplier = 1 + critRate × (critDamage − 1)</pre>
-    <h3>Per-slot DPS</h3>
+    <h3>单槽位 DPS</h3>
     <pre>normalDPS = attack × normalRate × costumeAttackRate × swingsPerSec
 skillDPS  = attack × skillMult(skillLv) × skillCoef × costumeAttackRate × skillRate × uniqueRate ÷ cycleTime
 cycleTime = recast × (1 − cooldownReduction) + castTime + 0.5s queue
 skillMult = lerp(startValue → endValue over level range) ÷ 1000  (Permil)</pre>
-    <h3>Buffs / debuffs (team)</h3>
+    <h3>增益 / 减益（作用于全队）</h3>
     <pre>uptime = buffDuration ÷ cycleTime (≤ 1)
 attack/crit buffs &amp; defence-debuffs act as ×(1 + value × uptime) team multipliers</pre>
-    <h3>Ordering</h3>
+    <h3>站位顺序</h3>
     <pre>Your team shares ONE HP pool — the party wipes together when it empties; nobody tanks or dies early.
 Single-target hits land on the leftmost ENABLED slot (the lead) but drain the shared pool.
 Order only decides skill fire sequence: FIFO in formation order (unique 1/0.5s, assist 1/2s).
 Buffs/debuffs must be LEFT of your nuke to affect it. CP = HP×0.6 + Σ(normal×500 + skill×500) — rough estimate.</pre>
-    <p class="hint">Tag synergy uses a configurable weight (default +2%/extra member) — the game scales effects off tag counts but the exact per-tag values are condition-driven; treat it as an estimate. RecastReset effects are noted but not scored.</p>
+    <p class="hint">全队共享同一个体力池 —— 体力见底时全队一起倒下，没有人需要抗伤、也不会有人先倒下。单体伤害落在最靠左的「已启用」站位（即开团位），但会消耗共享体力。站位顺序只决定特技发动顺序：按站位 FIFO 依次发动（服装特技间隔 1/0.5 秒，支援间隔 1/2 秒）。增益／减益必须位于输出位的<b>左侧</b>才能生效。战力 CP = 体力×0.6 + Σ(普攻×500 + 特技×500)，仅为粗略估算。</p>
+    <p class="hint">标签协同使用可配置权重（默认每多一名成员 +2%）—— 游戏按标签数量生效，但各标签的具体数值由条件决定，请当作估算。「特技再发动缩短」（RecastReset）效果会标注但不计入评分。</p>
   </div>
 </section>
 </main>
 
 <footer>
-  <p>Data: full offline datamine of jp.co.applibot.chiikawapocketgl v2.4.1 · 146 costumes · 168 skills · 149 items · all effects from game tables.</p>
+  <p>数据：jp.co.applibot.chiikawapocketgl v2.4.1 完整离线拆包 · 146 套服装 · 168 个特技 · 149 件道具 · 全部效果取自游戏表。</p>
 </footer>
 
+<script src="zh.js"></script>
 <script src="data.js"></script>
 <script src="app.js"></script>
 </body>
