@@ -138,6 +138,7 @@ button.locked { background: var(--gold); border-color: var(--gold); color: #fff;
 .badge.debuff { background: var(--badge-debuff-bg); color: var(--badge-debuff-fg); }
 .badge.nuke { background: var(--badge-nuke-bg); color: var(--badge-nuke-fg); }
 .card .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.card .row.skill-desc { display: block; white-space: pre-line; line-height: 1.5; }
 .card input[type=number] { width: 64px; }
 .card .lvl { display: flex; gap: 4px; align-items: center; font-size: .78rem; color: var(--soft); }
 .slots { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin: 12px 0; }

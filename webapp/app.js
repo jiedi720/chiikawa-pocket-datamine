@@ -310,18 +310,20 @@ function costumeLabel(c) {
 function skillDesc(c) {
   const s = skillOf(c);
   if (!s) return '无特技';
-  const parts = [];
+  const lines = [];
   for (const e of s.effects) {
     const v1 = skillValueAt(e, 1), v100 = skillValueAt(e, 100);
-    if (e.type === 'Attack') parts.push(`${ZH_RANGE[e.range] || e.range} ${fmt(v1)}×→${fmt(v100)}×`);
-    else if (BUFF_TYPES[e.type]) {
+    if (e.type === 'Attack') {
+      lines.push(`${ZH_RANGE[e.range] || e.range} ${fmt(v1)}×→${fmt(v100)}×`);
+    } else if (BUFF_TYPES[e.type]) {
       const nm = ZH_BUFF_LABEL[BUFF_TYPES[e.type]] || BUFF_TYPES[e.type];
       const sign = e.target === 'Enemy' ? '-' : '+';
-      parts.push(`${nm}${e.range === 'Range' ? '（全体）' : ''} ${sign}${fmt(v1)}→${sign}${fmt(v100)} ${e.buffSec}秒`);
+      const dur = e.buffSec ? ` 持续${e.buffSec}秒` : '';
+      lines.push(`${nm}${e.range === 'Range' ? '（全体）' : ''} ${sign}${fmt(v1)}→${sign}${fmt(v100)}${dur}`);
     }
   }
-  parts.push(`${s.recastMs / 1000}秒 冷却`);
-  return parts.join(' · ');
+  if (s.recastMs) lines.push(`冷却 ${s.recastMs / 1000}秒`);
+  return lines.join('\n');
 }
 
 /* ============ roster UI ============ */
@@ -383,7 +385,7 @@ function renderRoster() {
         <button class="lockbtn ${isLocked(c.id) ? 'locked' : ''}" data-lock="${c.id}">${isLocked(c.id) ? '🔒 已锁定' : '锁定'}</button>
       </div>
       <div class="row">${badges.join('')}</div>
-      <div class="row hint">${skillDesc(c)}</div>
+      <div class="row hint skill-desc">${skillDesc(c)}</div>
       <div class="row lvl">
         <label><input type="checkbox" data-own="${c.id}" ${owned ? 'checked' : ''}> 已拥有</label>
         ${owned ? `<label>服装等级 <input type="number" min="1" max="200" value="${ownedLevel(c.id)}" data-lv="${c.id}"></label>` : ''}
