@@ -307,6 +307,12 @@ function costumeLabel(c) {
   const name = costumeName(c);
   return name ? `#${c.id} · ${name}` : `#${c.id} · ${charName(c.char)} · ${RARITY_NAME[c.rarity] || c.rarity}`;
 }
+// 特技数值：1级→100级。不随等级变化时只显示一个值，避免 3.00×→3.00× 这种冗余。
+function lvPair(v1, v100, sign, suffix) {
+  const a = fmt(v1), b = fmt(v100);
+  if (a === b) return `${sign}${a}${suffix}`;
+  return `${sign}${a}${suffix}→${sign}${b}${suffix}`;
+}
 function skillDesc(c) {
   const s = skillOf(c);
   if (!s) return '无特技';
@@ -314,12 +320,12 @@ function skillDesc(c) {
   for (const e of s.effects) {
     const v1 = skillValueAt(e, 1), v100 = skillValueAt(e, 100);
     if (e.type === 'Attack') {
-      lines.push(`${ZH_RANGE[e.range] || e.range} ${fmt(v1)}×→${fmt(v100)}×`);
+      lines.push(`${ZH_RANGE[e.range] || e.range} ${lvPair(v1, v100, '', '×')}`);
     } else if (BUFF_TYPES[e.type]) {
       const nm = ZH_BUFF_LABEL[BUFF_TYPES[e.type]] || BUFF_TYPES[e.type];
       const sign = e.target === 'Enemy' ? '-' : '+';
       const dur = e.buffSec ? ` 持续${e.buffSec}秒` : '';
-      lines.push(`${nm}${e.range === 'Range' ? '（全体）' : ''} ${sign}${fmt(v1)}→${sign}${fmt(v100)}${dur}`);
+      lines.push(`${nm}${e.range === 'Range' ? '（全体）' : ''} ${lvPair(v1, v100, sign, '')}${dur}`);
     }
   }
   if (s.recastMs) {
