@@ -500,6 +500,13 @@ function optimize() {
   const freeRoster = roster.filter(x => !lockedIds.has(x.c.id) && !lockedChars.has(x.c.char));
   const need = 6 - locked.length;
   if (need < 0) { status.textContent = '锁定的站位太多了。'; return; }
+  if (need === 0) {
+    const fullLocked = locked.slice().sort((a, b) => a.i - b.i)
+      .map(l => slotCalc(l.c, l.lv, inp, ctx0));
+    renderResult(fullLocked, inp, '优化后的队伍（六个站位均已锁定）');
+    status.textContent = '六个站位均已锁定，已完成合法性校验。';
+    return;
+  }
 
   // 1. score each costume standalone; candidates from the same character are alternatives.
   const scored = freeRoster.map(x => ({ x, r: slotCalc(x.c, x.lv, inp, ctx0) }));
@@ -508,8 +515,11 @@ function optimize() {
   // 2. Greedily select the best legal six: never take two costumes of one character.
   function teamScoreOf(list) {
     if (!hasUniqueCharacters([...locked, ...list])) return -Infinity;
-    const slots = list.map(x => slotCalc(x.c, x.lv, inp, buildTeamContext(inp)));
-    return teamCalc(slots, inp).total;
+    const teamSlots = [
+      ...locked.map(x => slotCalc(x.c, x.lv, inp, buildTeamContext(inp))),
+      ...list.map(x => slotCalc(x.c, x.lv, inp, buildTeamContext(inp)))
+    ];
+    return teamCalc(teamSlots, inp).total;
   }
   let team = [];
   const selectedChars = new Set(lockedChars);
