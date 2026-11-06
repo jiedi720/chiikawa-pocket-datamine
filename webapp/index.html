@@ -5,11 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>口袋吉伊卡哇 — 队伍计算器</title>
 <link rel="stylesheet" href="style.css">
+<script>
+  (function(){try{var t=localStorage.getItem('cp-theme')||'auto';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','auto');}})();
+</script>
 </head>
 <body>
 <header>
   <h1>🌸 口袋吉伊卡哇 — 队伍与站位计算器</h1>
   <p class="sub">基于 v2.4.1 拆包数据 —— 真实公式，不靠猜。攻击力已归一化为 <b>1</b>，所以所有结果都是你游戏内攻击力的倍数。</p>
+  <div class="theme-switch" role="group" aria-label="主题切换">
+    <button type="button" data-theme-opt="auto" title="跟随系统">🖥 自动</button>
+    <button type="button" data-theme-opt="light" title="浅色">☀ 浅色</button>
+    <button type="button" data-theme-opt="dark" title="深色">🌙 深色</button>
+  </div>
 </header>
 
 <nav class="tabs">
@@ -26,27 +34,27 @@
       <h2>1 · 账号面板</h2>
       <p class="hint">数据取自游戏内状态页。倍率直接填倍数（1.20 = +20%）。</p>
       <div class="grid2">
-        <label data-en="Crit rate (0–1)">暴击率（0–1） <input id="in-critRate" type="number" step="0.01" value="0.10" data-en="Crit rate (0–1)"></label>
-        <label data-en="Crit damage (×)">暴击伤害（×） <input id="in-critDmg" type="number" step="0.1" value="1.5" data-en="Crit damage (×)"></label>
-        <label data-en="Normal atk rate">普通攻击伤害倍率 <input id="in-normalRate" type="number" step="0.1" value="1.0" data-en="Normal atk rate"></label>
-        <label data-en="Skill dmg rate">特技＆支援伤害倍率 <input id="in-skillRate" type="number" step="0.1" value="1.0" data-en="Skill dmg rate"></label>
-        <label data-en="Unique skill rate">特技伤害倍率 <input id="in-uniqueRate" type="number" step="0.1" value="1.0" data-en="Unique skill rate"></label>
-        <label data-en="Boss dmg rate">对 Boss 的伤害倍率 <input id="in-bossRate" type="number" step="0.1" value="1.5" data-en="Boss dmg rate"></label>
-        <label data-en="Mob dmg rate">对非 Boss 的伤害 <input id="in-mobRate" type="number" step="0.1" value="1.0" data-en="Mob dmg rate"></label>
-        <label data-en="Attack speed (swings/s)">攻击速度（次/秒） <input id="in-atkSpeed" type="number" step="0.01" value="0.66" data-en="Attack speed (swings/s)"></label>
-        <label data-en="Cooldown reduction (0–0.9)">冷却缩减（0–0.9） <input id="in-cdr" type="number" step="0.01" value="0" data-en="Cooldown reduction (0–0.9)"></label>
-        <label data-en="Defence-debuff amp">体力削减倍率 <input id="in-defDebuff" type="number" step="0.05" value="1.0" data-en="Defence-debuff amp"></label>
+        <label><span class="lbl" data-en="Crit rate (0–1)">暴击率（0–1）</span> <input id="in-critRate" type="number" step="0.01" value="0.10" ></label>
+        <label><span class="lbl" data-en="Crit damage (×)">暴击伤害（×）</span> <input id="in-critDmg" type="number" step="0.1" value="1.5" ></label>
+        <label><span class="lbl" data-en="Normal atk rate">普通攻击伤害倍率</span> <input id="in-normalRate" type="number" step="0.1" value="1.0" ></label>
+        <label><span class="lbl" data-en="Skill dmg rate">特技＆支援伤害倍率</span> <input id="in-skillRate" type="number" step="0.1" value="1.0" ></label>
+        <label><span class="lbl" data-en="Unique skill rate">特技伤害倍率</span> <input id="in-uniqueRate" type="number" step="0.1" value="1.0" ></label>
+        <label><span class="lbl" data-en="Boss dmg rate">对 Boss 的伤害倍率</span> <input id="in-bossRate" type="number" step="0.1" value="1.5" ></label>
+        <label><span class="lbl" data-en="Mob dmg rate">对非 Boss 的伤害</span> <input id="in-mobRate" type="number" step="0.1" value="1.0" ></label>
+        <label><span class="lbl" data-en="Attack speed (swings/s)">攻击速度（次/秒）</span> <input id="in-atkSpeed" type="number" step="0.01" value="0.66" ></label>
+        <label><span class="lbl" data-en="Cooldown reduction (0–0.9)">冷却缩减（0–0.9）</span> <input id="in-cdr" type="number" step="0.01" value="0" ></label>
+        <label><span class="lbl" data-en="Defence-debuff amp">体力削减倍率</span> <input id="in-defDebuff" type="number" step="0.05" value="1.0" ></label>
       </div>
       <h2>2 · 模式</h2>
       <div class="grid1">
-        <label data-en="Fight context">战斗场景
-          <select id="in-mode" data-en="Fight context">
+        <label><span class="lbl" data-en="Fight context">战斗场景</span>
+          <select id="in-mode" >
             <option value="balanced" selected>均衡（清波 + Boss）</option>
             <option value="farm">刷本 / 清波（以杂兵为主）</option>
             <option value="boss">Boss 墙（单体爆发）</option>
           </select>
         </label>
-        <label data-en="Tag synergy weight %/extra member">标签协同权重 %/每名额外成员 <input id="in-tagWeight" type="number" step="0.5" value="2" data-en="Tag synergy weight %/extra member"></label>
+        <label><span class="lbl" data-en="Tag synergy weight %/extra member">标签协同权重 %/每名额外成员</span> <input id="in-tagWeight" type="number" step="0.5" value="2" ></label>
       </div>
       <h2>3 · 计算</h2>
       <div class="grid1">
@@ -60,7 +68,30 @@
     <div class="panel" id="roster-panel">
       <h2>4 · 你的服装 <span id="roster-count" class="hint"></span></h2>
       <div class="roster-tools">
-        <input id="roster-filter" type="search" placeholder="筛选（编号 / 角色 / 标签 / 技能类型）…">
+        <input id="roster-filter" type="search" placeholder="搜索（编号 / 角色 / 标签 / 技能）…">
+        <label>排序
+          <select id="roster-sort">
+            <option value="default">默认（序号）</option>
+            <option value="id-asc">序号 ↑</option>
+            <option value="id-desc">序号 ↓</option>
+            <option value="star-desc">星级 ↓（高→低）</option>
+            <option value="star-asc">星级 ↑（低→高）</option>
+            <option value="atk-desc">攻击倍率 ↓</option>
+            <option value="atk-asc">攻击倍率 ↑</option>
+            <option value="name">名称</option>
+          </select>
+        </label>
+        <label>标签
+          <select id="roster-tagfilter"><option value="">全部标签</option></select>
+        </label>
+        <label>星级
+          <select id="roster-rarityfilter">
+            <option value="">全部星级</option>
+            <option value="1">★4 (SR)</option>
+            <option value="2">★5 (HR)</option>
+            <option value="3">★6 (UR)</option>
+          </select>
+        </label>
         <label><input type="checkbox" id="roster-ownedonly"> 只看已拥有</label>
         <button id="btn-allowned">全部标记为已拥有</button>
         <button id="btn-noneowned">全部标记为未拥有</button>
@@ -89,6 +120,22 @@
         <option value="treasure">珍藏品</option><option value="home">小天地物品</option>
         <option value="keyholder">钥匙扣</option>
       </select>
+      <label>排序
+        <select id="item-sort">
+          <option value="default">默认顺序</option>
+          <option value="id-asc">序号 ↑</option>
+          <option value="id-desc">序号 ↓</option>
+          <option value="kind">按种类</option>
+          <option value="name">按名称</option>
+        </select>
+      </label>
+      <label>状态
+        <select id="item-statusfilter">
+          <option value="">全部状态</option>
+          <option value="owned">仅已拥有</option>
+          <option value="equipped">仅已装备</option>
+        </select>
+      </label>
       <label>平均道具等级 <input id="item-level" type="number" value="1" min="1" max="200" style="width:5em"></label>
       <button id="btn-applyitems" class="primary">应用到账号数值</button>
     </div>
@@ -128,10 +175,19 @@ Buffs/debuffs must be LEFT of your nuke to affect it. CP = HP×0.6 + Σ(normal×
   <p>数据：jp.co.applibot.chiikawapocketgl v2.4.1 完整离线拆包 · 146 套服装 · 168 个特技 · 149 件道具 · 全部效果取自游戏表。</p>
 </footer>
 
+<!-- 放大图灯箱：左键单击服装图标打开原始分辨率大图 -->
+<div id="lightbox" class="lightbox" hidden>
+  <div class="lightbox-backdrop" data-close></div>
+  <img class="lightbox-img" alt="放大图">
+  <button class="lightbox-close" data-close aria-label="关闭">✕</button>
+  <div class="lightbox-cap"></div>
+</div>
+
 <script src="zh.js"></script>
 <script src="img.js"></script>
 <script src="data.js"></script>
 <script src="app.js"></script>
 <script src="en-tip.js"></script>
+<script src="theme.js"></script>
 </body>
 </html>

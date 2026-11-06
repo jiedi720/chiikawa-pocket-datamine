@@ -1,18 +1,70 @@
 :root {
   --bg: #fdf6ec; --panel: #fffdf8; --ink: #4a3f35; --soft: #8a7a6a;
   --accent: #f091a7; --accent2: #7fb8a4; --line: #ead9c8; --gold: #d9a441;
+  --input-bg: #ffffff; --input-ink: #4a3f35;
+  --owned-bg: #f2fbf7; --ico-bg: #faf3e7; --code-bg: #faf3e7;
+  --tip-bg: #4a3f35; --tip-fg: #fdf6ec;
+  --badge-r1-bg: #c05b9c; --badge-r1-fg: #fff;
+  --badge-r2-bg: #d9893b; --badge-r2-fg: #fff;
+  --badge-r3-bg: #7aa0d8; --badge-r3-fg: #fff;
+  --badge-tag-bg: #b8a48a; --badge-tag-fg: #fff;
+  --badge-nuke-bg: #d86a6a; --badge-nuke-fg: #fff;
+  --badge-debuff-bg: #8a76c9; --badge-debuff-fg: #fff;
+  --badge-aoe-bg: #7fb8a4; --badge-aoe-fg: #fff;
+  --badge-buff-bg: #d9a441; --badge-buff-fg: #fff;
+  --shadow: 0 1px 3px rgba(180,140,100,.08);
+}
+[data-theme="dark"] {
+  --bg: #1b1916; --panel: #262320; --ink: #f0e9da; --soft: #a99a8a;
+  --accent: #ec7d9d; --accent2: #6fae9a; --line: #3a352f; --gold: #e0b455;
+  --input-bg: #2e2a26; --input-ink: #f0e9da;
+  --owned-bg: #22302b; --ico-bg: #2a2622; --code-bg: #211e1b;
+  --tip-bg: #f0e9da; --tip-fg: #1b1916;
+  --badge-r1-bg: #3a2332; --badge-r1-fg: #ec9ccb;
+  --badge-r2-bg: #3a2c1d; --badge-r2-fg: #e6b277;
+  --badge-r3-bg: #1f2b3d; --badge-r3-fg: #9cc0ee;
+  --badge-tag-bg: #2e2a21; --badge-tag-fg: #cdbfa6;
+  --badge-nuke-bg: #3a2326; --badge-nuke-fg: #eaa0a0;
+  --badge-debuff-bg: #2a2540; --badge-debuff-fg: #b6a4e8;
+  --badge-aoe-bg: #1f3330; --badge-aoe-fg: #8fd1bd;
+  --badge-buff-bg: #332b1a; --badge-buff-fg: #e9c878;
+  --shadow: 0 1px 3px rgba(0,0,0,.45);
+}
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"] {
+    --bg: #1b1916; --panel: #262320; --ink: #f0e9da; --soft: #a99a8a;
+    --accent: #ec7d9d; --accent2: #6fae9a; --line: #3a352f; --gold: #e0b455;
+    --input-bg: #2e2a26; --input-ink: #f0e9da;
+    --owned-bg: #22302b; --ico-bg: #2a2622; --code-bg: #211e1b;
+    --tip-bg: #f0e9da; --tip-fg: #1b1916;
+    --badge-r1-bg: #3a2332; --badge-r1-fg: #ec9ccb;
+    --badge-r2-bg: #3a2c1d; --badge-r2-fg: #e6b277;
+    --badge-r3-bg: #1f2b3d; --badge-r3-fg: #9cc0ee;
+    --badge-tag-bg: #2e2a21; --badge-tag-fg: #cdbfa6;
+    --badge-nuke-bg: #3a2326; --badge-nuke-fg: #eaa0a0;
+    --badge-debuff-bg: #2a2540; --badge-debuff-fg: #b6a4e8;
+    --badge-aoe-bg: #1f3330; --badge-aoe-fg: #8fd1bd;
+    --badge-buff-bg: #332b1a; --badge-buff-fg: #e9c878;
+    --shadow: 0 1px 3px rgba(0,0,0,.45);
+  }
 }
 * { box-sizing: border-box; }
 body {
   margin: 0; font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   background: var(--bg); color: var(--ink);
 }
-header { padding: 18px 24px 8px; }
+header { padding: 18px 24px 8px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 h1 { margin: 0; font-size: 1.45rem; }
 .sub { color: var(--soft); margin: 6px 0 0; font-size: .9rem; }
+/* 主题切换控件 */
+.theme-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--input-bg); margin-top: 2px; flex: none; }
+.theme-switch button { border: none; border-radius: 0; background: transparent; color: var(--soft); padding: 7px 13px; font-size: .82rem; cursor: pointer; }
+.theme-switch button + button { border-left: 1px solid var(--line); }
+.theme-switch button.active { background: var(--accent); color: #fff; }
+.theme-switch button:hover { color: var(--ink); }
 .tabs { display: flex; gap: 8px; padding: 12px 24px 0; }
 .tab {
-  border: 1px solid var(--line); background: #fff; padding: 8px 18px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--input-bg); padding: 8px 18px; border-radius: 999px;
   cursor: pointer; font-size: .95rem; color: var(--ink);
 }
 .tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
@@ -22,7 +74,7 @@ main { padding: 16px 24px 32px; }
 .cols { display: grid; grid-template-columns: 340px 1fr; gap: 16px; align-items: start; }
 .panel {
   background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
-  padding: 14px 16px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(180,140,100,.08);
+  padding: 14px 16px; margin-bottom: 16px; box-shadow: var(--shadow);
 }
 h2 { font-size: 1.05rem; margin: 10px 0 8px; }
 h2:first-child { margin-top: 0; }
@@ -31,49 +83,66 @@ h3 { font-size: .95rem; margin: 14px 0 6px; }
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .grid1 { display: grid; gap: 8px; }
 label { font-size: .85rem; display: grid; gap: 3px; }
+/* 账号面板：中文标签在输入框上方，提示锚定到中文文字 */
+#account-panel label { display: flex; flex-direction: column; gap: 3px; }
+#account-panel label .lbl { width: fit-content; max-width: 100%; align-self: flex-start; cursor: help; }
 input, select {
   font: inherit; padding: 5px 8px; border: 1px solid var(--line); border-radius: 8px;
-  background: #fff; color: var(--ink); width: 100%;
+  background: var(--input-bg); color: var(--input-ink); width: 100%;
 }
 button {
   font: inherit; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--line);
-  background: #fff; cursor: pointer;
+  background: var(--input-bg); color: var(--ink); cursor: pointer;
 }
 button:hover { border-color: var(--accent); }
 button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
 button.locked { background: var(--gold); border-color: var(--gold); color: #fff; }
 .roster-tools { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
-.roster-tools input[type=search] { width: 260px; }
+.roster-tools input[type=search] { width: 220px; }
+.roster-tools label { display: inline-flex; align-items: center; gap: 4px; }
+.roster-tools select { width: auto; min-width: 84px; }
+.card .ico.zoomable { cursor: zoom-in; }
+.card .ico.zoomable:hover { border-color: var(--accent); }
+/* 放大图灯箱 */
+.lightbox { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 24px; }
+.lightbox[hidden] { display: none; }
+.lightbox-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.80); }
+.lightbox-img { position: relative; max-width: 92vw; max-height: 86vh; width: auto; height: auto; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 50px rgba(0,0,0,.55); background: #fff; }
+.lightbox-close { position: absolute; top: 16px; right: 18px; z-index: 1001; width: 40px; height: 40px; border-radius: 50%; font-size: 1.1rem; background: rgba(255,255,255,.92); border: none; color: #222; cursor: pointer; }
+.lightbox-close:hover { background: #fff; }
+.lightbox-cap { position: absolute; bottom: 18px; left: 0; right: 0; text-align: center; color: #fff; font-size: .85rem; text-shadow: 0 1px 4px #000; padding: 0 16px; }
 .roster {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 8px;
   max-height: 520px; overflow-y: auto;
 }
 .card {
-  border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; background: #fff;
+  border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; background: var(--input-bg);
   font-size: .82rem; display: grid; gap: 4px;
 }
-.card.owned { border-color: var(--accent2); background: #f2fbf7; }
+.card.owned { border-color: var(--accent2); background: var(--owned-bg); }
 .card .head { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
 .card .hdmain { display: flex; align-items: center; gap: 8px; min-width: 0; }
 .card .ico {
   width: 42px; height: 42px; flex: none;
   object-fit: contain; border-radius: 9px;
-  background: #faf3e7; border: 1px solid var(--line);
+  background: var(--ico-bg); border: 1px solid var(--line);
 }
 .card .title { font-weight: 700; font-size: .88rem; }
-.badge { border-radius: 6px; padding: 1px 6px; font-size: .72rem; color: #fff; white-space: nowrap; }
-.badge.r1 { background: #c05b9c; } .badge.r2 { background: #d9893b; } .badge.r3 { background: #7aa0d8; }
-.badge.tag { background: #b8a48a; }
-.badge.aoe { background: var(--accent2); }
-.badge.buff { background: var(--gold); }
-.badge.debuff { background: #8a76c9; }
-.badge.nuke { background: #d86a6a; }
+.badge { border-radius: 6px; padding: 1px 6px; font-size: .72rem; white-space: nowrap; }
+.badge.r1 { background: var(--badge-r1-bg); color: var(--badge-r1-fg); }
+.badge.r2 { background: var(--badge-r2-bg); color: var(--badge-r2-fg); }
+.badge.r3 { background: var(--badge-r3-bg); color: var(--badge-r3-fg); }
+.badge.tag { background: var(--badge-tag-bg); color: var(--badge-tag-fg); }
+.badge.aoe { background: var(--badge-aoe-bg); color: var(--badge-aoe-fg); }
+.badge.buff { background: var(--badge-buff-bg); color: var(--badge-buff-fg); }
+.badge.debuff { background: var(--badge-debuff-bg); color: var(--badge-debuff-fg); }
+.badge.nuke { background: var(--badge-nuke-bg); color: var(--badge-nuke-fg); }
 .card .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .card input[type=number] { width: 64px; }
 .card .lvl { display: flex; gap: 4px; align-items: center; font-size: .78rem; color: var(--soft); }
 .slots { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin: 12px 0; }
 .slot {
-  border: 2px solid var(--line); border-radius: 12px; background: #fff; padding: 10px;
+  border: 2px solid var(--line); border-radius: 12px; background: var(--input-bg); padding: 10px;
   font-size: .8rem; position: relative; min-height: 150px;
 }
 .slot .pos { position: absolute; top: -12px; left: -8px; width: 26px; height: 26px; border-radius: 50%;
@@ -89,7 +158,7 @@ button.locked { background: var(--gold); border-color: var(--gold); color: #fff;
 #team-math { font-size: .82rem; color: var(--soft); white-space: pre-wrap; }
 #item-summary { font-size: .88rem; margin-bottom: 10px; display: flex; gap: 18px; flex-wrap: wrap; }
 pre {
-  background: #faf3e7; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;
+  background: var(--code-bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;
   font-size: .82rem; overflow-x: auto;
 }
 footer { padding: 12px 24px 24px; color: var(--soft); font-size: .78rem; }
@@ -97,10 +166,10 @@ footer { padding: 12px 24px 24px; color: var(--soft); font-size: .78rem; }
 /* 原英文名 tooltip */
 #en-tip {
   position: absolute; z-index: 999; pointer-events: none;
-  background: #4a3f35; color: #fdf6ec;
+  background: var(--tip-bg); color: var(--tip-fg);
   padding: 4px 9px; border-radius: 7px;
   font-size: .76rem; line-height: 1.35; white-space: nowrap;
-  box-shadow: 0 3px 10px rgba(74,63,53,.28);
+  box-shadow: 0 3px 10px rgba(0,0,0,.28);
   opacity: 0; transform: translateY(-3px);
   transition: opacity .12s ease, transform .12s ease;
 }

@@ -286,10 +286,12 @@ function tagName(t) {
 function charName(id) { return CHAR_NAME[id] || ('角色 ' + id); }
 
 // 列表缩略图：img.js 按官方中文编号存放图标。查不到就返回空串，条目保持纯文字。
-function imgTag(key) {
+// zoomable=true 时给图标加 data-zoom，供左键单击打开原始分辨率大图。
+function imgTag(key, zoomable) {
   const f = (typeof IMG !== 'undefined' && key) ? IMG[key] : null;
   if (!f) return '';
-  return `<img class="ico" src="img/${f}" alt="" loading="lazy" onerror="this.style.display='none'">`;
+  const z = zoomable ? ' class="ico zoomable" data-zoom="img/' + f + '"' : ' class="ico"';
+  return `<img${z} src="img/${f}" alt="" loading="lazy" onerror="this.style.display='none'">`;
 }
 // 武器/防具用 sprite 里的 4 位编号（与官方中文名同键），支援用自身 id
 function itemImgKey(it) {
@@ -330,10 +332,34 @@ function renderRoster() {
   const el = document.getElementById('roster');
   const filter = (document.getElementById('roster-filter').value || '').toLowerCase();
   const ownedOnly = document.getElementById('roster-ownedonly').checked;
+  const sortBy = document.getElementById('roster-sort').value;
+  const tagFilter = document.getElementById('roster-tagfilter').value;
+  const rarityFilter = document.getElementById('roster-rarityfilter').value;
   let shown = 0, ownedN = 0;
   el.innerHTML = '';
-  const sorted = DATA.costumes.slice().sort((a, b) => a.sort - b.sort);
-  for (const c of sorted) {
+
+  // 1) 先按 标签 / 星级 过滤
+  let list = DATA.costumes.slice();
+  if (rarityFilter) list = list.filter(c => String(c.rarity) === rarityFilter);
+  if (tagFilter) list = list.filter(c => c.tags.includes(+tagFilter));
+
+  // 2) 排序（攻击倍率以满级为基准）
+  const atkOf = c => evalGroup(c.arGroup, 100);
+  list.sort((a, b) => {
+    switch (sortBy) {
+      case 'id-asc':   return a.id - b.id;
+      case 'id-desc':  return b.id - a.id;
+      case 'star-desc':return b.rarity - a.rarity || a.sort - b.sort;
+      case 'star-asc': return a.rarity - b.rarity || a.sort - b.sort;
+      case 'atk-desc': return atkOf(b) - atkOf(a) || a.sort - b.sort;
+      case 'atk-asc':  return atkOf(a) - atkOf(b) || a.sort - b.sort;
+      case 'name':     return costumeName(a).localeCompare(costumeName(b), 'zh');
+      default:         return a.sort - b.sort;
+    }
+  });
+
+  // 3) 渲染（再套用文字搜索 / 已拥有）
+  for (const c of list) {
     const owned = ownedLevel(c.id) != null;
     if (owned) ownedN++;
     if (ownedOnly && !owned) continue;
@@ -353,7 +379,7 @@ function renderRoster() {
     }
     for (const t of c.tags) badges.push(`<span class="badge tag">标签 ${tagName(t)}</span>`);
     card.innerHTML = `
-      <div class="head"><span class="hdmain">${imgTag('costume_' + c.id)}<span class="title">${costumeLabel(c)}</span></span>
+      <div class="head"><span class="hdmain">${imgTag('costume_' + c.id, true)}<span class="title">${costumeLabel(c)}</span></span>
         <button class="lockbtn ${isLocked(c.id) ? 'locked' : ''}" data-lock="${c.id}">${isLocked(c.id) ? '🔒 已锁定' : '锁定'}</button>
       </div>
       <div class="row">${badges.join('')}</div>
@@ -377,6 +403,19 @@ function renderRoster() {
   el.querySelectorAll('[data-lock]').forEach(btn => btn.addEventListener('click', e => {
     toggleLock(+e.target.dataset.lock); saveState(); renderRoster();
   }));
+}
+
+// 用数据里的全部标签填充「标签」筛选下拉
+function populateRosterFilters() {
+  const sel = document.getElementById('roster-tagfilter');
+  if (!sel) return;
+  const tags = new Set();
+  for (const c of DATA.costumes) for (const t of c.tags) tags.add(t);
+  for (const t of [...tags].sort((a, b) => a - b)) {
+    const o = document.createElement('option');
+    o.value = t; o.textContent = '标签 ' + tagName(t);
+    sel.appendChild(o);
+  }
 }
 function deleteSlotLock(costumeId) {
   for (const [k, v] of Object.entries(state.locks)) if (v === costumeId) delete state.locks[k];
@@ -593,6 +632,8 @@ function keyholderText(g) {
 function renderItems() {
   const el = document.getElementById('items');
   const kind = document.getElementById('item-kind').value;
+  const sortBy = document.getElementById('item-sort').value;
+  const statusFilter = document.getElementById('item-statusfilter').value;
   el.innerHTML = '';
   const addCard = (key, title, text, showEq, levelSel, imgKey) => {
     const st = itemState(key);
@@ -608,25 +649,54 @@ function renderItems() {
       </div>`;
     el.appendChild(card);
   };
+  // 收集全部道具为统一列表，便于排序 / 筛选
+  const items = [];
   if (!kind || kind === 'weapon' || kind === 'armor' || kind === 'assist' || kind === 'treasure') {
     for (const it of DATA.items) {
       if (kind && it.kind !== kind) continue;
       const nm = itemName(it);
-      addCard(it.kind + ':' + it.id, `${ZH_KIND[it.kind] || it.kind} #${it.id}${nm ? ' · ' + nm : ''}${it.rarity ? ' · ' + (ZH_RARITY[it.rarity] || it.rarity) : ''}`, itemEffectText(it), true, undefined, itemImgKey(it));
+      items.push({
+        key: it.kind + ':' + it.id, kind: it.kind, id: it.id,
+        title: `${ZH_KIND[it.kind] || it.kind} #${it.id}${nm ? ' · ' + nm : ''}${it.rarity ? ' · ' + (ZH_RARITY[it.rarity] || it.rarity) : ''}`,
+        text: itemEffectText(it), showEq: true, levelSel: undefined, imgKey: itemImgKey(it),
+      });
     }
   }
   if (!kind || kind === 'home') {
     for (const h of DATA.homeItems) {
       const fx = fxValueAt(h.fx, 1);
-      addCard('home:' + h.id, `小天地物品 #${h.id} · ${ZH_HOME_TYPE[h.type] || h.type}${ZH['home_item_' + h.id] ? ' · ' + ZH['home_item_' + h.id] : ''}`,
-        `<b>持有：</b> ${fx ? (ZH_STATUS[fx.status] || fx.status) : '?'} 道具等级 1/2/3 时为 ×1.15 / ×1.20 / ×1.30（摆放位置只是装饰，拥有即可生效）`, false, h.maxLv);
+      items.push({
+        key: 'home:' + h.id, kind: 'home', id: h.id,
+        title: `小天地物品 #${h.id} · ${ZH_HOME_TYPE[h.type] || h.type}${ZH['home_item_' + h.id] ? ' · ' + ZH['home_item_' + h.id] : ''}`,
+        text: `<b>持有：</b> ${fx ? (ZH_STATUS[fx.status] || fx.status) : '?'} 道具等级 1/2/3 时为 ×1.15 / ×1.20 / ×1.30（摆放位置只是装饰，拥有即可生效）`,
+        showEq: false, levelSel: h.maxLv, imgKey: '',
+      });
     }
   }
   if (!kind || kind === 'keyholder') {
     for (const g of DATA.keyholderGroups) {
-      addCard('kh:' + g.id, `钥匙扣 #${g.id} · ${charName(g.chara)}${ZH['assist_skill_' + g.assist] ? ' + ' + ZH['assist_skill_' + g.assist] : ''}`, keyholderText(g), true);
+      items.push({
+        key: 'kh:' + g.id, kind: 'keyholder', id: g.id,
+        title: `钥匙扣 #${g.id} · ${charName(g.chara)}${ZH['assist_skill_' + g.assist] ? ' + ' + ZH['assist_skill_' + g.assist] : ''}`,
+        text: keyholderText(g), showEq: true, levelSel: undefined, imgKey: '',
+      });
     }
   }
+  // 状态筛选
+  if (statusFilter === 'owned') items = items.filter(it => itemState(it.key).own);
+  else if (statusFilter === 'equipped') items = items.filter(it => itemState(it.key).eq);
+  // 排序
+  const kindOrder = { weapon: 0, armor: 1, assist: 2, treasure: 3, home: 4, keyholder: 5 };
+  items.sort((a, b) => {
+    switch (sortBy) {
+      case 'id-asc':  return a.id - b.id || kindOrder[a.kind] - kindOrder[b.kind];
+      case 'id-desc': return b.id - a.id || kindOrder[a.kind] - kindOrder[b.kind];
+      case 'kind':    return kindOrder[a.kind] - kindOrder[b.kind] || a.id - b.id;
+      case 'name':    return a.title.localeCompare(b.title, 'zh');
+      default:        return 0;
+    }
+  });
+  for (const it of items) addCard(it.key, it.title, it.text, it.showEq, it.levelSel, it.imgKey);
   el.querySelectorAll('[data-own]').forEach(cb => cb.addEventListener('change', e => {
     const key = e.target.dataset.own;
     setItemState(key, { own: e.target.checked, eq: e.target.checked ? itemState(key).eq : false });
@@ -726,6 +796,11 @@ function bindControls() {
   document.getElementById('btn-clearlocks').addEventListener('click', () => { state.locks = {}; saveState(); renderRoster(); });
   document.getElementById('item-kind').addEventListener('change', renderItems);
   document.getElementById('item-level').addEventListener('change', renderItemSummary);
+  document.getElementById('roster-sort').addEventListener('change', renderRoster);
+  document.getElementById('roster-tagfilter').addEventListener('change', renderRoster);
+  document.getElementById('roster-rarityfilter').addEventListener('change', renderRoster);
+  document.getElementById('item-sort').addEventListener('change', renderItems);
+  document.getElementById('item-statusfilter').addEventListener('change', renderItems);
   document.getElementById('btn-applyitems').addEventListener('click', () => {
     const sums = JSON.parse(document.getElementById('item-summary').dataset.sums || '{}');
     const mul = (id, st) => {
@@ -752,6 +827,34 @@ function bindControls() {
   }
 }
 
+/* ============ 放大图灯箱（左键单击服装图标） ============ */
+function openLightbox(src, cap) {
+  const lb = document.getElementById('lightbox');
+  lb.querySelector('.lightbox-img').src = src;
+  lb.querySelector('.lightbox-cap').textContent = cap || '';
+  lb.hidden = false;
+}
+function closeLightbox() {
+  const lb = document.getElementById('lightbox');
+  lb.hidden = true;
+  lb.querySelector('.lightbox-img').src = '';
+}
+function bindLightbox() {
+  const lb = document.getElementById('lightbox');
+  lb.addEventListener('click', e => { if (e.target.hasAttribute('data-close')) closeLightbox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  // 事件委托：roster 内任意 zoomable 图标左键单击即放大
+  document.getElementById('roster').addEventListener('click', e => {
+    const img = e.target.closest('img.ico.zoomable');
+    if (!img) return;
+    const card = img.closest('.card');
+    const cap = card ? (card.querySelector('.title') || {}).textContent : '';
+    openLightbox(img.getAttribute('data-zoom'), cap);
+  });
+}
+
 bindTabs();
 bindControls();
+populateRosterFilters();
+bindLightbox();
 renderRoster();

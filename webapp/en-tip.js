@@ -21,11 +21,16 @@
     t.classList.add('show');
     const r = el.getBoundingClientRect();
     const tr = t.getBoundingClientRect();
-    // 默认显示在元素下方居中；贴近视口边缘时自动翻到上方 / 靠边
-    let left = r.left + r.width / 2 - tr.width / 2;
-    left = Math.max(8, Math.min(left, window.innerWidth - tr.width - 8));
-    let top = r.bottom + 7;
-    if (top + tr.height > window.innerHeight - 8) top = r.top - tr.height - 7;
+    // 锚定到中文文字，显示在【其右侧】并垂直居中；右侧空间不足则翻到左侧；再不足兜底到下方居中
+    let left = r.right + 6;
+    let top = r.top + (r.height - tr.height) / 2;
+    if (left + tr.width > window.innerWidth - 8) {
+      left = r.left - tr.width - 6;                 // 右侧放不下 → 翻到左侧
+    }
+    if (left < 8) {                                 // 左侧也放不下 → 下方居中兜底
+      left = Math.max(8, Math.min(r.left + r.width / 2 - tr.width / 2, window.innerWidth - tr.width - 8));
+      top = r.bottom + 6;
+    }
     t.style.left = (left + window.scrollX) + 'px';
     t.style.top = (top + window.scrollY) + 'px';
   }
