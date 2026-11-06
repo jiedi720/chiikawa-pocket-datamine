@@ -526,16 +526,14 @@ function optimize() {
   if (inp.mode !== 'boss' && need > 0) {
     const hasAoE = team.some(x => slotCalc(x.c, x.lv, inp, ctx0).hasAoE);
     if (!hasAoE) {
+      const replaceIndex = team.length - 1;
+      const otherChars = new Set([...lockedChars, ...team.filter((_, i) => i !== replaceIndex).map(x => x.c.char)]);
       const bestAoE = scored.find(s =>
         slotCalc(s.x.c, s.x.lv, inp, ctx0).hasAoE &&
         !team.includes(s.x) &&
-        !selectedChars.has(s.x.c.char)
+        !otherChars.has(s.x.c.char)
       );
-      if (bestAoE && team.length) {
-        selectedChars.delete(team[team.length - 1].c.char);
-        team[team.length - 1] = bestAoE.x;
-        selectedChars.add(bestAoE.x.c.char);
-      }
+      if (bestAoE && team.length) team[replaceIndex] = bestAoE.x;
     }
   }
   let improved = true, guard = 0;
