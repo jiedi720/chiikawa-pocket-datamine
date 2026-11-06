@@ -322,7 +322,7 @@ function skillDesc(c) {
       lines.push(`${nm}${e.range === 'Range' ? '（全体）' : ''} ${sign}${fmt(v1)}→${sign}${fmt(v100)}${dur}`);
     }
   }
-  if (s.recastMs) lines.push(`冷却 ${s.recastMs / 1000}秒`);
+  if (s.recastMs) lines.push(`技能冷却 ${s.recastMs / 1000}秒`);
   return lines.join('\n');
 }
 
