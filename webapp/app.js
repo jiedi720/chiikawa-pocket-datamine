@@ -434,12 +434,45 @@ function deleteSlotLock(costumeId) {
 }
 function toggleLock(costumeId) {
   if (isLocked(costumeId)) { deleteSlotLock(costumeId); return; }
+  const costume = COSTUME_BY_ID[costumeId];
+  if (!costume) return;
+  const duplicate = Object.values(state.locks).some(id => {
+    const locked = COSTUME_BY_ID[id];
+    return locked && locked.char === costume.char;
+  });
+  if (duplicate) {
+    const status = document.getElementById('opt-status');
+    if (status) status.textContent = '同一角色只能锁定一套服装，请先解锁该角色的另一套服装。';
+    return;
+  }
   for (let i = 0; i < 6; i++) if (state.locks[i] == null) { state.locks[i] = costumeId; return; }
 }
 
 /* ============ optimizer ============ */
 function ownedCostumes() {
   return Object.entries(state.owned).map(([id, lv]) => ({ c: COSTUME_BY_ID[id], lv: Math.max(1, Math.min(200, lv)) })).filter(x => x.c);
+}
+
+// 游戏规则：同一角色只能选择一套服装。char 是角色 ID，不是服装 ID。
+function hasUniqueCharacters(costumes) {
+  const seen = new Set();
+  for (const x of costumes) {
+    const charId = x.c ? x.c.char : x.char;
+    if (charId == null || seen.has(charId)) return false;
+    seen.add(charId);
+  }
+  return true;
+}
+function duplicateCharacterNames(costumes) {
+  const counts = new Map();
+  for (const x of costumes) {
+    const c = x.c || x;
+    counts.set(c.char, (counts.get(c.char) || 0) + 1);
+  }
+  return [...counts.entries()].filter(([, n]) => n > 1).map(([id]) => {
+    const c = DATA.characters.find(x => x.id === id);
+    return c ? (c.chinese || c.name || ('角色 ' + id)) : ('角色 ' + id);
+  });
 }
 
 function optimize() {
@@ -453,28 +486,56 @@ function optimize() {
   const locked = [];
   for (let i = 0; i < 6; i++) if (state.locks[i] != null && state.owned[state.locks[i]] != null)
     locked.push({ i, c: COSTUME_BY_ID[state.locks[i]], lv: state.owned[state.locks[i]] });
+  if (locked.length !== Object.keys(state.locks).filter(k => state.locks[k] != null && state.owned[state.locks[k]] != null).length) {
+    status.textContent = '锁定的服装数据无效，请检查队伍锁定状态。'; return;
+  }
+  if (!hasUniqueCharacters(locked)) {
+    const names = duplicateCharacterNames(locked);
+    status.textContent = `锁定队伍包含重复角色（${names.join('、')}）。同一角色只能上场一套服装，请先解除重复锁定。`;
+    return;
+  }
   const lockedIds = new Set(locked.map(l => l.c.id));
-  const freeRoster = roster.filter(x => !lockedIds.has(x.c.id));
+  const lockedChars = new Set(locked.map(l => l.c.char));
+  const freeRoster = roster.filter(x => !lockedIds.has(x.c.id) && !lockedChars.has(x.c.char));
   const need = 6 - locked.length;
   if (need < 0) { status.textContent = '锁定的站位太多了。'; return; }
-  if (freeRoster.length < need) { status.textContent = `空位还缺 ${need} 套已拥有的服装。`; return; }
 
-  // 1. score each costume standalone
+  // 1. score each costume standalone; candidates from the same character are alternatives.
   const scored = freeRoster.map(x => ({ x, r: slotCalc(x.c, x.lv, inp, ctx0) }));
   scored.sort((a, b) => b.r.dps - a.r.dps);
 
-  // 2. greedy fill + swap improvement on team score (with buff interactions)
+  // 2. Greedily select the best legal six: never take two costumes of one character.
   function teamScoreOf(list) {
+    if (!hasUniqueCharacters([...locked, ...list])) return -Infinity;
     const slots = list.map(x => slotCalc(x.c, x.lv, inp, buildTeamContext(inp)));
     return teamCalc(slots, inp).total;
   }
-  let team = scored.slice(0, need).map(s => s.x);
+  const team = [];
+  const selectedChars = new Set(lockedChars);
+  for (const candidate of scored) {
+    if (selectedChars.has(candidate.x.c.char)) continue;
+    team.push(candidate.x);
+    selectedChars.add(candidate.x.c.char);
+    if (team.length === need) break;
+  }
+  if (team.length < need) {
+    status.textContent = `可用的不同角色不足：还需要 ${need} 个角色，但当前库存和锁定条件无法组成合法六人队。请补充不同角色服装或解除锁定。`;
+    return;
+  }
   // role coverage: ensure at least one AoE if mode != boss and available
   if (inp.mode !== 'boss' && need > 0) {
     const hasAoE = team.some(x => slotCalc(x.c, x.lv, inp, ctx0).hasAoE);
     if (!hasAoE) {
-      const bestAoE = scored.find(s => slotCalc(s.x.c, s.x.lv, inp, ctx0).hasAoE);
-      if (bestAoE && !team.includes(bestAoE.x)) team[team.length - 1] = bestAoE.x;
+      const bestAoE = scored.find(s =>
+        slotCalc(s.x.c, s.x.lv, inp, ctx0).hasAoE &&
+        !team.includes(s.x) &&
+        !selectedChars.has(s.x.c.char)
+      );
+      if (bestAoE && team.length) {
+        selectedChars.delete(team[team.length - 1].c.char);
+        team[team.length - 1] = bestAoE.x;
+        selectedChars.add(bestAoE.x.c.char);
+      }
     }
   }
   let improved = true, guard = 0;
@@ -485,6 +546,7 @@ function optimize() {
       for (const cand of scored) {
         if (team.includes(cand.x)) continue;
         const trial = team.slice(); trial[i] = cand.x;
+        if (!hasUniqueCharacters([...locked, ...trial])) continue;
         const sc = teamScoreOf(trial);
         if (sc > cur * 1.001) { team = trial; cur = sc; improved = true; }
       }
@@ -511,9 +573,14 @@ function factorial(n) { let r = 1; for (let i = 2; i <= n; i++) r *= i; return r
 function optimizeOrderOnly() {
   const inp = readInputs();
   const roster = ownedCostumes();
-  if (roster.length < 6) { document.getElementById('opt-status').textContent = '需要至少 6 套已拥有的服装；将按排序取前 6 套。'; }
+  const status = document.getElementById('opt-status');
   const six = roster.slice(0, 6);
-  if (six.length < 6) { document.getElementById('opt-status').textContent = '需要 6 套已拥有的服装。'; return; }
+  if (six.length < 6) { status.textContent = '需要至少 6 套已拥有的服装。'; return; }
+  if (!hasUniqueCharacters(six)) {
+    const names = duplicateCharacterNames(six);
+    status.textContent = `当前选取的六套服装存在重复角色（${names.join('、')}），无法进行站位优化。请在已拥有列表中每个角色只保留一套参战服装，或先调整队伍选择。`;
+    return;
+  }
   const ctx0 = buildTeamContext(inp);
   const calcs = six.map(x => slotCalc(x.c, x.lv, inp, ctx0));
   let best = null, bestScore = -Infinity;
@@ -526,6 +593,11 @@ function optimizeOrderOnly() {
 
 /* ============ result rendering ============ */
 function renderResult(orderedSlots, inp, title) {
+  if (!orderedSlots || orderedSlots.length !== 6 || !hasUniqueCharacters(orderedSlots)) {
+    const status = document.getElementById('opt-status');
+    if (status) status.textContent = '安全校验未通过：队伍必须由六个不同角色组成，已阻止输出无效推荐。';
+    return;
+  }
   const tc = teamCalc(orderedSlots, inp);
   const sum = document.getElementById('team-summary');
   const critE = 1 + Math.min(1, tc.ctx.critRate) * (tc.ctx.critDmg - 1);
