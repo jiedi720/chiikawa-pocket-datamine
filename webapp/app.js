@@ -329,7 +329,7 @@ function skillDesc(c) {
     }
   }
   if (s.recastMs) {
-    if (s.effects.length === 1) lines[0] += ` （技能冷却 ${s.recastMs / 1000}秒）`;
+    if (s.effects.length === 1) lines[0] += ` （冷却 ${s.recastMs / 1000}秒）`;
     else lines.push(`技能冷却 ${s.recastMs / 1000}秒`);
   }
   return lines.join('\n');
