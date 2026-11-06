@@ -486,7 +486,8 @@ function optimize() {
   const locked = [];
   for (let i = 0; i < 6; i++) if (state.locks[i] != null && state.owned[state.locks[i]] != null)
     locked.push({ i, c: COSTUME_BY_ID[state.locks[i]], lv: state.owned[state.locks[i]] });
-  if (locked.length !== Object.keys(state.locks).filter(k => state.locks[k] != null && state.owned[state.locks[k]] != null).length) {
+  if (locked.length !== Object.keys(state.locks).filter(k => state.locks[k] != null && state.owned[state.locks[k]] != null).length ||
+      locked.some(l => !l.c)) {
     status.textContent = '锁定的服装数据无效，请检查队伍锁定状态。'; return;
   }
   if (!hasUniqueCharacters(locked)) {
@@ -510,7 +511,7 @@ function optimize() {
     const slots = list.map(x => slotCalc(x.c, x.lv, inp, buildTeamContext(inp)));
     return teamCalc(slots, inp).total;
   }
-  const team = [];
+  let team = [];
   const selectedChars = new Set(lockedChars);
   for (const candidate of scored) {
     if (selectedChars.has(candidate.x.c.char)) continue;
