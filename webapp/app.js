@@ -300,6 +300,7 @@ function itemImgKey(it) {
     return m ? it.kind + '_' + m[1] : '';
   }
   if (it.kind === 'assist') return 'assist_' + it.id;
+  if (it.kind === 'treasure') return 'treasure_' + it.id;
   return '';
 }
 
@@ -680,7 +681,7 @@ function renderItems() {
         key: 'home:' + h.id, kind: 'home', id: h.id,
         title: `小天地物品 #${h.id} · ${ZH_HOME_TYPE[h.type] || h.type}${ZH['home_item_' + h.id] ? ' · ' + ZH['home_item_' + h.id] : ''}`,
         text: `<b>持有：</b> ${fx ? (ZH_STATUS[fx.status] || fx.status) : '?'} 道具等级 1/2/3 时为 ×1.15 / ×1.20 / ×1.30（摆放位置只是装饰，拥有即可生效）`,
-        showEq: false, levelSel: h.maxLv, imgKey: '',
+        showEq: false, levelSel: h.maxLv, imgKey: 'home_' + h.id,
       });
     }
   }
